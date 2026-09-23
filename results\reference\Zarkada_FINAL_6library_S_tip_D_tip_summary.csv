@@ -1,0 +1,7 @@
+sample,age,analysis_arm,n_S_tip,n_D_tip,delta_D_minus_S_norrin_score,delta_D_minus_S_barrier_score,delta_D_minus_S_junction_score,delta_D_minus_S_transport_score,delta_D_minus_S_legacy_norrin_score
+GSM5350878_P6_WT,P6,WT_primary,108,53,0.120,0.616,0.423,0.534,0.056
+GSM5350880_P10_WT_D7,P10,WT_primary,8,7,0.310,0.643,0.825,0.684,0.083
+GSM5350881_P10_WT_C7,P10,WT_primary,26,153,0.150,0.472,0.208,0.706,0.096
+GSM5350879_P6_Alk5,P6,Alk5_sensitivity,49,34,0.377,0.654,0.457,1.137,0.134
+GSM5350882_P10_Alk5_B7,P10,Alk5_sensitivity,39,120,0.256,0.660,0.327,0.747,0.147
+GSM5350883_P10_Alk5_E7,P10,Alk5_sensitivity,9,7,0.296,0.721,0.602,0.677,0.197

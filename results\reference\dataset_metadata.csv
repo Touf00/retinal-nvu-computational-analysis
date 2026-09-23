@@ -1,0 +1,4 @@
+dataset,record,input,selected_libraries,validated_clean_ecs,role
+MRCA,https://doi.org/10.5281/zenodo.10815031,MRCA all-cells h5ad,11 eligible sampleid cohorts,1436,cross-cohort correlation and descriptive random-effects synthesis
+Furtado GSE282775,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282775,processed 10x count triplets,5 pooled genotype libraries,3017,within-library correlation and AV-adjusted sensitivity
+Zarkada GSE175895,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175895,processed 10x count triplets,3 WT plus 3 Alk5 libraries,1210,frozen WT state mapping and Alk5 projection

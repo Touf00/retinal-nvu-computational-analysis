@@ -1,0 +1,4 @@
+dataset,analysis_unit,n_cells,primary_result,major_caveat
+MRCA,11 sufficiently sampled EC sequencing cohorts,1436,"Random-effects pooled r = 0.206 (95% CI 0.099-0.309); I2 = 66.5%","Cohorts are sequencing/preparation groups, not equivalent biological replicates"
+Furtado GSE282775,5 pooled genotype libraries,3017,"Positive in all five libraries; rho = 0.122-0.236; AV adjustment changes <=0.004","Cells are not biological replicates; pooled genotype libraries; descriptive"
+Zarkada GSE175895,3 WT plus 3 Alk5 libraries,1210,"D-tip-like > S-tip-like for four primary modules in 6/6 libraries","Unequal state counts; smallest Alk5 library is supportive only; descriptive"

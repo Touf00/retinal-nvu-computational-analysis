@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release and the source datasets."
+type: software
+title: "Retinal endothelial Norrin-BRB computational triangulation"
+version: 0.1.0
+date-released: 2026-09-24
+authors:
+  - name: "Retinal NVU Computational Analysis contributors"
+abstract: >-
+  Reproducible secondary analysis of three public mouse retinal single-cell
+  RNA-sequencing resources testing coupling between frozen Norrin-associated
+  endothelial and blood-retinal barrier transcriptional modules.
+keywords:
+  - retina
+  - blood-retinal barrier
+  - Norrin
+  - single-cell RNA sequencing
+  - endothelial cells
+license: MIT

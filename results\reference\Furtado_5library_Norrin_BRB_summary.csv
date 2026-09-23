@@ -1,0 +1,6 @@
+sample,n_cells,analysis_arm,raw_Norrin_vs_BRB_rho,AV_adjusted_partial_rho,change_after_AV_adjustment
+GSM8650444_Ntn1flfl,635,control,0.214,0.213,-0.001
+GSM8650446_Unc5bflfl,89,control,0.178,0.179,0.000
+GSM8650445_Ntn1iKO,618,perturbation,0.236,0.232,-0.004
+GSM8650447_Unc5biECKO,122,perturbation,0.122,0.122,0.001
+GSM8650448_Unc5biECKO_Ctnnb1flex3,1553,perturbation,0.236,0.238,0.002

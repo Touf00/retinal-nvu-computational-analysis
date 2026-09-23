@@ -1,0 +1,26 @@
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Multi-gigabyte public inputs and transient downloads
+data/
+*.h5ad
+*.h5
+*.loom
+*.mtx
+*.mtx.gz
+*.tar
+*.tar.gz
+*.part
+
+# Regenerated analysis artifacts; compact reference outputs remain tracked
+results/generated/
+
+# Editors and local environment
+.vscode/
+.idea/
+.env
+*.log

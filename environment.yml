@@ -1,0 +1,10 @@
+name: retinal-nvu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - jupyterlab>=4,<5
+  - ipykernel>=6,<7
+  - pip:
+      - -r requirements.txt

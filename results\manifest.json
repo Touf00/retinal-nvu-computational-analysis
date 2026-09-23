@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "project": "retinal-nvu-computational-analysis",
+  "prepared_on": "2026-09-24",
+  "analysis_scope": "Secondary analysis of public mouse retinal single-cell RNA-sequencing data",
+  "source_notebook": {
+    "name": "Retinal_NVU_Computational_Recovery_Local.ipynb",
+    "sha256": "8a77055a4fd6cdc01f6d0e6fd2170c7b62eea887678b8f985b90dcb13f80f494",
+    "executed_cells": 139,
+    "note": "Reference results were extracted from the successful final analysis embedded in this executed source notebook; obsolete recovery paths were not retained."
+  },
+  "clean_notebook": {
+    "path": "notebooks/retinal_nvu_computational_analysis.ipynb",
+    "sha256_at_packaging": "b6b4ff9ccf6c78690b75356524cbe3a93cf07e25d73888d4ab8323dfd66dbd8d",
+    "outputs_cleared": true,
+    "full_raw_rerun_during_packaging": false,
+    "release_gate": "Run from raw public inputs and require every notebook assertion to pass before tagging v1.0.0."
+  },
+  "frozen_modules": {
+    "primary_norrin_associated": ["Fzd4", "Lrp5", "Tspan12", "Lef1"],
+    "brb": ["Cldn5", "Ocln", "Tjp1", "Mfsd2a", "Slc2a1", "Abcb1a"],
+    "junction_sensitivity": ["Cldn5", "Ocln", "Tjp1"],
+    "transport_sensitivity": ["Mfsd2a", "Slc2a1", "Abcb1a"],
+    "legacy_norrin_sensitivity_only": ["Ndp", "Fzd4", "Lrp5", "Tspan12", "Ctnnb1"]
+  },
+  "datasets": [
+    {
+      "name": "Mouse Retina Cell Atlas",
+      "record": "https://doi.org/10.5281/zenodo.10815031",
+      "input": "MRCA all-cells h5ad",
+      "input_md5": "cbbd7cc9802330a7002946757b995f26"
+    },
+    {
+      "name": "Furtado GSE282775",
+      "record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282775",
+      "input": "Five processed 10x count matrices"
+    },
+    {
+      "name": "Zarkada GSE175895",
+      "record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE175895",
+      "input": "Three WT and three Alk5 processed 10x count matrices"
+    }
+  ],
+  "reference_results": {
+    "mrca": {
+      "clean_ecs": 1436,
+      "eligible_cohorts": 11,
+      "pooled_r": 0.206009731473561,
+      "ci_low": 0.09867203001770468,
+      "ci_high": 0.30860885860479753,
+      "I2_percent": 66.54151894364368
+    },
+    "furtado": {
+      "clean_ecs": 3017,
+      "libraries": 5,
+      "raw_rho_range_rounded": [0.122, 0.236],
+      "all_positive": true,
+      "maximum_absolute_change_after_av_adjustment_rounded": 0.004
+    },
+    "zarkada": {
+      "wt_clean_ecs": 683,
+      "alk5_clean_ecs": 527,
+      "libraries": 6,
+      "directionally_positive_libraries": 6,
+      "positive_modules": ["Norrin", "BRB", "Junction", "Transport"]
+    },
+    "reference_figure": {
+      "path": "results/reference/figure_computational_triangulation.png",
+      "sha256": "cd63180c53f5ea5e53c859964915dd1cec7a60929ee9e662004b20261645eba5",
+      "provenance": "PNG output extracted unchanged from final figure cell 128 of the validated source notebook"
+    }
+  },
+  "environment_observed_in_validated_execution": {
+    "python": "3.13.15",
+    "scanpy": "1.12.4",
+    "anndata": "0.13.4",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "limitation": "Exact scikit-learn, matplotlib, leidenalg, and igraph versions were not captured; requirements bound compatible APIs and notebook assertions detect analytical drift."
+  },
+  "caveats": [
+    "Individual cells are not independent biological replicates.",
+    "MRCA sequencing/preparation cohorts are not equivalent to 11 independent animals.",
+    "Furtado genotype libraries are pooled preparations; comparisons are descriptive.",
+    "Zarkada state contrasts are descriptive and have unequal cell counts.",
+    "The smallest Alk5 E7 D-tip/S-tip comparison is supportive rather than independently decisive.",
+    "Module scores represent transcriptional identity and do not directly measure pathway activity or causality."
+  ]
+}
