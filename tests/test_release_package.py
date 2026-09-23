@@ -1,4 +1,5 @@
 import csv
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -54,6 +55,9 @@ for module in ["norrin", "barrier", "junction", "transport"]:
     assert all(float(row[column]) > 0 for row in zarkada)
 
 manifest = json.loads((ROOT / "results" / "manifest.json").read_text(encoding="utf-8"))
+notebook_sha256 = hashlib.sha256(notebook_path.read_bytes()).hexdigest()
+assert manifest["clean_notebook"]["sha256_at_packaging"] == notebook_sha256
+assert all(not cell.get("outputs") for cell in notebook["cells"] if cell.get("cell_type") == "code")
 assert manifest["reference_results"]["mrca"]["pooled_r"] == mrca["pooled_r"]
 assert manifest["reference_results"]["furtado"]["clean_ecs"] == 3017
 assert manifest["reference_results"]["zarkada"]["directionally_positive_libraries"] == 6
