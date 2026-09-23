@@ -11,7 +11,7 @@
   },
   "clean_notebook": {
     "path": "notebooks/retinal_nvu_computational_analysis.ipynb",
-    "sha256_at_packaging": "b6b4ff9ccf6c78690b75356524cbe3a93cf07e25d73888d4ab8323dfd66dbd8d",
+    "sha256_at_packaging": "d71c21fc3a74e741641de382aec37a582388c5a3e726101b706dbfa292bd49b3",
     "outputs_cleared": true,
     "full_raw_rerun_during_packaging": false,
     "release_gate": "Run from raw public inputs and require every notebook assertion to pass before tagging v1.0.0."
