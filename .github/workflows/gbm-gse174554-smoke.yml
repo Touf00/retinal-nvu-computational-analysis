@@ -1,9 +1,8 @@
 name: GBM GSE174554 smoke test
 on:
-  push:
-    branches: [gbm-nvu-gse174554-temp]
-    paths:
-      - '.github/workflows/gbm-gse174554-smoke.yml'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
