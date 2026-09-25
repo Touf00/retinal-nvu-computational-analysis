@@ -1,0 +1,91 @@
+name: GBM GSE174554 smoke test
+on:
+  push:
+    branches: [gbm-nvu-gse174554-temp]
+    paths:
+      - '.github/workflows/gbm-gse174554-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download one GEO library
+        run: |
+          set -euo pipefail
+          BASE="https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5319nnn/GSM5319503/suppl"
+          curl -fL --retry 5 -o barcodes.tsv.gz "$BASE/GSM5319503_SF10099_barcodes.tsv.gz"
+          curl -fL --retry 5 -o features.tsv.gz "$BASE/GSM5319503_SF10099_features.tsv.gz"
+          curl -fL --retry 5 -o matrix.mtx.gz "$BASE/GSM5319503_SF10099_matrix.mtx.gz"
+
+      - name: Build frozen EC99 pseudobulk
+        shell: python
+        run: |
+          import csv, gzip, re
+
+          targets = {
+              "AGACAGGTCACTACTT",
+              "AGGCTGCGTGATTGGG",
+              "AGTACCAAGCCAGAGT",
+              "CACCAAATCAAATGCC",
+              "CTGAGGCGTCCGTTTC",
+              "GCAGCTGGTGCAACAG",
+              "TGCGACGTCCACGGGT",
+              "TTGAGTGGTGCCTGCA",
+          }
+          expected_umi = 42205
+
+          with gzip.open("barcodes.tsv.gz", "rt", errors="replace") as f:
+              raw = [x.strip() for x in f if x.strip()]
+          canon = [re.sub(r"[^ACGT]", "", x)[-16:] for x in raw]
+          col_to_target = {i+1:b for i,b in enumerate(canon) if b in targets}
+          assert set(col_to_target.values()) == targets, (
+              len(col_to_target), set(targets)-set(col_to_target.values())
+          )
+
+          with gzip.open("features.tsv.gz", "rt", errors="replace") as f:
+              genes = [x.replace("\x00","").strip().split("\t")[0] for x in f if x.strip()]
+
+          gene_counts = {}
+          total = 0
+          with gzip.open("matrix.mtx.gz", "rb") as f:
+              # skip comments + dimensions
+              for line in f:
+                  if not line.startswith(b"%"):
+                      break
+              for line in f:
+                  line = line.replace(b"\x00", b"")
+                  a = line.split()
+                  if len(a) < 3:
+                      continue
+                  rr, cc = int(a[0]), int(a[1])
+                  if cc not in col_to_target:
+                      continue
+                  val = int(float(a[2]))
+                  total += val
+                  g = genes[rr-1]
+                  gene_counts[g] = gene_counts.get(g, 0) + val
+
+          print("EC99 cells:", len(targets))
+          print("Observed UMI:", total)
+          print("Expected UMI:", expected_umi)
+          assert total == expected_umi, (total, expected_umi)
+
+          with open("smoke_pseudobulk.csv", "w", newline="") as f:
+              w=csv.writer(f)
+              w.writerow(["gene","count"])
+              for g,v in sorted(gene_counts.items()):
+                  w.writerow([g,v])
+
+          with open("smoke_summary.txt","w") as f:
+              f.write(f"cells={len(targets)}\nobserved_umi={total}\nexpected_umi={expected_umi}\ngenes_detected={sum(v>0 for v in gene_counts.values())}\n")
+
+      - name: Upload smoke result
+        uses: actions/upload-artifact@v4
+        with:
+          name: gse174554-smoke
+          path: |
+            smoke_summary.txt
+            smoke_pseudobulk.csv
+          retention-days: 7
