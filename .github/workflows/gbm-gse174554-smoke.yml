@@ -1,4 +1,4 @@
-name: GBM GSE174554 EC99 pseudobulk
+name: GBM GSE174554 frozen sensitivities
 on:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -9,58 +9,52 @@ permissions:
   contents: read
 
 jobs:
-  pseudobulk:
-    name: pseudobulk-chunk-${{ matrix.chunk }}
+  extract:
+    name: sensitivity-chunk-${{ matrix.chunk }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
-        chunk: [1, 2, 3, 4, 5, 6, 7]
+        chunk: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
-      - name: Extract frozen EC99 pseudobulks
-        run: python analysis/gse174554/pseudobulk_chunk.py ${{ matrix.chunk }}
+      - name: Extract all frozen sensitivity pseudobulks in one pass
+        run: python analysis/gse174554/sensitivity_extract.py ${{ matrix.chunk }} 4
       - name: Upload checkpoint
         uses: actions/upload-artifact@v4
         with:
-          name: gse174554-chunk-${{ matrix.chunk }}
+          name: gse174554-sensitivity-chunk-${{ matrix.chunk }}
           path: out/*
           retention-days: 7
 
-  combine_and_edger:
-    name: combine-and-paired-edgeR
-    needs: pseudobulk
+  combine_and_test:
+    name: combine-and-test-frozen-sensitivities
+    needs: extract
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download all pseudobulk checkpoints
+      - name: Download sensitivity checkpoints
         uses: actions/download-artifact@v4
         with:
-          pattern: gse174554-chunk-*
+          pattern: gse174554-sensitivity-chunk-*
           path: artifacts
           merge-multiple: true
-
-      - name: Combine libraries to 28 frozen specimens
-        run: python analysis/gse174554/combine_pseudobulk.py
-
+      - name: Combine frozen sensitivity pseudobulks
+        run: python analysis/gse174554/combine_sensitivity.py
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
-
       - name: Install edgeR
         run: |
           Rscript -e 'if (!requireNamespace("BiocManager", quietly=TRUE)) install.packages("BiocManager", repos="https://cloud.r-project.org"); BiocManager::install("edgeR", ask=FALSE, update=FALSE)'
-
-      - name: Run paired Primary vs Recurrent edgeR
-        run: Rscript analysis/gse174554/run_edger.R
-
-      - name: Upload final primary recurrence outputs
+      - name: Run paired edgeR sensitivity models
+        run: Rscript analysis/gse174554/run_sensitivity_edger.R
+      - name: Upload frozen sensitivity outputs
         uses: actions/upload-artifact@v4
         with:
-          name: gse174554-EC99-primary-results
-          path: combined/*
+          name: gse174554-frozen-sensitivity-results
+          path: sensitivity/**
           retention-days: 14
