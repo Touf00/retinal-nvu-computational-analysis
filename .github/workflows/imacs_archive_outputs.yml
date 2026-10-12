@@ -70,3 +70,5 @@ jobs:
             git commit -m "Archive IMACS processed tables and run provenance [skip ci]"
             git push origin HEAD:imacs-stroke-pet-screen
           fi
+
+# Rebuild latest integrated matrix after /TEAMRED removal of nonreplicated sign concordance.
