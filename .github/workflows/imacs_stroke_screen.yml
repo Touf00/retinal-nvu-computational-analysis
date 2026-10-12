@@ -1,0 +1,46 @@
+name: IMACS stroke PET screen
+
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/**"
+      - ".github/workflows/imacs_stroke_screen.yml"
+  workflow_dispatch:
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_run
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install notebook runtime
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyter nbconvert ipykernel
+
+      - name: Execute replicated GSE174574 screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert             --to notebook             --execute IMACS_Stroke_PET/notebooks/01_primary_GSE174574_screen.ipynb             --output "${{ github.workspace }}/executed/01_primary_GSE174574_screen.executed.ipynb"             --ExecutePreprocessor.timeout=7000             --ExecutePreprocessor.kernel_name=python3
+
+      - name: Upload analysis outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-stroke-pet-primary-screen
+          path: |
+            executed/
+            imacs_stroke_pet_run/results/
+            imacs_stroke_pet_run/figures/
+          if-no-files-found: warn
+          retention-days: 30
