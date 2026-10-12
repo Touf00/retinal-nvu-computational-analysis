@@ -1,0 +1,39 @@
+name: IMACS independent vascular astro target validation
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/08_independent_FACS_astro_paired_analysis.ipynb"
+      - ".github/workflows/imacs_independent_validation.yml"
+  workflow_dispatch:
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_independent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install jupyter nbconvert nbformat ipykernel pandas numpy scipy requests
+      - name: Run independent sorted EC and paired astrocyte screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/08_independent_FACS_astro_paired_analysis.ipynb \
+            --output "${{ github.workspace }}/executed/08_independent_FACS_astro_paired_analysis.executed.ipynb" \
+            --ExecutePreprocessor.timeout=3500
+      - name: Preserve independent source biological audit outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-independent-biological-validation
+          path: |
+            executed/
+            imacs_stroke_pet_independent/results/
+          if-no-files-found: warn
+          retention-days: 30
