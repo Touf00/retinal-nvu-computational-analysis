@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078",
+    "status_code": 200,
+    "content_type": "application/json; charset=utf-8",
+    "preview": "{\"accession\":\"SCP3078\",\"name\":\"MCAOatlas_allcells\",\"description\":\"This dataset corresponds to the integrated single-cell RNA sequencing (scRNA-seq) atlas shown in Figure 1A of the following study:\u00a0Kuwata Y, Yasuda K, Tsukita K et al.\\\"Characterizing Hypoxia-Orchestrated Post-Stroke Changes in Oligod"
+  },
+  {
+    "url": "https://singlecell.broadinstitute.org/single_cell/api/v1/studies/SCP3078",
+    "status_code": 401,
+    "content_type": "text/html",
+    "preview": ""
+  },
+  {
+    "url": "https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078/files",
+    "status_code": 500,
+    "content_type": "application/json; charset=utf-8",
+    "preview": "{\"error\":\"No route matches [GET] \\\"/single_cell/api/v1/site/studies/SCP3078/files\\\"\",\"error_class\":\"ActionController::RoutingError\",\"source\":\"/usr/local/rvm/gems/ruby-3.4.8/gems/actionpack-7.2.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:35:in 'ActionDispatch::DebugExceptions#call'\"}"
+  }
+]

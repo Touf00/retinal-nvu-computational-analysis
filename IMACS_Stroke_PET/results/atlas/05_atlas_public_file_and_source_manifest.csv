@@ -1,0 +1,8 @@
+api_url,json_field,value
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.accession,SCP3078
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.name,MCAOatlas_allcells
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.study_files[0].name,MCAO_norExpr_metaanalysis_all.h5ad
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.study_files[0].file_type,AnnData
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.study_files[0].upload_file_size,5004976071
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.study_files[0].download_url,https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078/download?filename=MCAO_norExpr_metaanalysis_all.h5ad
+https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078,.study_files[0].media_url,https://singlecell.broadinstitute.org/single_cell/api/v1/site/studies/SCP3078/stream?filename=MCAO_norExpr_metaanalysis_all.h5ad
