@@ -9,6 +9,7 @@ numerically across independent scRNA, snRNA and Visium experiments.
 **Spatial:** mixed spots, no author region annotations transferred.
 **PET feasibility:** not inferred from RNA.
 
-Mouse 24 h vs day 1 alignment is an exploratory *sign check* only.
-Do not describe it as independent target validation until original cell labels
-and disease-model differences are reconciled.
+The current cross-study integration deliberately does not calculate 'alignment',
+reproducibility percentages, concordance p-values or summary meta-analytic effects.
+Time-series data have no within-condition animal replication and marker-based
+cell annotations require independent curation before biological validation.
