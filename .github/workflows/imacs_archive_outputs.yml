@@ -51,6 +51,8 @@ jobs:
           IMACS spatial stroke PET screen|imacs-spatial-screen|imacs_stroke_pet_spatial/results|spatial
           IMACS atlas source audit|imacs-atlas-provenance-audit|imacs_stroke_pet_atlas/results|atlas
           IMACS full SCP3078 atlas screen|imacs-full-atlas-processed|imacs_stroke_pet_atlas_full/results|atlas_full
+          IMACS independent validation source audit|imacs-independent-source-audit|imacs_stroke_pet_validation/results|independent_sources
+          IMACS independent vascular astro target validation|imacs-independent-biological-validation|imacs_stroke_pet_independent/results|independent
           EOF
 
       - name: Run scientific audit after collecting data
