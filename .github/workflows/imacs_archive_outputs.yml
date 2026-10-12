@@ -45,12 +45,14 @@ jobs:
           IMACS rat stroke PET screen|imacs-rat-48h-screen|imacs_stroke_pet_rat/results|rat
           IMACS spatial stroke PET screen|imacs-spatial-screen|imacs_stroke_pet_spatial/results|spatial
           IMACS atlas source audit|imacs-atlas-provenance-audit|imacs_stroke_pet_atlas/results|atlas
+          IMACS full SCP3078 atlas screen|imacs-full-atlas-processed|imacs_stroke_pet_atlas_full/results|atlas_full
           EOF
 
       - name: Run scientific audit after collecting data
         run: |
           python -m pip install -q "pandas>=2.0"
           python IMACS_Stroke_PET/scripts/audit_all_results.py
+          python IMACS_Stroke_PET/scripts/integrate_candidates.py
 
       - name: Commit only small reproducible result tables to isolated branch
         run: |
