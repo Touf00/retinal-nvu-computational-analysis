@@ -1,0 +1,39 @@
+name: IMACS atlas source audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/05_SCP3078_metadata_independence_audit.ipynb"
+      - ".github/workflows/imacs_atlas_audit.yml"
+  workflow_dispatch:
+jobs:
+  atlas:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_atlas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install jupyter nbconvert nbformat ipykernel pandas requests
+      - name: Probe public atlas API and source dataset listing
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/05_SCP3078_metadata_independence_audit.ipynb \
+            --output "${{ github.workspace }}/executed/05_atlas_metadata.executed.ipynb" \
+            --ExecutePreprocessor.timeout=1600
+      - name: Archive audit output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-atlas-provenance-audit
+          path: |
+            executed/
+            imacs_stroke_pet_atlas/results/
+          if-no-files-found: warn
+          retention-days: 30
