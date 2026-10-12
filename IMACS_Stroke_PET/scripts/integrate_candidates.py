@@ -23,6 +23,12 @@ p=pd.read_csv(required[0]).set_index(["gene","celltype"])
 t=pd.read_csv(required[1]).set_index(["gene","broad_celltype","condition"])
 r=pd.read_csv(required[2]).set_index(["gene","celltype","prefix"])
 z=pd.read_csv(required[3]).set_index(["gene","section"])
+# Independent validation cohorts: retain their distinct experimental units and control types.
+independent_ec_file=base/"independent/08_independent_FACS_EC_exact_permutation_4v4.csv"
+independent_astro_file=base/"independent/08_independent_astro_endfoot_paired_3animals.csv"
+ind_ec=pd.read_csv(independent_ec_file).set_index("gene") if independent_ec_file.exists() else None
+ind_ast=pd.read_csv(independent_astro_file).set_index("gene") if independent_astro_file.exists() else None
+
 genes=sorted(set(p.index.get_level_values("gene")))
 cts=["Endothelial","Astrocyte","Pericyte"]
 rows=[]
@@ -75,6 +81,23 @@ for gene in genes:
         for stage,section in [("control","C1-control"),("day1","B1-D1"),("day3","D1-D3"),
                               ("day7_C1","C1-D7"),("day7_D1","D1-D7")]:
             d[f"spatial_section_{stage}_pct_spots_RNA_detected"]=fetch(z,(gene,section),"pct_spots_detected")
+        # Add independent primary biological evidence, not a pooled effect.
+        if ct=="Endothelial" and ind_ec is not None:
+            d["sorted_CD31_24h_ischemia_vs_naive_log2CPM_difference"]=fetch(ind_ec,gene,"ischemia_minus_naive_log2CPM")
+            d["sorted_CD31_4v4_exact_two_sided_p"]=fetch(ind_ec,gene,"permutation_two_sided_p")
+            d["sorted_CD31_4v4_BH_q_frozen_panel"]=fetch(ind_ec,gene,"BH_q_across_frozen_gene_panel")
+        else:
+            d["sorted_CD31_24h_ischemia_vs_naive_log2CPM_difference"]=np.nan
+            d["sorted_CD31_4v4_exact_two_sided_p"]=np.nan
+            d["sorted_CD31_4v4_BH_q_frozen_panel"]=np.nan
+
+        if ct=="Astrocyte" and ind_ast is not None:
+            d["astro_endfoot_6h_paired_ipsi_vs_contra_log2CPM_difference"]=fetch(ind_ast,gene,"mean_paired_ipsilateral_minus_contralateral_log2CPM")
+            d["astro_endfoot_6h_n_pairs"]=fetch(ind_ast,gene,"n_pairs")
+        else:
+            d["astro_endfoot_6h_paired_ipsi_vs_contra_log2CPM_difference"]=np.nan
+            d["astro_endfoot_6h_n_pairs"]=np.nan
+
         d["priority_PET_status"]="NOT RANKED: requires cell-specific protein, accessible epitope, binder and PK"
         rows.append(d)
 matrix=pd.DataFrame(rows)
@@ -96,6 +119,9 @@ numerically across independent scRNA, snRNA and Visium experiments.
 
 The current cross-study integration deliberately does not calculate 'alignment',
 reproducibility percentages, concordance p-values or summary meta-analytic effects.
+Sorted CD31 dataset provides an independent n=4/4 ischemia-versus-naive contrast,
+not a matched sham-controlled repetition. Endfoot n=3 data are paired ipsilateral
+versus contralateral and reflect early ribosome-bound RNA, not global astrocytes.
 Time-series data have no within-condition animal replication and marker-based
 cell annotations require independent curation before biological validation.
 """)
