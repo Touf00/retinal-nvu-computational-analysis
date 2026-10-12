@@ -20,6 +20,11 @@ jobs:
         with:
           ref: imacs-stroke-pet-screen
           persist-credentials: true
+      - name: Synchronize branch before generating results
+        run: |
+          git fetch origin imacs-stroke-pet-screen
+          git rebase origin/imacs-stroke-pet-screen
+
       - name: Collect latest successful data artifacts
         shell: bash
         run: |
@@ -58,8 +63,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin imacs-stroke-pet-screen
-          git rebase origin/imacs-stroke-pet-screen
           git add -f IMACS_Stroke_PET/results/
           if git diff --cached --quiet; then
             echo "No new results to archive"
