@@ -1,0 +1,40 @@
+name: IMACS spatial stroke PET screen
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/04_spatial_GSE233814_screen.ipynb"
+      - ".github/workflows/imacs_spatial_screen.yml"
+  workflow_dispatch:
+
+jobs:
+  spatial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_spatial
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install jupyter nbconvert nbformat ipykernel
+      - name: Execute GEO spatial screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/04_spatial_GSE233814_screen.ipynb \
+            --output "${{ github.workspace }}/executed/04_spatial_GSE233814_screen.executed.ipynb" \
+            --ExecutePreprocessor.timeout=7000
+      - name: Upload analysis outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-spatial-screen
+          path: |
+            executed/
+            imacs_stroke_pet_spatial/results/
+          if-no-files-found: warn
+          retention-days: 30
