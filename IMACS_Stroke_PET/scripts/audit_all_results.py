@@ -61,6 +61,21 @@ try:
 except (FileNotFoundError,KeyError) as e:
     add("spatial_sections","NOT_COMPLETE",str(e))
 
+try:
+    facs=csv("independent/08_independent_FACS_EC_exact_permutation_4v4.csv")
+    test=facs[facs.status=="TESTABLE"]
+    add("independent_sorted_endothelial_4v4",
+        "PASS" if len(test)>0 and test.n_ischemia.eq(4).all() and test.n_naive.eq(4).all()
+          and test.permutation_two_sided_p.min()>=2/70-1e-12 else "FAIL",
+        f"{len(test)} frozen genes, 4 ischemia vs 4 naive control; permutation p min={test.permutation_two_sided_p.min():.4f}; naïve controls not shams")
+    astro=csv("independent/08_independent_astro_endfoot_paired_3animals.csv")
+    val=astro[astro.status=="TESTABLE"]
+    add("independent_astro_endfeet_3paired",
+        "PASS" if len(val)>0 and val.n_pairs.eq(3).all() else "CHECK",
+        f"{len(val)} genes with 3 contralateral/ipsilateral pairs; no population-level significance")
+except (FileNotFoundError,KeyError) as e:
+    add("independent_vascular_astro","NOT_COMPLETE",str(e))
+
 BASE.mkdir(exist_ok=True,parents=True)
 (BASE/"scientific_audit.json").write_text(json.dumps(checks,indent=2))
 lines=["# Automated /TEAMRED analysis audit","",
