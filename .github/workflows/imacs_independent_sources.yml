@@ -1,0 +1,40 @@
+name: IMACS independent validation source audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/07_independent_endothelial_astro_source_audit.ipynb"
+      - ".github/workflows/imacs_independent_sources.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_validation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install metadata runtime
+        run: pip install jupyter nbconvert nbformat ipykernel pandas requests
+      - name: Run independent stroke cohort source audit
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/07_independent_endothelial_astro_source_audit.ipynb \
+            --output "${{ github.workspace }}/executed/07_independent_endothelial_astro_source_audit.executed.ipynb" \
+            --ExecutePreprocessor.timeout=1600
+      - name: Archive source manifests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-independent-source-audit
+          path: |
+            executed/
+            imacs_stroke_pet_validation/results/
+          if-no-files-found: warn
+          retention-days: 30
