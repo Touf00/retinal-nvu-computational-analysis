@@ -1,0 +1,43 @@
+name: IMACS rat stroke PET screen
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/03_rat_GSE250245_screen.ipynb"
+      - ".github/workflows/imacs_rat_screen.yml"
+  workflow_dispatch:
+
+jobs:
+  rat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_rat
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install notebook runtime
+        run: |
+          python -m pip install --upgrade pip
+          pip install nbconvert ipykernel nbformat jupyter
+      - name: Run rat GSE250245 screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/03_rat_GSE250245_screen.ipynb \
+            --output "${{ github.workspace }}/executed/03_rat_GSE250245_screen.executed.ipynb" \
+            --ExecutePreprocessor.timeout=7000
+      - name: Preserve all computed artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-rat-48h-screen
+          path: |
+            executed/
+            imacs_stroke_pet_rat/results/
+          if-no-files-found: warn
+          retention-days: 30
