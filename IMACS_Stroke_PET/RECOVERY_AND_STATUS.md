@@ -14,13 +14,17 @@
 | Visium 5 section experiment, GSE233814 (GSE233815 SuperSeries) | `notebooks/04_spatial_GSE233814_screen.ipynb` | `imacs_spatial_screen.yml` |
 | SCP3078 public atlas metadata/provenance | `notebooks/05_SCP3078_metadata_independence_audit.ipynb` | `imacs_atlas_audit.yml` |
 | SCP3078 full source-aware 5GB H5AD | `notebooks/06_SCP3078_full_atlas_screen.ipynb` | `imacs_full_atlas_screen.yml` |
+| FACS endothelial and paired astrocyte **source format audit** | `notebooks/07_independent_endothelial_astro_source_audit.ipynb` | `imacs_independent_sources.yml` |
+| Independent sorted CD31+ EC n4+4 and astrocytic endfoot RiboTag n3 pairs | `notebooks/08_independent_FACS_astro_paired_analysis.ipynb` | `imacs_independent_validation.yml` |
 
 Each notebook is Colab-compatible via:
 `https://colab.research.google.com/github/Touf00/retinal-nvu-computational-analysis/blob/imacs-stroke-pet-screen/IMACS_Stroke_PET/notebooks/<filename>.ipynb`.
 
 ## Permanent processed results
 
-`results/primary/`, `results/temporal/`, `results/rat/`, `results/spatial/`, `results/atlas/`, `results/integrated/`.
+`results/primary/`, `results/temporal/`, `results/rat/`, `results/spatial/`, `results/atlas/`, `results/independent_sources/`, `results/independent/`, `results/integrated/`.
+
+All of these processed tables were **verified as committed to this branch**. The independent validation workflow succeeded and the recovery publisher completed successfully at GitHub Actions run `38323537320`.
 
 Every successfully archived dataset directory includes `source_run_id.txt`: the exact GitHub Actions run used to generate those outputs. Inputs are obtained from GEO at run time and SHA256 checksums are recorded. Raw sequencing files are NOT stored in GitHub.
 
@@ -38,6 +42,10 @@ Every successfully archived dataset directory includes `source_run_id.txt`: the 
 
 **GSE233814 — five Visium sections computed.** One control, one day1, one day3, two day7. Mixed tissue spots are not individual astrocytes/endothelium. Original author's region labels `DetailedRegionAnnoShort` have not yet been transferred from processed Seurat data. Therefore NO lesion core/penumbra claims in current output.
 
+**GSE223744 — completed independently replicated purified endothelial RNA.** Four ipsilateral ischemia versus four **naïve** sorted CD31+ mouse endothelial samples. Fractional `expected_counts` used for per-sample log2CPM and exact n4+n4 label permutation, with BH across the prespecified 29-gene panel only. This is a true independent model cohort but **not operated-sham-controlled**, and does not establish PET binding.
+
+**GSE286075 — completed paired astrocyte-endfoot RiboTag RNA.** Three ipsilateral-versus-contralateral animal PAIRS following 2h ischemia and 6h reperfusion. STAR unstranded read-count column and Ensembl-to-symbol map traced to the purified-endothelial experiment. Two-sided sign flips n3 cannot establish p<0.25; directional evidence only, not MAO-B protein measurement.
+
 **SCP3078 — metadata audited, full expression BLOCKED.** Public Single Cell Portal metadata expose a 5,004,976,071-byte H5AD; attempted download and stream return unauthorized response to GitHub runner. Raw expression not accessed, hence NOT analyzed. The source is an integrated atlas of partially overlapping input datasets; even with expression access, it cannot count as an independent biological replication until component study IDs are recovered.
 
 ## Next science gates
@@ -50,3 +58,20 @@ Every successfully archived dataset directory includes `source_run_id.txt`: the 
 6. Study the BBB cargo-delivery question in a separate pharmacokinetics and assay framework; no RNA-expression atlas proves productive transcytosis.
 
 The science can reject APJ, AMOT, MAO-B or any existing tracer if independent evidence supports doing so. These are **not** automatic leading candidates.
+
+## Quick recovery
+
+From GitHub without touching the retinal study default branch:
+
+```bash
+git clone --single-branch --branch imacs-stroke-pet-screen https://github.com/Touf00/retinal-nvu-computational-analysis.git
+cd retinal-nvu-computational-analysis
+ls IMACS_Stroke_PET
+```
+
+The full branch snapshot can also be obtained as a ZIP from:
+https://github.com/Touf00/retinal-nvu-computational-analysis/archive/refs/heads/imacs-stroke-pet-screen.zip
+
+The official GitHub Actions run pages contain executed notebook artifacts; the branch under `IMACS_Stroke_PET/results/` contains the permanent processed CSV evidence tables. The source GEO FASTQ/10x files are NOT included, but are redownloadable via the notebooks with published accession numbers and recorded file checksums.
+
+A GitHub workflow reporting **success** is evidence of code execution, not automatically of valid biological inference. Always read `results/SCIENTIFIC_AUDIT.md` and individual dataset audits before using numbers in a proposal.
