@@ -11,5 +11,8 @@ numerically across independent scRNA, snRNA and Visium experiments.
 
 The current cross-study integration deliberately does not calculate 'alignment',
 reproducibility percentages, concordance p-values or summary meta-analytic effects.
+Sorted CD31 dataset provides an independent n=4/4 ischemia-versus-naive contrast,
+not a matched sham-controlled repetition. Endfoot n=3 data are paired ipsilateral
+versus contralateral and reflect early ribosome-bound RNA, not global astrocytes.
 Time-series data have no within-condition animal replication and marker-based
 cell annotations require independent curation before biological validation.

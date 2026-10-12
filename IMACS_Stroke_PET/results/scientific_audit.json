@@ -48,5 +48,15 @@
     "name": "spatial_celltypes",
     "status": "CHECK",
     "detail": "Mixed Visium spots; no core/periphery annotations; do not assign cell type or lesion location"
+  },
+  {
+    "name": "independent_sorted_endothelial_4v4",
+    "status": "PASS",
+    "detail": "29 frozen genes, 4 ischemia vs 4 naive control; permutation p min=0.0286; na\u00efve controls not shams"
+  },
+  {
+    "name": "independent_astro_endfeet_3paired",
+    "status": "PASS",
+    "detail": "29 genes with 3 contralateral/ipsilateral pairs; no population-level significance"
   }
 ]
