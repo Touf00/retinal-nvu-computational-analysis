@@ -1,0 +1,7 @@
+{
+  "primary_dataset": "GSE174574",
+  "design": "3 sham vs 3 MCAO at 24h",
+  "inference_unit": "sample/animal",
+  "candidate_count": 29,
+  "output_dir": "/home/runner/work/retinal-nvu-computational-analysis/retinal-nvu-computational-analysis/imacs_stroke_pet_run/results"
+}

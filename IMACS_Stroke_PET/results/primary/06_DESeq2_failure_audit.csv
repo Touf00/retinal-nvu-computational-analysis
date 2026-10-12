@@ -1,0 +1,5 @@
+celltype,error_type,message
+Endothelial,IndexError,"too many indices for array: array is 1-dimensional, but 2 were indexed"
+Astrocyte,IndexError,"too many indices for array: array is 1-dimensional, but 2 were indexed"
+Pericyte,IndexError,"too many indices for array: array is 1-dimensional, but 2 were indexed"
+VSMC,IndexError,"too many indices for array: array is 1-dimensional, but 2 were indexed"

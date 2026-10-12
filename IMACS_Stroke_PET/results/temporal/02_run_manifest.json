@@ -1,0 +1,28 @@
+{
+  "accession": "GSE227651",
+  "conditions": [
+    {
+      "gsm": "GSM7104635",
+      "prefix": "sham",
+      "condition": "Sham"
+    },
+    {
+      "gsm": "GSM7104632",
+      "prefix": "1d",
+      "condition": "MCAO_day1"
+    },
+    {
+      "gsm": "GSM7104633",
+      "prefix": "3d",
+      "condition": "MCAO_day3"
+    },
+    {
+      "gsm": "GSM7104634",
+      "prefix": "7d",
+      "condition": "MCAO_day7"
+    }
+  ],
+  "statistical_inference": "NONE: one deposited sample per condition",
+  "candidate_count": 29,
+  "analysis_version": "1.0"
+}

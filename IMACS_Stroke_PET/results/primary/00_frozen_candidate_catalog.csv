@@ -1,0 +1,30 @@
+gene,axis,role,initial_disposition
+Aplnr,APJ vascular repair,host tracer target,KEEP
+Apln,APJ pathway,context,CONTEXT
+Apela,APJ pathway,context,CONTEXT
+Amot,angiomotin vascular repair,host tracer target,KEEP
+Mcam,CD146-AMOT axis,context,KEEP
+Maob,astrocyte-associated MAO-B,external PET target,KEEP
+Mfsd2a,BBB homeostasis,BBB-state marker,KEEP
+Slc22a8,BBB transport/homeostasis,BBB-state marker,KEEP
+Cldn5,tight junction,BBB-state marker,CONTEXT
+Cav1,caveolar transcytosis,BBB-state marker,CONTEXT
+Plvap,barrier disruption,accessible endothelial candidate,KEEP
+Tfrc,BBB receptor-mediated transport,delivery handle,KEEP
+Lrp1,BBB receptor-mediated transport,delivery handle,KEEP
+Slc3a2,BBB receptor-mediated transport,delivery handle,KEEP
+Igf1r,BBB receptor-mediated transport,delivery handle,KEEP
+Pdgfrb,pericyte state,abluminal context,CONTEXT
+Rgs5,pericyte state,intracellular context,CONTEXT
+Icam1,acute endothelial activation,surface candidate,KEEP
+Vcam1,subacute endothelial activation,surface candidate,KEEP
+Ackr1,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED
+Pvr,activated endothelium/immune interface,surface candidate,KEEP
+Tnfrsf10b,injury-associated receptor,surface candidate,KEEP
+Itgav,angiogenesis,established RGD comparator,COMPARATOR
+Itgb3,angiogenesis,established RGD comparator,COMPARATOR
+Kdr,angiogenesis,context,CONTEXT
+Flt1,vascular state,context,CONTEXT
+Angpt2,vascular remodeling,context,CONTEXT
+Esm1,activated/angiogenic endothelium,candidate,KEEP
+Egfl7,angiogenic endothelium,candidate,KEEP

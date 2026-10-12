@@ -1,0 +1,7 @@
+,n_cells,library_size,condition,celltype
+MCAO1,883,3263693,MCAO,Astrocyte
+MCAO2,848,3047103,MCAO,Astrocyte
+MCAO3,607,2643805,MCAO,Astrocyte
+sham1,355,1175688,Sham,Astrocyte
+sham2,359,1219597,Sham,Astrocyte
+sham3,429,1526851,Sham,Astrocyte

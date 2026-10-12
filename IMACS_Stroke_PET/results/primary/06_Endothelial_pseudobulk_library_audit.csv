@@ -1,0 +1,7 @@
+,n_cells,library_size,condition,celltype
+MCAO1,4543,12411443,MCAO,Endothelial
+MCAO2,4448,11687465,MCAO,Endothelial
+MCAO3,3034,9619670,MCAO,Endothelial
+sham1,4553,10704538,Sham,Endothelial
+sham2,4484,10825405,Sham,Endothelial
+sham3,5160,12571533,Sham,Endothelial
