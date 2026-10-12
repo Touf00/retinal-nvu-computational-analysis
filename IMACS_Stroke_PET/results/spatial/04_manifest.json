@@ -1,0 +1,8 @@
+{
+  "superseries": "GSE233815",
+  "spatial_subseries": "GSE233814",
+  "biological_inference": "DESCRIPTIVE SECTION LEVEL ONLY",
+  "region_labels_available": false,
+  "source_software": "Zucha et al. Spatial_MCAO GitHub",
+  "n_samples": 5
+}

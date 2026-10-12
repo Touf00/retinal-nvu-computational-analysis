@@ -1,0 +1,7 @@
+gsm,prefix,severity,hemisphere,reported_group_n_rats
+GSM7976206,Sham_L,Sham,contralateral_or_left,4
+GSM7976207,Sham_R,Sham,ipsilateral_or_right,4
+GSM7976208,mMCAO_contra,moderate,contralateral,3
+GSM7976209,mMCAO_ipsi,moderate,ipsilateral,3
+GSM7976210,sMCAO_contra,severe,contralateral,4
+GSM7976211,sMCAO_ipsi,severe,ipsilateral,4

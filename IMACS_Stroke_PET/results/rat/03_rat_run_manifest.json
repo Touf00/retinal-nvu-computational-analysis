@@ -1,0 +1,8 @@
+{
+  "dataset": "GSE250245",
+  "n_deposited_group_hemisphere_matrices": 6,
+  "design": "4 sham, 3 moderate MCAO, 4 severe MCAO; ipsilateral/contralateral",
+  "biological_replication_for_analysis": "NOT IDENTIFIABLE FROM DEPOSITED GROUP MATRICES",
+  "inference": "DESCRIPTIVE ONLY; no cell-level inferential statistics",
+  "key_caveat": "snRNA at 48h permanent MCAO differs from mouse scRNA at 24h transient MCAO"
+}

@@ -1,0 +1,7 @@
+gsm,severity,hemisphere,n_cells_before,n_cells_after,median_genes_after,median_pct_mt_after
+GSM7976206,Sham,contralateral_or_left,13138,13061,1518.0,0.0
+GSM7976207,Sham,ipsilateral_or_right,13631,13550,1240.0,0.0
+GSM7976208,moderate,contralateral,14508,14424,1690.0,0.02269889939577802
+GSM7976209,moderate,ipsilateral,12972,12888,1596.0,0.022724693016534778
+GSM7976210,severe,contralateral,10803,10738,1516.0,0.03372681665260719
+GSM7976211,severe,ipsilateral,8774,8710,1314.0,0.11209505801651182

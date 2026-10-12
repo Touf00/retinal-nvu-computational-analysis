@@ -1,0 +1,52 @@
+[
+  {
+    "name": "mouse_acute_samples",
+    "status": "PASS",
+    "detail": "6 sample rows"
+  },
+  {
+    "name": "mouse_acute_animal_level_permutations",
+    "status": "PASS",
+    "detail": "116 candidate x compartment rows; minimum exact p=0.100; cannot claim p<0.05"
+  },
+  {
+    "name": "mouse_acute_DESeq2",
+    "status": "NOT_COMPLETE",
+    "detail": "4 unresolved DESeq2 errors; use exact-label direction analysis only"
+  },
+  {
+    "name": "mouse_temporal",
+    "status": "PASS",
+    "detail": "4 deposited conditions; ONE SAMPLE per condition, descriptive only"
+  },
+  {
+    "name": "mouse_temporal_pseudoreplication",
+    "status": "PASS",
+    "detail": "No spurious cell-level inferential p-values"
+  },
+  {
+    "name": "rat_48h",
+    "status": "PASS",
+    "detail": "6 condition/hemisphere matrices; individual rat identities NOT recoverable"
+  },
+  {
+    "name": "rat_endothelium_QC",
+    "status": "CHECK",
+    "detail": "Minimum endothelial-labelled nuclei in a group = 12, NOT suitable for vascular validation without improved annotation"
+  },
+  {
+    "name": "rat_missing_feature_symbols",
+    "status": "CHECK",
+    "detail": "4 of frozen genes could not be matched to reference feature symbols; unmatchable is NOT biological absence"
+  },
+  {
+    "name": "spatial_sections",
+    "status": "PASS",
+    "detail": "5 Visium sections: Ctrl x1, day1 x1, day3 x1, day7 x2"
+  },
+  {
+    "name": "spatial_celltypes",
+    "status": "CHECK",
+    "detail": "Mixed Visium spots; no core/periphery annotations; do not assign cell type or lesion location"
+  }
+]
