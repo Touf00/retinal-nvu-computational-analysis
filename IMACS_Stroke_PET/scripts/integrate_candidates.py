@@ -57,10 +57,9 @@ for gene in genes:
             value=fetch(t,(gene,ct,stage),"mean_log1p")
             d[f"temporal_{stage}_minus_sham_mean_log1p"]=value-sham if pd.notna(sham) and pd.notna(value) else np.nan
             d[f"temporal_{stage}_n_cells"]=fetch(t,(gene,ct,stage),"n_cells")
-        d["mouse_24h_vs_day1_descriptive_alignment"]=(
-            "aligned" if sign(effect)==sign(d["temporal_MCAO_day1_minus_sham_mean_log1p"]) and sign(effect) not in ("unchanged","not_available")
-            else ("discordant" if sign(effect) not in ("not_available","unchanged") and sign(d["temporal_MCAO_day1_minus_sham_mean_log1p"]) not in ("not_available","unchanged")
-                  else "insufficient_data"))
+        # Separate source rows do not constitute an independent replication test:
+        # temporal dataset contains only one deposited sample per condition.
+        d["mouse_24h_vs_day1_reproducibility"]="NOT ESTABLISHED: temporal dataset has no within-timepoint animal replication"
 
         # Rat severe ipsilateral vs sham right. Recovered compartment counts must pass 50/group
         a=fetch(r,(gene,ct,"sMCAO_ipsi"),"mean_log1p")
@@ -81,7 +80,7 @@ for gene in genes:
 matrix=pd.DataFrame(rows)
 matrix.to_csv(out/"candidate_by_celltype_cross_dataset_evidence.csv",index=False)
 summary=matrix[matrix.celltype=="Endothelial"][["gene","primary_mouse_log2CPM_difference_24h",
-  "temporal_MCAO_day1_minus_sham_mean_log1p","mouse_24h_vs_day1_descriptive_alignment",
+  "temporal_MCAO_day1_minus_sham_mean_log1p","mouse_24h_vs_day1_reproducibility",
   "rat_48h_qualified_for_descriptive_interpretation","priority_PET_status"]]
 summary.to_csv(out/"endothelial_compact_audit.csv",index=False)
 (out/"README.md").write_text("""# Frozen cross-dataset candidate synthesis
@@ -95,8 +94,9 @@ numerically across independent scRNA, snRNA and Visium experiments.
 **Spatial:** mixed spots, no author region annotations transferred.
 **PET feasibility:** not inferred from RNA.
 
-Mouse 24 h vs day 1 alignment is an exploratory *sign check* only.
-Do not describe it as independent target validation until original cell labels
-and disease-model differences are reconciled.
+The current cross-study integration deliberately does not calculate 'alignment',
+reproducibility percentages, concordance p-values or summary meta-analytic effects.
+Time-series data have no within-condition animal replication and marker-based
+cell annotations require independent curation before biological validation.
 """)
 print("Saved",len(matrix),"gene × compartment rows; no statistical meta-analysis")
