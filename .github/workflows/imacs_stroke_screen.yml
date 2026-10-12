@@ -4,7 +4,8 @@ on:
   push:
     branches: [imacs-stroke-pet-screen]
     paths:
-      - "IMACS_Stroke_PET/**"
+      - "IMACS_Stroke_PET/notebooks/01_primary_GSE174574_screen.ipynb"
+      - "IMACS_Stroke_PET/config/candidate_catalog.csv"
       - ".github/workflows/imacs_stroke_screen.yml"
   workflow_dispatch:
 
