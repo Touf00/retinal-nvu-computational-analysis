@@ -1,0 +1,6 @@
+accession,species,model,timepoints,replication,use
+GSE174574,mouse,tMCAO,24h,3 sham + 3 MCAO,Primary replicated acute adjudication
+GSE227651,mouse,tMCAO,sham/day1/day3/day7,one deposited sample per condition,Descriptive temporal discovery only
+GSE233815,mouse,permanent MCAO,control/day1/day3/day7,multimodal,Spatial adjudication
+GSE250245,rat,permanent MCAO,48h,hemisphere-level samples,Reconstruct dependence before inference
+SCP3078,mouse,integrated MCAO atlas,sham/day1/day3/day7/day14,integrated studies,Cross-study replication preserving source-study structure
