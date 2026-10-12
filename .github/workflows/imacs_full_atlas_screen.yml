@@ -1,0 +1,40 @@
+name: IMACS full SCP3078 atlas screen
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/06_SCP3078_full_atlas_screen.ipynb"
+      - ".github/workflows/imacs_full_atlas_screen.yml"
+  workflow_dispatch:
+jobs:
+  atlas_full:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_pet_atlas_full
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install chunked AnnData runtime
+        run: pip install jupyter nbconvert nbformat ipykernel
+      - name: Run full source-aware backed atlas screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/06_SCP3078_full_atlas_screen.ipynb \
+            --output "${{ github.workspace }}/executed/06_SCP3078_full_atlas_screen.executed.ipynb" \
+            --ExecutePreprocessor.timeout=6800
+      - name: Preserve small processed outputs only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-full-atlas-processed
+          path: |
+            executed/
+            imacs_stroke_pet_atlas_full/results/
+          if-no-files-found: warn
+          retention-days: 30
