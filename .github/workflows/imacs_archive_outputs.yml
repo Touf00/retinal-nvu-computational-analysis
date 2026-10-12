@@ -1,0 +1,61 @@
+name: IMACS archive computed results
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_archive_outputs.yml"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: imacs-stroke-pet-screen
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - name: Collect latest successful data artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tmp
+          while IFS='|' read -r workflow artifact source_subdir dest; do
+            run_id="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --branch "$BRANCH" --limit 20 --json databaseId,conclusion --jq '.[] | select(.conclusion=="success") | .databaseId' | head -n 1 || true)"
+            if [[ -z "$run_id" ]]; then echo "Not yet successful: $workflow"; continue; fi
+            target="tmp/$dest"
+            mkdir -p "$target"
+            if ! gh run download "$run_id" --repo "$GITHUB_REPOSITORY" -n "$artifact" -D "$target"; then
+              echo "Cannot download artifact from run $run_id"; continue
+            fi
+            src="$target/$source_subdir"
+            if [[ -d "$src" ]]; then
+              mkdir -p "IMACS_Stroke_PET/results/$dest"
+              find "$src" -maxdepth 1 -type f -exec cp {} "IMACS_Stroke_PET/results/$dest/" \;
+              echo "$run_id" > "IMACS_Stroke_PET/results/$dest/source_run_id.txt"
+            fi
+          done <<'EOF'
+          IMACS stroke PET screen|imacs-stroke-pet-primary-screen|imacs_stroke_pet_run/results|primary
+          IMACS temporal stroke PET screen|imacs-stroke-pet-temporal-screen|imacs_stroke_pet_temporal/results|temporal
+          IMACS rat stroke PET screen|imacs-rat-48h-screen|imacs_stroke_pet_rat/results|rat
+          IMACS spatial stroke PET screen|imacs-spatial-screen|imacs_stroke_pet_spatial/results|spatial
+          EOF
+
+      - name: Commit only small reproducible result tables to isolated branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin imacs-stroke-pet-screen
+          git rebase origin/imacs-stroke-pet-screen
+          git add -f IMACS_Stroke_PET/results/
+          if git diff --cached --quiet; then
+            echo "No new results to archive"
+          else
+            git commit -m "Archive IMACS processed tables and run provenance [skip ci]"
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
