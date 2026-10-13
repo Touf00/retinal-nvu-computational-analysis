@@ -1,0 +1,21 @@
+name: IMACS spatial author region crosswalk self-test
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/scripts/validate_zucha_author_region_crosswalk.py"
+      - ".github/workflows/imacs_zucha_crosswalk.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python IMACS_Stroke_PET/scripts/validate_zucha_author_region_crosswalk.py --self-test
