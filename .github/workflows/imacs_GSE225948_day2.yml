@@ -1,0 +1,43 @@
+name: IMACS independent day-2 brain EC validation
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/11_GSE225948_FACS_EC_4v4_day2.ipynb"
+      - ".github/workflows/imacs_GSE225948_day2.yml"
+  workflow_dispatch:
+jobs:
+  day2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_GSE225948
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install notebook tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyter nbconvert ipykernel
+      - name: Execute 4v4 preparation-level candidate screen
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/11_GSE225948_FACS_EC_4v4_day2.ipynb \
+            --output "${{ github.workspace }}/executed/11_GSE225948_FACS_EC_day2.executed.ipynb" \
+            --ExecutePreprocessor.timeout=7000 \
+            --ExecutePreprocessor.kernel_name=python3
+      - name: Archive result and execution logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-GSE225948-day2-EC-4v4
+          path: |
+            executed/
+            imacs_stroke_GSE225948/results/
+          if-no-files-found: warn
+          retention-days: 30
