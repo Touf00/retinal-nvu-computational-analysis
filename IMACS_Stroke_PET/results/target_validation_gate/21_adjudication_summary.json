@@ -1,0 +1,21 @@
+{
+  "panel_n": 29,
+  "mouse_two_EC_cohorts_direction_concordant": 25,
+  "mapped_human_paired_genes": 27,
+  "mouse_two_EC_cohorts_plus_human_bulk_direction_concordant": 12,
+  "human_core_BH_significant": 0,
+  "experimentally_focus_genes": [
+    "MCAM",
+    "ICAM1",
+    "PVR",
+    "VCAM1",
+    "APLNR",
+    "AMOT",
+    "SLC3A2",
+    "TFRC",
+    "MAOB"
+  ],
+  "experiment_shortlist_only": true,
+  "PET_target_GO_n": 0,
+  "note": "Human healthy adult surgical control endothelial expression does not validate stroke upregulation or PET binding"
+}
