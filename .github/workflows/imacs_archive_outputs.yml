@@ -56,6 +56,8 @@ jobs:
           IMACS independent day3 tMCAO spatial check|imacs-spatial-day3-2026-results|imacs_day3_2026/results|spatial_day3
           IMACS processed spatial region source probe|imacs-spatial-source-probe|.|source_probes
           IMACS human paired brain stroke screen|imacs-human-paired-ischemia-screen|imacs_human_paired/results|human
+          IMACS independent day-2 brain EC validation|imacs-GSE225948-day2-EC-4v4|imacs_stroke_GSE225948/results|independent_day2
+          IMACS independent day-2 mouse stroke source probe|imacs-GSE225948-source-probe|.|independent_day2_source
           EOF
 
       - name: Run scientific audit after collecting data
