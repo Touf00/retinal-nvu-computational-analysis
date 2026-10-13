@@ -1,0 +1,34 @@
+[
+  {
+    "url": "https://api.data.mendeley.com/datasets/publics/gnb2dsjms2/files?version=1",
+    "checked_utc": "2026-10-13T00:03:11.955376+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5758,
+    "response_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+  },
+  {
+    "url": "https://api.data.mendeley.com/datasets/gnb2dsjms2/files?version=1",
+    "checked_utc": "2026-10-13T00:03:12.173101+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5713,
+    "response_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+  },
+  {
+    "url": "https://api.data.mendeley.com/datasets/gnb2dsjms2?version=1",
+    "checked_utc": "2026-10-13T00:03:12.283986+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5695,
+    "response_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+  },
+  {
+    "url": "https://api.mendeley.com/datasets/gnb2dsjms2?version=1",
+    "checked_utc": "2026-10-13T00:03:12.371055+00:00",
+    "status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 5669,
+    "response_preview": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA"
+  }
+]

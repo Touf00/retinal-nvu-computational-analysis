@@ -1,0 +1,11 @@
+{
+  "dataset": "GSE337578",
+  "sample": "GSM9858163",
+  "model": "mouse 60-minute tMCAO day3",
+  "replicate_unit": "ONE SPATIAL LIBRARY; no biological inferential statistics",
+  "source_accession": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337578",
+  "n_barcodes": 30560,
+  "n_features": 32286,
+  "coordinate_valid": true,
+  "RNA_only_no_core_mask": true
+}
