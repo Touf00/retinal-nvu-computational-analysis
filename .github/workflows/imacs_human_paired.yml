@@ -1,0 +1,38 @@
+name: IMACS human paired brain stroke screen
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/10_human_paired_GSE162955_screen.ipynb"
+      - ".github/workflows/imacs_human_paired.yml"
+  workflow_dispatch:
+jobs:
+  paired:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_human_paired
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          pip install jupyter nbconvert ipykernel
+      - run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/10_human_paired_GSE162955_screen.ipynb \
+            --output "${{ github.workspace }}/executed/10_human_paired_GSE162955_screen.executed.ipynb" \
+            --ExecutePreprocessor.timeout=2500
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: imacs-human-paired-ischemia-screen
+          path: |
+            executed/
+            imacs_human_paired/results/
+          if-no-files-found: warn
+          retention-days: 30
