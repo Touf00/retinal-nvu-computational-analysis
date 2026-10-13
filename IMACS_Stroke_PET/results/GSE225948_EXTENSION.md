@@ -64,3 +64,12 @@ Workflow: `.github/workflows/imacs_GSE225948_day2.yml`.
 4. Report source count matrix's fractional values and normalization conventions; effect is a difference in sample-mean log1p normalized RNA, not transcriptional fold-change or protein.
 5. Use exact group-label permutation over 70 assignments; minimum two-sided p = 2/70. Control multiplicity only within the frozen panel, and state that limitation.
 6. PET requires accessible protein, ligand binding, BBB/perfusion controls and radiochemical validation; BBB delivery requires capillary depletion/intact drug/target engagement.
+
+## Additional time/batch confounding audit
+
+The author metadata `study.ident` gives different experiment/preparation IDs and acquisition-like dates, with **no exact sham-to-stroke preparation pairing**:
+
+- Sham: `GR180716`, `GR181128`, `GR181212`, `GR190110`.
+- Day2 Stroke: `GR180426`, `GR180614`, `GR180919`, `GR181024`.
+
+The prefixes suggest the preparations were not contemporaneously matched; because preprocessing, operators and batches may differ by preparation, **unpaired exact exchangeability is an assumption, not proven by GEO metadata**. This weakens causal disease interpretation even for the few unadjusted p=.0286 findings. No paired statistical model is justified. Day14-vs-day2 requires the same source batch audit before interpretation.
