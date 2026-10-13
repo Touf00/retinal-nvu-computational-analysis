@@ -4,7 +4,7 @@
 No automatic timepoint-based section assignment: there are TWO day-7 sections.
 Original region annotations must come from published Mendeley Seurat RDS
 DOI:10.17632/gnb2dsjms2.1 (export_zucha_region_annotations.R).
-A verified 5-row author_sample -> GSM section mapping is required.
+A verified author_sample -> GSM section mapping is required for the four final author sections, or all five GEO source sections when both day-7 sections are present.
 No spots are treated as independent animal-level replicates.
 """
 from __future__ import annotations
@@ -32,7 +32,7 @@ EXPECTED_CONDITIONS={
  "control":{"ctrl","control","sham"},
  "day1":{"1dpi","1day","day1","d1"},
  "day3":{"3dpi","3day","day3","d3"},
- "day7":{"7dpi","7day","day7","d7"},
+ "day7":{"7dpi","7day","day7","d7","d7b"},
 }
 
 def require(ok,msg):
@@ -56,15 +56,19 @@ def validate_crosswalk(author,section_map,spot_csv,geo_csv,out,min_spots=100):
     geo=read(geo_csv)
     require(set(r["gsm"] for r in geo)==set(SERIES) and len(geo)==5,
             "Archive must match five original GSE233814 GEO sections")
-    require(len(section_map)==5,"Need five section assignments, not four timepoints")
+    require(len(section_map) in (4,5),"Require 4 final author sections or 5 original sections")
     sampled={}
     for r in section_map:
         name,gsm=r["author_sample"],r["gsm"]
         require(bool(name) and gsm in SERIES and name not in sampled,
                 "Nonunique or invalid author sample map")
         sampled[name]=gsm
-    require(set(sampled.values())==set(SERIES),
-            "Map must distinguish both GSE233814 day-7 sections")
+    mapped_gsms=set(sampled.values())
+    require(len(mapped_gsms)==len(sampled),"Two author sections cannot map to one GEO GSM")
+    require({SERIES[x] for x in mapped_gsms}=={"control","day1","day3","day7"},
+            "Original four condition categories need distinct anatomical sections")
+    require(len(mapped_gsms.intersection({"GSM7437224","GSM7437225"}))==len(mapped_gsms)-3,
+            "Day7 source sections cannot be inferred from timepoint alone")
     require(author and all(("author_barcode" in r and "author_sample" in r and
                              "DetailedRegionAnnoShort" in r and "condition" in r and
                              "original_seurat_spot_id" in r) for r in author),
@@ -91,7 +95,7 @@ def validate_crosswalk(author,section_map,spot_csv,geo_csv,out,min_spots=100):
         aligned[key]=dict(author_region=region,
                           original_condition=r["condition"],
                           original_sample=sample)
-    require(len(aligned)>=min_spots*5,"Insufficient author metadata records")
+    require(len(aligned)>=min_spots*len(sampled),"Insufficient author metadata records")
     seen_spots=set()
     hit_spots=set()
     aggregate=defaultdict(lambda:[0,0.0])
@@ -117,7 +121,7 @@ def validate_crosswalk(author,section_map,spot_csv,geo_csv,out,min_spots=100):
     authors=Counter(gsm for gsm,_ in aligned)
     geo_spots=Counter(gsm for gsm,_ in seen_spots)
     report=[]
-    for gsm in SERIES:
+    for gsm in sorted(mapped_gsms):
         m=matched[gsm]
         require(m>=min_spots,f"Too few exact Seurat/GEO barcode matches {gsm}")
         # The final author Seurat object may be QC-filtered; allow missing
@@ -146,7 +150,9 @@ def validate_crosswalk(author,section_map,spot_csv,geo_csv,out,min_spots=100):
     summary={
        "dataset":"GSE233814 (subseries of GSE233815)",
        "original_author_RDS":"10.17632/gnb2dsjms2.1",
-       "five_author_sample_to_GSM_mappings_verified_manually":True,
+       "author_sample_to_GSM_mappings_verified_manually":len(sampled),
+       "unmapped_GEO_spatial_sections_excluded_from_author_region_transfer":sorted(set(SERIES)-mapped_gsms),
+       "original_author_processing_note":"Author 1DP_02 workflow removes D7b after integration because its bregma section differs from others; final author Seurat may legitimately have four, not five, sections.",
        "barcodes_joined_by_exact_GSM_and_author_barcode":True,
        "no_condition_to_GSM_guessing":True,
        "no_spot_level_inferential_pvalues":True,
@@ -186,7 +192,15 @@ def self_test():
                                          gene="Itm2a",log1p_cpm=str(i)))
         result=validate_crosswalk(author,mapping,p/"spots.gz",p/"geo.csv",
                                   p/"out",min_spots=1)
-        require(len(result["sections"])==5,"Missing test sample")
+        require(len(result["sections"])==5,"Missing five-source test sample")
+        # The original source paper removed D7b from its final object; a
+        # four-section author export must be accepted without inventing a
+        # fifth region, provided each retained section maps uniquely.
+        result4=validate_crosswalk(author[:8],mapping[:4],p/"spots.gz",
+                                   p/"geo.csv",p/"out4",min_spots=1)
+        require(len(result4["sections"])==4,"Original final 4-section export rejected")
+        require(len(result4["unmapped_GEO_spatial_sections_excluded_from_author_region_transfer"])==1,
+                "Missing source section not explicitly excluded")
         # Deliberately collapse both day-7 author_sample ids: must refuse.
         bad=[dict(x) for x in mapping]
         bad[-1]["author_sample"]=bad[-2]["author_sample"]
@@ -196,7 +210,7 @@ def self_test():
         except AssertionError:
             pass
         else: raise AssertionError("Could not reject ambiguous day7 mapping")
-        print("SPATIAL_REGION_CROSSWALK_SELFTEST PASS: five exact sections, duplicate day7 rejected")
+        print("SPATIAL_REGION_CROSSWALK_SELFTEST PASS: five original or four final author sections; ambiguous day7 rejected")
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
