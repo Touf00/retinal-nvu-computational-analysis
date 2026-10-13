@@ -159,8 +159,8 @@ def validate_crosswalk(author,section_map,spot_csv,geo_csv,out,min_spots=100):
        "no_core_penumbra_remapping_without_author_field":True,
        "unassigned_original_author_region_rows":skipped_missing_region,
        "sections":report,
-       "sample_level_replicates":{
-           "control":1,"day1":1,"day3":1,"day7":2},
+       "included_spatial_sections_by_condition":dict(sorted(Counter(SERIES[gsm] for gsm in mapped_gsms).items())),
+       "animal_level_replicates":"UNVERIFIED from published section-level matrices",
        "interpretation":"Spatial author region labels descriptively map archived spot RNA, NOT vascular-cell localization or rat/human PET feasibility"
     }
     (out/"17_spatial_region_crosswalk_manifest.json").write_text(
