@@ -1,0 +1,56 @@
+{
+  "dataset": "GSE250245",
+  "organism": "Rattus norvegicus",
+  "deposited_matrices": 6,
+  "source_groups": "4 sham rats, 3 moderate MCAO rats, 4 severe MCAO rats, bilateral hemispheres",
+  "specimen_to_rat_mapping_available_for_inhouse_pseudobulk": false,
+  "independent_rat_level_differential_expression_possible_from_archived_matrices": false,
+  "rat_study_design_authority": "GEO GSE250245 / PMID 39043661",
+  "inhouse_qc_retained_nuclei_all_matrices": 73371,
+  "author_publication_clustered_nuclei": 68616,
+  "difference_inhouse_minus_author": 4755,
+  "difference_interpretation": "Distinct preprocessing/cell-filtering and annotation; requires recovery of original QC/metadata before asserting lineage concordance",
+  "inhouse_annotation": "custom broad marker-score classifier, not independently validated",
+  "source_missing_frozen_genes_all_six_groups": [
+    "Amot",
+    "Apln",
+    "Cldn5",
+    "Flt1"
+  ],
+  "missing_gene_vs_biological_nonexpression": "NOT EQUIVALENT; no fuzzy substitution",
+  "source_comparison_rows": 1276,
+  "original_count_only_PASS_rows_with_missing_gene": 72,
+  "comparison_gate_counts": {
+    "BLOCK_LOW_CAPTURE": 650,
+    "BLOCK_MISSING_FEATURE": 176,
+    "DESCRIPTIVE_ONLY_NO_RAT_LEVEL_REPLICATION": 450
+  },
+  "low_endothelial_capture_lt50": [
+    {
+      "gsm": "GSM7976206",
+      "source_group": "Sham_L",
+      "EC_nuclei": 14
+    },
+    {
+      "gsm": "GSM7976207",
+      "source_group": "Sham_R",
+      "EC_nuclei": 12
+    },
+    {
+      "gsm": "GSM7976208",
+      "source_group": "mMCAO_contra",
+      "EC_nuclei": 34
+    },
+    {
+      "gsm": "GSM7976209",
+      "source_group": "mMCAO_ipsi",
+      "EC_nuclei": 42
+    },
+    {
+      "gsm": "GSM7976210",
+      "source_group": "sMCAO_contra",
+      "EC_nuclei": 14
+    }
+  ],
+  "interpretation": "Exploratory pooled cross-model context only; cannot validate vascular stroke targets or PET suitability"
+}
