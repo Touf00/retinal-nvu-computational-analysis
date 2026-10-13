@@ -2,7 +2,7 @@
 
 **Work location:** `Touf00/retinal-nvu-computational-analysis` → branch `imacs-stroke-pet-screen` → directory `IMACS_Stroke_PET/`.
 
-**This is an isolated branch inside an EXISTING repository, not a separately created repository.** The original retinal-NVU analysis on `main` remains untouched. Do **not** merge this IMACS branch into the retinal main branch. When a new dedicated repository is created, copy the full `IMACS_Stroke_PET/` tree plus the seven `.github/workflows/imacs_*.yml` workflows; update hard-coded raw-GitHub candidate-catalog URLs to the new repository.
+**This is an isolated branch inside an EXISTING repository, not a separately created repository.** The original retinal-NVU analysis on `main` remains untouched. Do **not** merge this IMACS branch into the retinal main branch. When a new dedicated repository is created, copy the full `IMACS_Stroke_PET/` tree plus all `.github/workflows/imacs_*.yml` workflows; update hard-coded raw-GitHub candidate-catalog URLs to the new repository.
 
 ## Source code and Colab notebooks
 
@@ -19,6 +19,8 @@
 
 | Independent tMCAO day-3 2026 spatial transcriptomic matrix GSE337578 | `notebooks/09_spatial_GSE337578_day3_screen.ipynb` | `imacs_spatial_day3_2026.yml` |
 | Human n6 paired autopsy infarct core vs contralateral array GSE162955 | `notebooks/10_human_paired_GSE162955_screen.ipynb` | `imacs_human_paired.yml` |
+| Independent author-annotated brain EC: 4 sham pools vs 4 stroke pools, day2, GSE225948 | `notebooks/11_GSE225948_FACS_EC_4v4_day2.ipynb` | `imacs_GSE225948_day2.yml` |
+| Independent stroke-only day14 versus day2 EC pools, GSE225948 | `notebooks/12_GSE225948_FACS_EC_day2_vs_day14.ipynb` | `imacs_GSE225948_day14.yml` |
 | Original Zucha lesion region label API access audit | `scripts/probe_spatial_region_source.py` | `imacs_spatial_source_probe.yml` |
 
 Each notebook is Colab-compatible via:
@@ -26,7 +28,7 @@ Each notebook is Colab-compatible via:
 
 ## Permanent processed results
 
-`results/primary/`, `results/temporal/`, `results/rat/`, `results/spatial/`, `results/atlas/`, `results/independent_sources/`, `results/independent/`, `results/integrated/`.
+`results/primary/`, `results/temporal/`, `results/rat/`, `results/spatial/`, `results/atlas/`, `results/independent_sources/`, `results/independent/`, `results/independent_day2/`, `results/independent_late/`, `results/integrated/`.
 
 All of these processed tables were **verified as committed to this branch**. The independent validation workflow succeeded and the recovery publisher completed successfully at GitHub Actions run `38323537320`.
 
@@ -49,6 +51,10 @@ Every successfully archived dataset directory includes `source_run_id.txt`: the 
 **GSE223744 — completed independently replicated purified endothelial RNA.** Four ipsilateral ischemia versus four **naïve** sorted CD31+ mouse endothelial samples. Fractional `expected_counts` used for per-sample log2CPM and exact n4+n4 label permutation, with BH across the prespecified 29-gene panel only. This is a true independent model cohort but **not operated-sham-controlled**, and does not establish PET binding.
 
 **GSE286075 — completed paired astrocyte-endfoot RiboTag RNA.** Three ipsilateral-versus-contralateral animal PAIRS following 2h ischemia and 6h reperfusion. STAR unstranded read-count column and Ensembl-to-symbol map traced to the purified-endothelial experiment. Two-sided sign flips n3 cannot establish p<0.25; directional evidence only, not MAO-B protein measurement.
+
+**GSE225948 day2 — source-audited author-annotated EC; pooled preparations only.** Four pooled Sham and four pooled tMCAO preparations; fractional expression matrices and non-matched processing batches. No BH q<.05 for any 28 tested genes either across whole EC or within EC1. EC2 is inadequately captured in Sham for valid inference. Do NOT claim individual mice n=4/group, causal expression changes, or true cell-type composition change.
+
+**GSE225948 stroke day14 versus day2 — source-audited, no sham day14.** Four pooled stroke preparations at each timepoint; no panel-wide BH discoveries either in whole EC or within EC1. This is an unpaired disease-stage comparison, not a validated stroke-vs-sham response or causal progression.
 
 **SCP3078 — metadata audited, full expression BLOCKED.** Public Single Cell Portal metadata expose a 5,004,976,071-byte H5AD; attempted download and stream return unauthorized response to GitHub runner. Raw expression not accessed, hence NOT analyzed. The source is an integrated atlas of partially overlapping input datasets; even with expression access, it cannot count as an independent biological replication until component study IDs are recovered.
 
