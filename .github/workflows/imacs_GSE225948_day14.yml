@@ -1,0 +1,43 @@
+name: IMACS replicated day2 versus day14 stroke EC comparison
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/notebooks/12_GSE225948_FACS_EC_day2_vs_day14.ipynb"
+      - ".github/workflows/imacs_GSE225948_day14.yml"
+  workflow_dispatch:
+jobs:
+  stroke_day14:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_stroke_GSE225948_late
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install notebook tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install jupyter nbconvert ipykernel
+      - name: Execute day14 vs day2 ischemia-stage analysis
+        run: |
+          mkdir -p executed
+          jupyter nbconvert --to notebook --execute \
+            IMACS_Stroke_PET/notebooks/12_GSE225948_FACS_EC_day2_vs_day14.ipynb \
+            --output "${{ github.workspace }}/executed/12_GSE225948_EC_day14_vs_day2.executed.ipynb" \
+            --ExecutePreprocessor.timeout=7000 \
+            --ExecutePreprocessor.kernel_name=python3
+      - name: Upload source-audited results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-GSE225948-day14-vs-day2-EC
+          path: |
+            executed/
+            imacs_stroke_GSE225948_late/results/
+          if-no-files-found: warn
+          retention-days: 30
