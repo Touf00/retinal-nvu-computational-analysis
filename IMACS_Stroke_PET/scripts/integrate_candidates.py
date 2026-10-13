@@ -73,7 +73,15 @@ for gene in genes:
         na=fetch(r,(gene,ct,"sMCAO_ipsi"),"n_cells")
         nb=fetch(r,(gene,ct,"Sham_R"),"n_cells")
         d["rat_48h_severe_ipsi_minus_sham_right_mean_log1p"]=a-b if pd.notna(a) and pd.notna(b) else np.nan
-        d["rat_48h_qualified_for_descriptive_interpretation"]=bool(pd.notna(na) and pd.notna(nb) and na>=50 and nb>=50)
+        feature_present=bool(pd.notna(a) and pd.notna(b))
+        enough_cells=bool(pd.notna(na) and pd.notna(nb) and na>=50 and nb>=50)
+        d["rat_48h_feature_present_both_pooled_groups"]=feature_present
+        d["rat_48h_qualified_for_descriptive_interpretation"]=bool(feature_present and enough_cells)
+        d["rat_48h_comparison_gate"]=(
+            "BLOCK_MISSING_SOURCE_FEATURE" if not feature_present else
+            "BLOCK_LOW_CELL_CAPTURE" if not enough_cells else
+            "DESCRIPTIVE_ONLY_NO_ANIMAL_REPLICATION"
+        )
         d["rat_severe_ipsi_recovered_nuclei"]=na
         d["rat_sham_right_recovered_nuclei"]=nb
 
