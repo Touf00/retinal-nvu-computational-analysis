@@ -1,0 +1,7 @@
+gsm,title,source,source_includes_epilepsy_surgical_controls,captured_cells_before,qc_accepted_cells,qc_retention_fraction,median_features_after,median_UMI_after,median_mito_fraction_after,noninteger_original_matrix_fraction,measurement_level
+GSM8101534,TL_patient1_EC,GSE256490,True,20073,19910,0.9918796393164948,1611.5,3575.5,1.7428130530482315,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"
+GSM8101535,TL_patient2_EC,GSE256490,True,6265,6228,0.9940941739824422,884.0,1540.0,1.704035874439462,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"
+GSM8101536,TL_patient3_EC,GSE256490,False,7066,6256,0.8853665440135862,2949.0,8168.5,10.286297838411155,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"
+GSM8101537,TL_patient4_EC,GSE256490,False,2348,1896,0.807495741056218,1782.5,3708.5,8.579413586654717,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"
+GSM8101538,TL_patient5_EC,GSE256490,False,7574,7045,0.9301557961447056,2170.0,4950.0,8.304579215158782,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"
+GSM8101539,TL_patient6_EC,GSE256490,False,9155,8916,0.9738940469688695,2342.0,5435.0,5.762433878146921,0.0,"FACS CD31+ CD45- pooled-cell distribution, not donor-level stroke comparison"

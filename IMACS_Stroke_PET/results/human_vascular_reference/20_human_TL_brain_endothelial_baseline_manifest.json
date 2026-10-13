@@ -1,0 +1,30 @@
+{
+  "accession": "GSE256490",
+  "source_publication": "W\u00e4lchli et al. Nature 2024",
+  "doi": "10.1038/s41586-024-07493-y",
+  "specimen": "six distinct GEO TL_patient[1-6]_EC surgical adult temporal lobe samples",
+  "sampling": "FACS sorted CD31-positive CD45-negative endothelial-enriched tissue; may contain other cell types",
+  "donor_context": "controls from brain surgery; first two matrix filenames explicitly say Epilepsy; not healthy population controls",
+  "n_original_GEO_preparations": 6,
+  "GSM": [
+    "GSM8101534",
+    "GSM8101535",
+    "GSM8101536",
+    "GSM8101537",
+    "GSM8101538",
+    "GSM8101539"
+  ],
+  "individual_cells_biological_replicates": false,
+  "normalization": "per-cell library-size normalized log1p(10000*source_U MI/total); expression and detection descriptive",
+  "cross_stroke_comparison": "NOT PERFORMED: NO ISCHEMIC BRAIN IN THIS SELECTION",
+  "interpretation": "Patient-level baseline detection in human surgical brain EC, NOT independent validation of stroke induction or human BBB luminal protein",
+  "gene_symbol_mapping": "exact same deposited HGNC symbol (case insensitive), duplicate source features summed; absent != biologically absent",
+  "source_sha256_in": "20_GSE256490_human_TL_source_sha256.csv",
+  "protein_or_PET_feasibility": false,
+  "summary": {
+    "n_target_genes": 29,
+    "genes_covered_in_all_six_preparations": 29,
+    "genes_detected_in_at_least_10pct_cells_in_all_six": 8,
+    "total_cells_after_QC": 50251
+  }
+}
