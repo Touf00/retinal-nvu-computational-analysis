@@ -27,9 +27,13 @@ for gsm in ids:
             binary=session.get(file_url,timeout=180);binary.raise_for_status()
             raw=binary.content
             text=gzip.decompress(raw).decode("utf-8-sig")
-            sample=pd.read_csv(io.StringIO(text),nrows=6) if False else None
+            sample=pd.read_csv(io.StringIO(text),index_col=0)
             first=list(csv.reader(io.StringIO(text)))[:6]
             schema={"header":first[0],"first_rows":first[1:4],"total_csv_lines":len(text.splitlines())}
+            schema["parent_counts"]=sample["parent"].astype(str).value_counts().to_dict()
+            schema["sub_celltype_counts"]=sample["sub.celltype"].astype(str).value_counts().to_dict()
+            schema["cell_barcode_unique"]=bool(sample.index.is_unique)
+            schema["cell_barcode_count"]=int(len(sample))
             (root/f"{gsm}_metadata_schema.json").write_text(json.dumps(schema,indent=2))
             rows.append({"gsm":gsm,"kind":kind,"url":file_url,"filename":fname,"bytes":len(raw),
                          "sha256":hashlib.sha256(raw).hexdigest(),"n_columns_firstline":len(first[0]),
