@@ -23,10 +23,10 @@ Study: https://www.nature.com/articles/s41467-024-50465-z ; GEO: https://www.ncb
 
 ## GSE233814 / GSE233815 — Zucha et al. (PNAS 2024)
 Original dataset: https://data.mendeley.com/datasets/gnb2dsjms2/1 ; GEO: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE233814
-- Five spatial sections: control, day1, day3, and TWO day7 sections. Sections must NOT automatically be equated with different animals.
+- Five GEO spatial sections initially processed: control, day1, day3 and two day7. Original Zucha Integration Rmd explicitly REMOVED D7b after initial integration because D7b was sampled at bregma +0.5 mm vs the other sections at -1.3 mm. Thus the final processed author Seurat likely has FOUR sections and a five-map crosswalk is scientifically inappropriate unless the object actually includes D7b. Sections are not automatically different animals.
 - Original DetailedRegionAnnoShort metadata must be recovered from published processed Seurat spatial_seurat_1DP_13_nygen.rds; prior Mendeley API probes received HTTP 403. No original region metadata has yet been accessed or transferred into existing spot expression tables.
-- Updated source exporter: scripts/export_zucha_region_annotations.R. New strict importer: scripts/validate_zucha_author_region_crosswalk.py. Both require genuine author fields; mapping day7 by timepoint is refused.
-- Synthetic crosswalk self-test passed including rejection of ambiguous day7 mapping: https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38432907826 . This is software validation, NOT biological label recovery.
+- Updated source exporter: scripts/export_zucha_region_annotations.R. New strict importer: scripts/validate_zucha_author_region_crosswalk.py. Both require genuine author fields; mapping day7 by timepoint is refused, and the crosswalk accepts the original author's valid four-section final object or a source-verified five-section object.
+- Synthetic crosswalk self-test passed for both four- and five-section maps, including rejection of ambiguous day7 mapping: https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38432907826 . This is software validation, NOT biological label recovery.
 - No original lesion core/periphery evidence, cell-type-specific expression or inferential p-values is established from current spatial archives.
 
 Next genuine source requirements: mouse author barcode-to-label table (if released); rat original author cluster/barcode mapping and animal provenance (if separable); spatial published Seurat RDS and exact five-section mapping. Raw published inputs must not be committed into this repository.
