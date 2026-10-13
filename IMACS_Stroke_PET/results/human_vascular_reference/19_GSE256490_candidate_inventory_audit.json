@@ -1,0 +1,45 @@
+{
+  "dataset": "GSE256490",
+  "paper": "W\u00e4lchli et al. Nature 2024, DOI 10.1038/s41586-024-07493-y",
+  "source_family_soft": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE256nnn/GSE256490/soft/GSE256490_family.soft.gz",
+  "compressed_source_sha256": "c56554a9cd005f8f8b642befad7ae36a9667ce28261d1c236659a312fde05afd",
+  "total_GEO_libraries": 71,
+  "candidate_adult_TL_CD31_CD45neg_endothelial_libraries": 6,
+  "candidate_libraries_missing_any_matrix_url": [],
+  "candidate_GEO_titles": [
+    {
+      "gsm": "GSM8101534",
+      "title": "TL_patient1_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient1"
+    },
+    {
+      "gsm": "GSM8101535",
+      "title": "TL_patient2_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient2"
+    },
+    {
+      "gsm": "GSM8101536",
+      "title": "TL_patient3_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient3"
+    },
+    {
+      "gsm": "GSM8101537",
+      "title": "TL_patient4_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient4"
+    },
+    {
+      "gsm": "GSM8101538",
+      "title": "TL_patient5_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient5"
+    },
+    {
+      "gsm": "GSM8101539",
+      "title": "TL_patient6_EC",
+      "characteristics": "tissue: adult/control brain; cell line: Endothelial cells; cell type: Adult; genotype: Temporal lobe; treatment: control; treatment: TL_patient6"
+    }
+  ],
+  "patient_mapping": "DO NOT INFER INDIVIDUAL DONOR COUNTS FROM LIBRARY NAMES",
+  "disease_scope": "Non-stroke adult temporal-lobe control vascular reference ONLY",
+  "downstream_role": "Healthy cerebral EC target baseline / background expression; not stroke change or PET ligand proof",
+  "selection_basis": "GEO title TL and token EC without UNSORTED/FETAL"
+}
