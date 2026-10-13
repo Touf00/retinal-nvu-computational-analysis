@@ -1,5 +1,8 @@
 # IMACS Stroke/NVU PET screen
 
+> **Proposal-screening scope correction (13 October 2026):** This project is to choose and prepare a practical 36-month **IMACS imaging fellowship proposal**, NOT to publish a dry-lab paper, obtain human autopsy tissue, or develop nine PET agents. Read **[current host-matched proposal decision](IMACS_2026_PROPOSAL_SCREEN_AND_PROJECT_DECISION.md)** first. The preferred concept is a single existing CERIMED angiogenesis PET tracer tested for delayed neurovascular recovery after cerebral ischemia, with an early fail-fast brain feasibility gate; [68Ga]Ga-sCD146/AMOT is provisional primary and [68Ga]Ga-AP747/APJ conditional fallback, subject to host tracer access. Earlier human-tissue procurement and exhaustive protein/PET-readiness documents are OPTIONAL FUTURE VALIDATION NOTES, not screening prerequisites. Do not contact tissue banks or require PI/clinical permissions merely to finalize the proposal.
+
+
 Temporary isolated working branch for the IMACS Aix-Marseille project screen. Nothing here is merged into the retinal-NVU project on `main`.
 
 ## Purpose
