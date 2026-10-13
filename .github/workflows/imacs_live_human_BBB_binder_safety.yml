@@ -1,0 +1,31 @@
+name: IMACS live human BBB luminal binder feasibility safeguards
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_live_human_BBB_binder_safety.yml"
+      - "IMACS_Stroke_PET/scripts/analyze_live_human_BBB_binder_access.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  live_luminal_safeguards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify matched human BBB live binding controls and permeability fail-closed rules
+        run: python IMACS_Stroke_PET/scripts/analyze_live_human_BBB_binder_access.py --self-test
+      - name: Ensure no fabricated real human BBB binder measurements were committed
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -d IMACS_Stroke_PET/results/human_vessel_BINDER_actual
+          echo "Synthetic self-test only; no live or clinical BBB assay performed."
