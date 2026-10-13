@@ -4,6 +4,7 @@ on:
     branches: [imacs-stroke-pet-screen]
     paths:
       - ".github/workflows/imacs_archive_outputs.yml"
+      - "IMACS_Stroke_PET/scripts/audit_all_results.py"
   workflow_dispatch:
 
 jobs:
