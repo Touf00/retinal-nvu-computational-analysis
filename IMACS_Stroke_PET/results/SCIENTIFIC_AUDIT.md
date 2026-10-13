@@ -6,7 +6,7 @@ Generated from committed processed results. Execution success is not scientific 
 |---|---|---|
 | mouse_acute_samples | PASS | 6 sample rows |
 | mouse_acute_animal_level_permutations | PASS | 116 candidate x compartment rows; minimum exact p=0.100; cannot claim p<0.05 |
-| mouse_acute_DESeq2 | PASS | 0 unresolved DESeq2 errors; use exact-label direction analysis only |
+| mouse_acute_DESeq2 | PASS | 0 unresolved errors; complete four-compartment analysis: True; n=3/group parametric Wald p-values require careful scrutiny, exact permutation floor 0.10 |
 | mouse_temporal | PASS | 4 deposited conditions; ONE SAMPLE per condition, descriptive only |
 | mouse_temporal_pseudoreplication | PASS | No spurious cell-level inferential p-values |
 | rat_48h | PASS | 6 condition/hemisphere matrices; individual rat identities NOT recoverable |
@@ -16,6 +16,8 @@ Generated from committed processed results. Execution success is not scientific 
 | spatial_celltypes | CHECK | Mixed Visium spots; no core/periphery annotations; do not assign cell type or lesion location |
 | independent_sorted_endothelial_4v4 | PASS | 29 frozen genes, 4 ischemia vs 4 naive control; permutation p min=0.0286; naïve controls not shams |
 | independent_astro_endfeet_3paired | PASS | 29 genes with 3 contralateral/ipsilateral pairs; no population-level significance |
+| new_2026_independent_spatial_day3 | PASS | GSE337578 one library; 30560 spatial units; no sham control or validated region masks; descriptive only |
+| human_six_paired_brain_infarct | PASS | 6 matched postmortem brain tissue donors, 27 mapped candidate genes. Microarray core-vs-contralateral; not vessel-specific and not PET proof. |
 
 ## Mandatory interpretation constraints
 - Do not pool cells/spots as biological replicates.

@@ -1,0 +1,11 @@
+{
+  "accession": "GSE162955",
+  "organism": "Homo sapiens",
+  "platform": "GPL17586",
+  "n_paired_donors": 6,
+  "comparisons": "autopsy infarct core vs matched contralateral",
+  "statistic": "exact two-sided six-pair signflip, 64 configurations",
+  "normalization": "author processed microarray log2 intensity",
+  "celltype_resolution": "none; whole tissue",
+  "target_protein_or_PET_validation": false
+}

@@ -12,7 +12,7 @@
   {
     "name": "mouse_acute_DESeq2",
     "status": "PASS",
-    "detail": "0 unresolved DESeq2 errors; use exact-label direction analysis only"
+    "detail": "0 unresolved errors; complete four-compartment analysis: True; n=3/group parametric Wald p-values require careful scrutiny, exact permutation floor 0.10"
   },
   {
     "name": "mouse_temporal",
@@ -58,5 +58,15 @@
     "name": "independent_astro_endfeet_3paired",
     "status": "PASS",
     "detail": "29 genes with 3 contralateral/ipsilateral pairs; no population-level significance"
+  },
+  {
+    "name": "new_2026_independent_spatial_day3",
+    "status": "PASS",
+    "detail": "GSE337578 one library; 30560 spatial units; no sham control or validated region masks; descriptive only"
+  },
+  {
+    "name": "human_six_paired_brain_infarct",
+    "status": "PASS",
+    "detail": "6 matched postmortem brain tissue donors, 27 mapped candidate genes. Microarray core-vs-contralateral; not vessel-specific and not PET proof."
   }
 ]
