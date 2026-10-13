@@ -1,0 +1,46 @@
+name: IMACS human stroke vascular protein literature-grade QC
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_human_protein_evidence_qc.yml"
+      - "IMACS_Stroke_PET/scripts/audit_human_protein_evidence_gate.py"
+      - "IMACS_Stroke_PET/results/target_validation_gate/22_human_ischemic_vascular_protein_and_tracer_evidence.csv"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  evidence_gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check each direct human protein grade, sources, and modality
+        run: python IMACS_Stroke_PET/scripts/audit_human_protein_evidence_gate.py
+      - name: Archive checked literature gate manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/target_validation_gate/22_human_stroke_protein_evidence_consistency.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive ischemic human vascular protein evidence-grade check [skip ci]"
+            git fetch origin imacs-stroke-pet-screen
+            git rebase origin/imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve QC gate results on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-human-vascular-protein-literature-evidence-QC
+          path: IMACS_Stroke_PET/results/target_validation_gate/22_human_stroke_protein_evidence_consistency.json
+          if-no-files-found: warn
+          retention-days: 30
