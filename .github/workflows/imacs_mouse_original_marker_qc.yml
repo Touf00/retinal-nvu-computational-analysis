@@ -1,0 +1,59 @@
+name: IMACS original Zheng GSE174574 marker concordance
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_mouse_original_marker_qc.yml"
+      - "IMACS_Stroke_PET/scripts/validate_GSE174574_original_paper_markers.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mouse_marker_qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      IMACS_ROOT: ${{ github.workspace }}/imacs_mouse_original_marker_qc
+      OPENBLAS_NUM_THREADS: "2"
+      OMP_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install original-clustering analysis dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "scanpy>=1.10,<1.12" "anndata>=0.10" "leidenalg>=0.10" "igraph>=0.11" matplotlib requests
+      - name: Rerun six original source matrices with Zheng published marker cross-check
+        run: python IMACS_Stroke_PET/scripts/validate_GSE174574_original_paper_markers.py
+      - name: Archive marker QC only on isolated IMACS branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p IMACS_Stroke_PET/results/mouse_author_marker_validation
+          cp "$IMACS_ROOT/results"/16_Zheng_* IMACS_Stroke_PET/results/mouse_author_marker_validation/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/mouse_author_marker_validation/
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive GSE174574 original-paper marker concordance [skip ci]"
+            git fetch origin imacs-stroke-pet-screen
+            git rebase origin/imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve reproducible result and execution logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-GSE174574-Zheng-marker-qc
+          path: |
+            imacs_mouse_original_marker_qc/results/16_Zheng_*
+            IMACS_Stroke_PET/results/mouse_author_marker_validation/
+          if-no-files-found: warn
+          retention-days: 30
