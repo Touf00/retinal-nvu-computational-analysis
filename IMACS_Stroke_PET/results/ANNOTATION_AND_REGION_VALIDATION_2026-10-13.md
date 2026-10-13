@@ -8,7 +8,7 @@ Original publication: https://pmc.ncbi.nlm.nih.gov/articles/PMC8721774/ ; GEO: h
 - Published marker genes Itm2a (endothelium), Hexb (microglia), Aldoc (astrocyte), Plp1 (oligodendrocyte), Ttr (ependymal/CP), Acta2 (VSMC) were present and most highly expressed in the corresponding in-house broad classes on six-sample mean expression.
 - Only Itm2a was absent from the original in-house classifier marker panel; the other five markers partially reuse inputs used for classification and cannot be labeled independent validation.
 - Ttr detected in essentially all cells across many unrelated in-house broad cell classes, despite highest mean level in Ependymal_CP. Possible ambient/background signal must be audited before interpreting isolated Ttr positivity.
-- Re-executing with Scanpy 1.11.5 changed 47 sample-by-class count slots versus archived values, maximum absolute change 52 cells; source checksums were identical. Do not claim exact label or pseudobulk reproducibility.
+- In the full-order rerun (restoring the original UMAP and raw-layer setup) with Scanpy 1.11.5, 43 sample-by-class count slots differed from archived values, maximum absolute difference 207 cells (MCAO2 Ependymal_CP); original source SHA256 files were identical. The earlier shortened marker run had 47 slots / maximum 52, and is superseded. The changes in broad labels could affect pseudobulk estimates; do not claim exact label or DE reproducibility from this marker audit.
 - Original paper resolved 17 types (including arterial, capillary, venous EC). Our pipeline assigns broad computational categories and has NOT recovered original published per-cell identity mappings.
 - Executed validation: https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38431719568
 
