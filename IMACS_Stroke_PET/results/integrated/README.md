@@ -16,3 +16,7 @@ not a matched sham-controlled repetition. Endfoot n=3 data are paired ipsilatera
 versus contralateral and reflect early ribosome-bound RNA, not global astrocytes.
 Time-series data have no within-condition animal replication and marker-based
 cell annotations require independent curation before biological validation.
+GSE174574 re-clustering sensitivity is now included as a separate column:
+29/29 endothelial directions were stable in this one in-house rerun,
+but 11/29 pericyte directions reversed. This is NOT an original author
+cell-ID comparison, independent animal replication, or PET target validation.
