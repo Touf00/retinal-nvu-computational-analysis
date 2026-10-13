@@ -53,6 +53,8 @@ jobs:
           IMACS full SCP3078 atlas screen|imacs-full-atlas-processed|imacs_stroke_pet_atlas_full/results|atlas_full
           IMACS independent validation source audit|imacs-independent-source-audit|imacs_stroke_pet_validation/results|independent_sources
           IMACS independent vascular astro target validation|imacs-independent-biological-validation|imacs_stroke_pet_independent/results|independent
+          IMACS independent day3 tMCAO spatial check|imacs-spatial-day3-2026-results|imacs_day3_2026/results|spatial_day3
+          IMACS processed spatial region source probe|imacs-spatial-source-probe|.|source_probes
           EOF
 
       - name: Run scientific audit after collecting data
