@@ -1,0 +1,46 @@
+name: IMACS rat pooled-design and feature QC audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_rat_provenance_qc.yml"
+      - "IMACS_Stroke_PET/scripts/audit_GSE250245_rat_pseudoreplication.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rat_qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Revalidate pooled rat GEO design, QC and feature eligibility
+        run: python IMACS_Stroke_PET/scripts/audit_GSE250245_rat_pseudoreplication.py
+      - name: Archive corrected eligibility and provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/rat_provenance_qc/
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive rat pooled-preparation feature eligibility QC [skip ci]"
+            git pull --rebase origin imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve QC outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-rat-pooled-provenance-QC
+          path: IMACS_Stroke_PET/results/rat_provenance_qc/
+          if-no-files-found: warn
+          retention-days: 30
