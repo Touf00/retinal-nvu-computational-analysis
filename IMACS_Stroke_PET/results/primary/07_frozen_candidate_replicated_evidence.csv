@@ -1,291 +1,291 @@
 gene,celltype,mean_log1p,pct_detected,n_cells,axis,role,initial_disposition,baseMean,log2FoldChange,lfcSE,pvalue,padj,direction,sample_level_inference
 Aplnr,Ambiguous,0.0,0.0,73,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Astrocyte,0.002439189702272415,0.2010916403332376,3481,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Endothelial,0.026943471282720566,1.7123026466325983,26222,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Ependymal_CP,0.0018969530938193202,0.2044525215810995,4402,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Microglia,0.002995444694533944,0.2483630616391962,13287,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Myeloid,0.0027633446734398603,0.26200873362445415,4580,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Oligodendrocyte,0.0,0.0,1517,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,Pericyte,0.003364394186064601,0.30272452068617556,991,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,VLMC_Fibroblast,0.013681275770068169,0.9689922480620154,516,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Aplnr,VSMC,0.001310490071773529,0.10548523206751054,2844,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Astrocyte,0.0027967123314738274,0.230566534914361,3036,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Endothelial,0.02690546214580536,1.7091420107106232,26329,APJ vascular repair,host tracer target,KEEP,83.09879832927244,-0.3884036855730202,0.19810073286213306,0.049921348232397716,0.1139869291687172,down,pseudobulk 3+3
+Aplnr,Ependymal_CP,0.0018956612329930067,0.20431328036322363,4405,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Microglia,0.0029170680791139603,0.2418645558487247,13644,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Myeloid,0.0027603311464190483,0.2617230098146129,4585,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Oligodendrocyte,0.0,0.0,1508,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,Pericyte,0.004743007943034172,0.41050903119868637,1218,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,VLMC_Fibroblast,0.013107189908623695,1.0126582278481013,395,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Aplnr,VSMC,0.0004721191944554448,0.03676470588235294,2720,APJ vascular repair,host tracer target,KEEP,,,,,,untested,not available
 Apln,Ambiguous,0.0,0.0,73,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Astrocyte,0.10282005369663239,7.526572823901177,3481,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Endothelial,0.02858573943376541,1.6665395469453133,26222,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Ependymal_CP,0.008611991070210934,0.7496592457973649,4402,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Microglia,0.007186493836343288,0.5569353503424399,13287,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Myeloid,0.006588089745491743,0.5676855895196506,4580,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Oligodendrocyte,0.17855454981327057,16.01845748187212,1517,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,Pericyte,0.01846196874976158,1.109989909182644,991,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,VLMC_Fibroblast,0.01986461505293846,1.3565891472868217,516,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apln,VSMC,0.004609514493495226,0.3867791842475387,2844,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,Astrocyte,0.10869869589805603,7.905138339920949,3036,APJ pathway,context,CONTEXT,48.62606609646841,-1.1549345742381059,0.2667289156763319,1.4911348146167477e-05,0.000366826051854448,down,pseudobulk 3+3
+Apln,Endothelial,0.028774632140994072,1.6825553572106804,26329,APJ pathway,context,CONTEXT,151.3404588154398,2.8381955987502265,0.1869127088414405,4.472512596055014e-52,3.6020710623291174e-50,up,pseudobulk 3+3
+Apln,Ependymal_CP,0.008606125600636005,0.7491486946651532,4405,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,Microglia,0.009091997519135475,0.7109352096159485,13644,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,Myeloid,0.006580905057489872,0.5670665212649946,4585,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,Oligodendrocyte,0.17828084528446198,15.981432360742707,1508,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,Pericyte,0.020991023629903793,1.3957307060755337,1218,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,VLMC_Fibroblast,0.009065518155694008,0.5063291139240507,395,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apln,VSMC,0.002146398648619652,0.1838235294117647,2720,APJ pathway,context,CONTEXT,,,,,,untested,not available
 Apela,Ambiguous,0.0,0.0,73,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Astrocyte,0.0014826719416305423,0.08618213157138753,3481,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Endothelial,5.168338248040527e-05,0.003813591640607124,26222,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Ependymal_CP,0.0,0.0,4402,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Microglia,0.00013263900473248214,0.007526153383005946,13287,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Myeloid,0.0,0.0,4580,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Oligodendrocyte,0.0,0.0,1517,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,Pericyte,0.0,0.0,991,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,VLMC_Fibroblast,0.0,0.0,516,APJ pathway,context,CONTEXT,,,,,,untested,not available
-Apela,VSMC,0.0,0.0,2844,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Astrocyte,0.0012427193578332663,0.06587615283267458,3036,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Endothelial,5.147334377397783e-05,0.0037980933571347187,26329,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Ependymal_CP,0.0,0.0,4405,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Microglia,0.00023091906041372567,0.01465845793022574,13644,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Myeloid,0.0,0.0,4585,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Oligodendrocyte,0.0,0.0,1508,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,Pericyte,0.0,0.0,1218,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,VLMC_Fibroblast,0.0,0.0,395,APJ pathway,context,CONTEXT,,,,,,untested,not available
+Apela,VSMC,0.0,0.0,2720,APJ pathway,context,CONTEXT,,,,,,untested,not available
 Amot,Ambiguous,0.052258506417274475,2.73972602739726,73,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Astrocyte,0.05393603816628456,4.021832806664752,3481,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Endothelial,0.05637768656015396,3.580962550530089,26222,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Ependymal_CP,0.01720184087753296,1.4766015447523853,4402,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Microglia,0.009626014158129692,0.7601414916836006,13287,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Myeloid,0.008807562291622162,0.8078602620087336,4580,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Oligodendrocyte,0.01396501436829567,1.2524719841793013,1517,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,Pericyte,0.017076589167118073,1.2108980827447022,991,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,VLMC_Fibroblast,0.03680069372057915,2.7131782945736433,516,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
-Amot,VSMC,0.011456952430307865,0.9845288326300985,2844,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,Astrocyte,0.050053782761096954,3.8866930171278,3036,angiomotin vascular repair,host tracer target,KEEP,18.85966568244687,-0.14763182907750091,0.39586430309140913,0.7091964924711384,0.9004603424984458,down,pseudobulk 3+3
+Amot,Endothelial,0.05646082013845444,3.589198222492309,26329,angiomotin vascular repair,host tracer target,KEEP,158.17893476982667,-0.7273028513155106,0.15097323922722022,1.4541985656922626e-06,1.024622189835772e-05,down,pseudobulk 3+3
+Amot,Ependymal_CP,0.01690983772277832,1.452894438138479,4405,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,Microglia,0.011380593292415142,0.8575197889182058,13644,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,Myeloid,0.009067242033779621,0.8287895310796075,4585,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,Oligodendrocyte,0.014048360288143158,1.259946949602122,1508,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,Pericyte,0.025114597752690315,2.134646962233169,1218,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,VLMC_Fibroblast,0.04575143754482269,3.2911392405063293,395,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
+Amot,VSMC,0.007362155243754387,0.5514705882352942,2720,angiomotin vascular repair,host tracer target,KEEP,,,,,,untested,not available
 Mcam,Ambiguous,0.07543899118900299,4.10958904109589,73,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Astrocyte,0.045498210936784744,3.389830508474576,3481,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Endothelial,0.06050538644194603,3.9928304477156584,26222,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Ependymal_CP,0.025718508288264275,2.339845524761472,4402,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Microglia,0.027271583676338196,2.0546398735606233,13287,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Myeloid,0.03230041265487671,2.554585152838428,4580,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Oligodendrocyte,0.24951310455799103,21.951219512195124,1517,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,Pericyte,0.39511939883232117,24.419778002018163,991,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,VLMC_Fibroblast,0.031900692731142044,2.3255813953488373,516,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
-Mcam,VSMC,1.1510002613067627,65.85794655414908,2844,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,Astrocyte,0.03891540318727493,2.9644268774703555,3036,CD146-AMOT axis,context,KEEP,14.689870743765935,0.5490675130032776,0.46181273916237064,0.23446338490243823,0.5649183388330179,up,pseudobulk 3+3
+Mcam,Endothelial,0.060497988015413284,3.9917961183485886,26329,CD146-AMOT axis,context,KEEP,203.69695685767508,1.9248602139813644,0.15596939527233097,5.429355432430977e-35,2.5875860628346133e-33,up,pseudobulk 3+3
+Mcam,Ependymal_CP,0.026010114699602127,2.3609534619750283,4405,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,Microglia,0.02440810389816761,1.817648783347992,13644,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,Myeloid,0.03158268332481384,2.5081788440567068,4585,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,Oligodendrocyte,0.2504197359085083,22.015915119363395,1508,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,Pericyte,0.5090808272361755,32.43021346469622,1218,CD146-AMOT axis,context,KEEP,94.39770865523512,-0.2974267230695308,0.18032442157443787,0.09906614375856912,0.39647171804265824,down,pseudobulk 3+3
+Mcam,VLMC_Fibroblast,0.031780026853084564,2.278481012658228,395,CD146-AMOT axis,context,KEEP,,,,,,untested,not available
+Mcam,VSMC,1.1451425552368164,65.22058823529412,2720,CD146-AMOT axis,context,KEEP,545.410225411849,-0.3176213920955514,0.0983193190572179,0.0012357024695329613,0.01343861781797574,down,pseudobulk 3+3
 Maob,Ambiguous,0.0,0.0,73,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Astrocyte,0.15485602617263794,11.548405630565929,3481,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Endothelial,0.05120505020022392,3.268248036000305,26222,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Ependymal_CP,0.19588221609592438,17.105860972285324,4402,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Microglia,0.015890004113316536,1.2568676149619928,13287,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Myeloid,0.019990094006061554,1.7685589519650653,4580,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Oligodendrocyte,0.020098362118005753,1.977587343441002,1517,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,Pericyte,0.03782354295253754,2.6236125126135215,991,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,VLMC_Fibroblast,0.029007619246840477,2.3255813953488373,516,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
-Maob,VSMC,0.019607320427894592,1.4767932489451476,2844,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,Astrocyte,0.16769185662269592,12.318840579710146,3036,astrocyte-associated MAO-B,external PET target,KEEP,68.29298533892529,-0.2835276201331654,0.21175841304898502,0.18059664765621486,0.4970841061586565,down,pseudobulk 3+3
+Maob,Endothelial,0.05122314766049385,3.2701583804929926,26329,astrocyte-associated MAO-B,external PET target,KEEP,145.61867690937447,-0.7135423280600511,0.16538775084839663,1.600657933180188e-05,9.456068802097442e-05,down,pseudobulk 3+3
+Maob,Ependymal_CP,0.19574879109859467,17.094211123723042,4405,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,Microglia,0.017234403640031815,1.3998827323365584,13644,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,Myeloid,0.02022935077548027,1.7884405670665213,4585,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,Oligodendrocyte,0.019404800608754158,1.9230769230769231,1508,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,Pericyte,0.03811097890138626,2.7914614121510675,1218,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,VLMC_Fibroblast,0.037893496453762054,3.0379746835443036,395,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
+Maob,VSMC,0.017215872183442116,1.25,2720,astrocyte-associated MAO-B,external PET target,KEEP,,,,,,untested,not available
 Mfsd2a,Ambiguous,0.4056348204612732,20.54794520547945,73,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Astrocyte,0.6337512135505676,40.44814708417122,3481,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Endothelial,0.7559199929237366,39.878727785828694,26222,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Ependymal_CP,0.09258759766817093,8.087233075874604,4402,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Microglia,0.09857632964849472,7.104688793557614,13287,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Myeloid,0.08923034369945526,6.899563318777292,4580,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Oligodendrocyte,0.21636877954006195,18.391562294001318,1517,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,Pericyte,0.17350643873214722,11.200807265388496,991,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,VLMC_Fibroblast,0.06524772197008133,5.426356589147287,516,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Mfsd2a,VSMC,0.08135851472616196,6.0829817158931085,2844,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,Astrocyte,0.6624593734741211,41.93017127799736,3036,BBB homeostasis,BBB-state marker,KEEP,305.6153032824866,0.4052022702577278,0.12737497088233798,0.0014667821232622377,0.017496263356091106,up,pseudobulk 3+3
+Mfsd2a,Endothelial,0.7554931640625,39.879980249914546,26329,BBB homeostasis,BBB-state marker,KEEP,2662.0969342009716,-0.7848398109212992,0.06275645684989989,6.91182939140501e-36,3.462717677386959e-34,down,pseudobulk 3+3
+Mfsd2a,Ependymal_CP,0.0930388867855072,8.127128263337118,4405,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,Microglia,0.10519357025623322,7.615068894752272,13644,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,Myeloid,0.08984623104333878,6.935659760087241,4585,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,Oligodendrocyte,0.21409450471401215,18.23607427055703,1508,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,Pericyte,0.2303401678800583,15.92775041050903,1218,BBB homeostasis,BBB-state marker,KEEP,51.274766874416464,-1.0604198118667556,0.24530895641000647,1.540663518354576e-05,0.00047948454863913143,down,pseudobulk 3+3
+Mfsd2a,VLMC_Fibroblast,0.06075701117515564,4.810126582278481,395,BBB homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Mfsd2a,VSMC,0.048538241535425186,3.5294117647058822,2720,BBB homeostasis,BBB-state marker,KEEP,16.554100942478815,-0.4605455287775485,0.42515127196674746,0.2786970404280207,0.6276590086064576,down,pseudobulk 3+3
 Slc22a8,Ambiguous,0.9633401036262512,49.31506849315068,73,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Astrocyte,0.20153075456619263,13.904050560183856,3481,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Endothelial,1.2139873504638672,57.75303180535428,26222,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Ependymal_CP,0.23128743469715118,19.650159018627896,4402,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Microglia,0.16711556911468506,11.379543915104989,13287,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Myeloid,0.13708533346652985,9.97816593886463,4580,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Oligodendrocyte,0.12397179752588272,10.94264996704021,1517,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,Pericyte,0.9226616024971008,45.50958627648839,991,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,VLMC_Fibroblast,0.5887001752853394,34.10852713178294,516,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
-Slc22a8,VSMC,0.14641374349594116,10.478199718706048,2844,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,Astrocyte,0.17288820445537567,12.351778656126482,3036,BBB transport/homeostasis,BBB-state marker,KEEP,78.09251684606016,-0.23442468301618719,0.22051062645908848,0.28773694164919217,0.6246125743727725,down,pseudobulk 3+3
+Slc22a8,Endothelial,1.2134679555892944,57.75000949523339,26329,BBB transport/homeostasis,BBB-state marker,KEEP,4975.581801063595,-0.7536418001972781,0.05197275891714285,1.1990672969676638e-47,8.769041007996277e-46,down,pseudobulk 3+3
+Slc22a8,Ependymal_CP,0.23115874826908112,19.63677639046538,4405,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,Microglia,0.16648651659488678,11.396951040750514,13644,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,Myeloid,0.1369081288576126,9.967284623773173,4585,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,Oligodendrocyte,0.1237376257777214,10.875331564986737,1508,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,Pericyte,0.9078258872032166,47.94745484400657,1218,BBB transport/homeostasis,BBB-state marker,KEEP,178.95266506633922,-0.5936359326327482,0.15628581756264848,0.00014563360245977623,0.0030674134610255525,down,pseudobulk 3+3
+Slc22a8,VLMC_Fibroblast,0.7138867378234863,40.0,395,BBB transport/homeostasis,BBB-state marker,KEEP,,,,,,untested,not available
+Slc22a8,VSMC,0.09471242874860764,6.985294117647059,2720,BBB transport/homeostasis,BBB-state marker,KEEP,33.489571410355985,-0.3136845910930696,0.29685537923665606,0.29065235151977853,0.6384678995136341,down,pseudobulk 3+3
 Cldn5,Ambiguous,3.1382994651794434,98.63013698630137,73,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Astrocyte,1.1387656927108765,57.97184717035335,3481,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Endothelial,3.9291815757751465,99.31736709633132,26222,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Ependymal_CP,0.9490348696708679,59.83643798273513,4402,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Microglia,1.0286575555801392,54.971024309475425,13287,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Myeloid,1.0145057439804077,57.33624454148472,4580,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Oligodendrocyte,0.9363726377487183,61.832564271588666,1517,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,Pericyte,1.3061773777008057,54.79313824419778,991,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,VLMC_Fibroblast,0.9833263754844666,57.55813953488372,516,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cldn5,VSMC,0.9323685169219971,51.16033755274262,2844,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,Astrocyte,1.0163261890411377,54.841897233201585,3036,tight junction,BBB-state marker,CONTEXT,851.0997954555352,0.2284557007177977,0.11365520583757921,0.04442305339797242,0.21806191926046187,up,pseudobulk 3+3
+Cldn5,Endothelial,3.9282028675079346,99.32014128907288,26329,tight junction,BBB-state marker,CONTEXT,63441.55022931245,-0.025096632720492434,0.0471575276483654,0.594596345534992,0.7199770194055355,down,pseudobulk 3+3
+Cldn5,Ependymal_CP,0.9493045210838318,59.84108967082861,4405,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,Microglia,1.0393922328948975,55.394312518323076,13644,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,Myeloid,1.0150654315948486,57.38276990185387,4585,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,Oligodendrocyte,0.9380843639373779,61.87002652519894,1508,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,Pericyte,1.6427448987960815,62.972085385878486,1218,tight junction,BBB-state marker,CONTEXT,950.87606306749,-0.2941786084651144,0.10435595007133666,0.004817468992603287,0.049774011615884975,down,pseudobulk 3+3
+Cldn5,VLMC_Fibroblast,0.9417004585266113,55.69620253164557,395,tight junction,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cldn5,VSMC,0.7518189549446106,47.72058823529412,2720,tight junction,BBB-state marker,CONTEXT,307.9052941912169,0.11318220191150329,0.1305639229843207,0.3860121765950678,0.721684842355649,up,pseudobulk 3+3
 Cav1,Ambiguous,0.47272345423698425,24.65753424657534,73,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Astrocyte,0.1155669093132019,8.675667911519678,3481,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Endothelial,0.5790032148361206,32.16001830523987,26222,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Ependymal_CP,0.07309561967849731,6.610631531122217,4402,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Microglia,0.0853416919708252,6.216602694362911,13287,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Myeloid,0.08015215396881104,6.441048034934497,4580,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Oligodendrocyte,0.08591222018003464,8.239947264337507,1517,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,Pericyte,0.13644175231456757,9.283551967709384,991,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,VLMC_Fibroblast,0.12893658876419067,9.108527131782946,516,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
-Cav1,VSMC,0.7981506586074829,50.35161744022504,2844,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,Astrocyte,0.11184050142765045,8.465085638998683,3036,caveolar transcytosis,BBB-state marker,CONTEXT,52.664344348446036,-0.7537472901952695,0.2424801395219685,0.0018804548126011027,0.02130915389768824,down,pseudobulk 3+3
+Cav1,Endothelial,0.5776413083076477,32.09009077443123,26329,caveolar transcytosis,BBB-state marker,CONTEXT,1983.5644523606882,-1.3164834484231067,0.06430869862595315,3.880304094392484e-93,6.672549946100588e-91,down,pseudobulk 3+3
+Cav1,Ependymal_CP,0.07304583489894867,6.606129398410896,4405,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,Microglia,0.08300723880529404,6.039284667253005,13644,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,Myeloid,0.08032580465078354,6.455834242093784,4585,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,Oligodendrocyte,0.08591175824403763,8.222811671087534,1508,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,Pericyte,0.28749212622642517,19.950738916256157,1218,caveolar transcytosis,BBB-state marker,CONTEXT,72.51171639821162,-1.2874310221284233,0.20683984900536373,4.837443017433259e-10,3.8180890455122715e-08,down,pseudobulk 3+3
+Cav1,VLMC_Fibroblast,0.15316177904605865,10.632911392405063,395,caveolar transcytosis,BBB-state marker,CONTEXT,,,,,,untested,not available
+Cav1,VSMC,0.7715540528297424,48.419117647058826,2720,caveolar transcytosis,BBB-state marker,CONTEXT,327.9480356084617,-0.383644141992109,0.11559812218836366,0.0009041329280150899,0.01041670724943446,down,pseudobulk 3+3
 Plvap,Ambiguous,0.18370045721530914,9.58904109589041,73,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Astrocyte,0.051539625972509384,3.849468543521976,3481,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Endothelial,0.06247195601463318,2.356799633895202,26222,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Ependymal_CP,0.031340330839157104,2.8396183552930485,4402,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Microglia,0.020868031308054924,1.557913750282231,13287,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Myeloid,0.02139473892748356,1.724890829694323,4580,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Oligodendrocyte,0.036543432623147964,3.2300593276203036,1517,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,Pericyte,0.01607317104935646,1.109989909182644,991,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,VLMC_Fibroblast,0.037121955305337906,3.10077519379845,516,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
-Plvap,VSMC,0.024109916761517525,1.7229254571026722,2844,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,Astrocyte,0.05347063019871712,3.9525691699604746,3036,barrier disruption,accessible endothelial candidate,KEEP,24.77423784447066,0.5934110057645581,0.36856257501064793,0.10738289494545622,0.3752764425718503,up,pseudobulk 3+3
+Plvap,Endothelial,0.0624377466738224,2.3624140681377948,26329,barrier disruption,accessible endothelial candidate,KEEP,693.671662630717,0.4062401747462587,0.1980518658878164,0.04024934785548423,0.09600242764030681,up,pseudobulk 3+3
+Plvap,Ependymal_CP,0.0315767377614975,2.8603859250851302,4405,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,Microglia,0.021130649372935295,1.5904426854294929,13644,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,Myeloid,0.02128967083990574,1.723009814612868,4585,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,Oligodendrocyte,0.03577795624732971,3.116710875331565,1508,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,Pericyte,0.021168772131204605,1.5599343185550083,1218,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,VLMC_Fibroblast,0.04556082561612129,3.79746835443038,395,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
+Plvap,VSMC,0.022371407598257065,1.5808823529411764,2720,barrier disruption,accessible endothelial candidate,KEEP,,,,,,untested,not available
 Tfrc,Ambiguous,0.5416348576545715,27.397260273972602,73,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Astrocyte,0.2214754819869995,16.288422866992246,3481,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Endothelial,0.5262005925178528,28.628632446037678,26222,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Ependymal_CP,0.10451140999794006,9.563834620626988,4402,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Microglia,0.12588666379451752,9.196959434033266,13287,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Myeloid,0.10738308727741241,8.73362445414847,4580,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Oligodendrocyte,0.14575162529945374,13.183915622940013,1517,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,Pericyte,0.11358679831027985,7.467204843592332,991,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,VLMC_Fibroblast,0.11789767444133759,9.30232558139535,516,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Tfrc,VSMC,0.12098921090364456,8.89592123769339,2844,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Ambiguous,0.253785640001297,13.698630136986301,73,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Astrocyte,0.5681121945381165,37.604136742315426,3481,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Endothelial,0.07259561866521835,4.606818701853405,26222,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Ependymal_CP,0.2809288203716278,23.739209450249888,4402,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Microglia,0.5366462469100952,35.16218860540378,13287,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Myeloid,0.3710136413574219,28.034934497816593,4580,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Oligodendrocyte,0.11083095520734787,9.82201713909031,1517,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,Pericyte,0.4228461980819702,25.126135216952573,991,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,VLMC_Fibroblast,1.0853750705718994,60.46511627906976,516,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Lrp1,VSMC,0.2994803190231323,20.991561181434598,2844,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,Astrocyte,0.226995050907135,16.699604743083004,3036,BBB receptor-mediated transport,delivery handle,KEEP,98.5182584441453,-0.6310587463920366,0.1829820565506717,0.0005631949406757263,0.008074229485972861,down,pseudobulk 3+3
+Tfrc,Endothelial,0.5251622200012207,28.58445060579589,26329,BBB receptor-mediated transport,delivery handle,KEEP,1767.570665411611,-1.4502689498222097,0.07252256003865998,5.791825063144116e-89,9.21262174106361e-87,down,pseudobulk 3+3
+Tfrc,Ependymal_CP,0.10474935173988342,9.580022701475595,4405,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,Microglia,0.12663385272026062,9.249486953972443,13644,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,Myeloid,0.10727174580097198,8.724100327153762,4585,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,Oligodendrocyte,0.14516684412956238,13.12997347480106,1508,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,Pericyte,0.16376075148582458,11.904761904761903,1218,BBB receptor-mediated transport,delivery handle,KEEP,37.190285480543146,-1.6421870726185217,0.28701600649694786,1.055335478816332e-08,6.491909266967332e-07,down,pseudobulk 3+3
+Tfrc,VLMC_Fibroblast,0.1085868775844574,8.60759493670886,395,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Tfrc,VSMC,0.10060469806194305,7.279411764705883,2720,BBB receptor-mediated transport,delivery handle,KEEP,34.6935073751981,-0.7380555462480402,0.29277340807723173,0.01170516337708124,0.08009904816354009,down,pseudobulk 3+3
+Lrp1,Ambiguous,0.2537856101989746,13.698630136986301,73,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,Astrocyte,0.5462087392807007,36.42951251646904,3036,BBB receptor-mediated transport,delivery handle,KEEP,223.58981902097426,0.26341262910909324,0.13323569367411797,0.04803682623221372,0.22863640439032193,up,pseudobulk 3+3
+Lrp1,Endothelial,0.0737469345331192,4.6754529226328385,26329,BBB receptor-mediated transport,delivery handle,KEEP,213.8727632870764,1.2475717526249543,0.13356777649705473,9.600280592645488e-21,2.3137039875267773e-19,up,pseudobulk 3+3
+Lrp1,Ependymal_CP,0.2810727655887604,23.745743473325767,4405,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,Microglia,0.5401909351348877,35.304895924948696,13644,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,Myeloid,0.3716811239719391,28.091603053435115,4585,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,Oligodendrocyte,0.11009639501571655,9.748010610079575,1508,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,Pericyte,0.39001190662384033,24.548440065681447,1218,BBB receptor-mediated transport,delivery handle,KEEP,56.10846020479676,-0.11157223729863877,0.24074081704188255,0.6430391504265949,0.8953427840107478,down,pseudobulk 3+3
+Lrp1,VLMC_Fibroblast,1.3613203763961792,74.9367088607595,395,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Lrp1,VSMC,0.31435853242874146,21.875,2720,BBB receptor-mediated transport,delivery handle,KEEP,115.17355842409586,0.03570967352966948,0.16810827200500011,0.8317788532320517,0.950704425200896,up,pseudobulk 3+3
 Slc3a2,Ambiguous,1.9610635042190552,78.08219178082192,73,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Astrocyte,1.8552181720733643,85.6650387819592,3481,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Endothelial,2.5579802989959717,93.58172526885821,26222,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Ependymal_CP,0.9943923950195312,63.53930031803725,4402,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Microglia,1.9354615211486816,85.22616090915933,13287,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Myeloid,1.5398743152618408,78.51528384279476,4580,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Oligodendrocyte,1.2117178440093994,74.22544495715228,1517,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,Pericyte,1.3196901082992554,63.57214934409687,991,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,VLMC_Fibroblast,1.7304083108901978,80.81395348837209,516,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Slc3a2,VSMC,0.926734209060669,54.53586497890295,2844,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,Astrocyte,1.8362141847610474,85.27667984189723,3036,BBB receptor-mediated transport,delivery handle,KEEP,1378.039069418707,0.7035165121410067,0.08260635606714473,1.6445657783573805e-17,3.020330115700486e-15,up,pseudobulk 3+3
+Slc3a2,Endothelial,2.5580966472625732,93.600212693228,26329,BBB receptor-mediated transport,delivery handle,KEEP,17558.381616422583,-0.10675515427507652,0.04579218576243302,0.019737740000485043,0.05330278894443383,down,pseudobulk 3+3
+Slc3a2,Ependymal_CP,0.9933724403381348,63.49602724177071,4405,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,Microglia,1.925309419631958,84.93843447669305,13644,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,Myeloid,1.541577935218811,78.6041439476554,4585,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,Oligodendrocyte,1.2074717283248901,74.13793103448276,1508,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,Pericyte,1.4375872611999512,69.04761904761905,1218,BBB receptor-mediated transport,delivery handle,KEEP,381.74501780715536,0.045686007039612106,0.11401733244261755,0.6886457773269172,0.9099598576422969,up,pseudobulk 3+3
+Slc3a2,VLMC_Fibroblast,1.9849869012832642,87.59493670886076,395,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Slc3a2,VSMC,0.8671507835388184,52.720588235294116,2720,BBB receptor-mediated transport,delivery handle,KEEP,380.98143212738506,0.5384720782773815,0.10734990060766847,5.274560628022514e-07,1.4406522634871836e-05,up,pseudobulk 3+3
 Igf1r,Ambiguous,0.8717800378799438,45.20547945205479,73,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Astrocyte,0.335264652967453,22.148807813846595,3481,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Endothelial,1.2716623544692993,61.41407978033712,26222,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Ependymal_CP,0.18324753642082214,14.902317128577918,4402,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Microglia,0.22662614285945892,15.03725445924588,13287,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Myeloid,0.2315831035375595,15.982532751091702,4580,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Oligodendrocyte,0.24668121337890625,20.63282794990112,1517,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,Pericyte,0.3289845287799835,19.576185671039354,991,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,VLMC_Fibroblast,0.27855384349823,20.155038759689923,516,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Igf1r,VSMC,0.5333799719810486,34.84528832630098,2844,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
-Pdgfrb,Ambiguous,0.11460354179143906,5.47945205479452,73,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Astrocyte,0.26609721779823303,18.586613042229246,3481,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Endothelial,0.024739213287830353,1.567386164289528,26222,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Ependymal_CP,0.0349208228290081,2.9532030895047705,4402,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Microglia,0.033479463309049606,2.483630616391962,13287,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Myeloid,0.04103110730648041,3.1004366812227078,4580,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Oligodendrocyte,0.033732812851667404,3.2300593276203036,1517,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,Pericyte,1.8662762641906738,84.25832492431887,991,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,VLMC_Fibroblast,0.44155648350715637,28.68217054263566,516,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
-Pdgfrb,VSMC,0.8077147006988525,48.76933895921238,2844,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Igf1r,Astrocyte,0.28196683526039124,19.268774703557312,3036,BBB receptor-mediated transport,delivery handle,KEEP,137.28491750895435,-0.15986485821799382,0.18292424732893967,0.38215080616860364,0.7092430546669899,down,pseudobulk 3+3
+Igf1r,Endothelial,1.2720386981964111,61.460746705154016,26329,BBB receptor-mediated transport,delivery handle,KEEP,5206.391222951994,-0.5940501330403262,0.0592207803954313,1.1125928155590876e-23,3.1322441544224313e-22,down,pseudobulk 3+3
+Igf1r,Ependymal_CP,0.1831238716840744,14.892167990919411,4405,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Igf1r,Microglia,0.23281951248645782,15.376722368806803,13644,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Igf1r,Myeloid,0.2313254326581955,15.986913849509268,4585,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Igf1r,Oligodendrocyte,0.2475569099187851,20.689655172413794,1508,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Igf1r,Pericyte,0.50001460313797,29.88505747126437,1218,BBB receptor-mediated transport,delivery handle,KEEP,127.59188097997774,-0.9139432722342883,0.16587880724362344,3.594358331124424e-08,1.979741538351697e-06,down,pseudobulk 3+3
+Igf1r,VLMC_Fibroblast,0.2688318192958832,19.746835443037973,395,BBB receptor-mediated transport,delivery handle,KEEP,,,,,,untested,not available
+Igf1r,VSMC,0.4676555097103119,31.433823529411764,2720,BBB receptor-mediated transport,delivery handle,KEEP,179.12367936987494,-0.07428849391650225,0.14218743997127808,0.6013439995918676,0.8515427795004162,down,pseudobulk 3+3
+Pdgfrb,Ambiguous,0.11460352689027786,5.47945205479452,73,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,Astrocyte,0.27739304304122925,19.202898550724637,3036,pericyte state,abluminal context,CONTEXT,114.7109872079307,-0.45855429717050555,0.1776305251132557,0.009837023199212046,0.07615114180087698,down,pseudobulk 3+3
+Pdgfrb,Endothelial,0.02484697662293911,1.5762087432109082,26329,pericyte state,abluminal context,CONTEXT,75.38541349924112,0.9800093672538779,0.22286619411960898,1.0960613784405447e-05,6.679780191885024e-05,up,pseudobulk 3+3
+Pdgfrb,Ependymal_CP,0.03489704057574272,2.9511918274687856,4405,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,Microglia,0.03205050528049469,2.3966578715919087,13644,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,Myeloid,0.039390671998262405,3.0316248636859324,4585,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,Oligodendrocyte,0.03393413498997688,3.249336870026525,1508,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,Pericyte,1.664049506187439,78.57142857142857,1218,pericyte state,abluminal context,CONTEXT,332.5390544852105,0.22120986529499165,0.11682135974518998,0.058281604778300175,0.290614546035371,up,pseudobulk 3+3
+Pdgfrb,VLMC_Fibroblast,0.5674219727516174,36.9620253164557,395,pericyte state,abluminal context,CONTEXT,,,,,,untested,not available
+Pdgfrb,VSMC,0.8150790929794312,49.00735294117647,2720,pericyte state,abluminal context,CONTEXT,354.26720663925016,0.07131123167563647,0.11376466417086037,0.5307699430377044,0.8105668876242578,up,pseudobulk 3+3
 Rgs5,Ambiguous,0.2034437358379364,10.95890410958904,73,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Astrocyte,0.14508946239948273,9.997127262280953,3481,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Endothelial,0.17891454696655273,10.098390664327663,26222,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Ependymal_CP,0.10975562036037445,9.086778736937756,4402,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Microglia,0.11435272544622421,7.834725671709189,13287,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Myeloid,0.1378348469734192,9.868995633187772,4580,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Oligodendrocyte,0.12042900174856186,10.01977587343441,1517,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,Pericyte,3.3927054405212402,97.88092835519677,991,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,VLMC_Fibroblast,0.10883650928735733,6.976744186046512,516,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
-Rgs5,VSMC,1.9929391145706177,76.47679324894516,2844,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,Astrocyte,0.13039368391036987,9.025032938076416,3036,pericyte state,intracellular context,CONTEXT,63.820472163810585,0.5663370378313508,0.231885765557198,0.014593589338383275,0.10233766532749089,up,pseudobulk 3+3
+Rgs5,Endothelial,0.17858406901359558,10.09533214326408,26329,pericyte state,intracellular context,CONTEXT,655.9822280727938,0.43236828161198737,0.09486815456474819,5.1748777571103e-06,3.346052818050232e-05,up,pseudobulk 3+3
+Rgs5,Ependymal_CP,0.10973551869392395,9.080590238365494,4405,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,Microglia,0.1061755120754242,7.615068894752272,13644,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,Myeloid,0.1339256912469864,9.74918211559433,4585,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,Oligodendrocyte,0.1201586127281189,10.013262599469495,1508,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,Pericyte,3.106926202774048,94.82758620689656,1218,pericyte state,intracellular context,CONTEXT,1562.499281398316,0.1565576483457776,0.08729723341043158,0.0729112024310821,0.33396811064237614,up,pseudobulk 3+3
+Rgs5,VLMC_Fibroblast,0.07079847157001495,5.3164556962025316,395,pericyte state,intracellular context,CONTEXT,,,,,,untested,not available
+Rgs5,VSMC,2.0080947875976562,76.36029411764706,2720,pericyte state,intracellular context,CONTEXT,2305.9097771646307,0.022983518164829627,0.07650135374845667,0.7638470252953693,0.924143959377744,up,pseudobulk 3+3
 Icam1,Ambiguous,0.26780983805656433,15.068493150684931,73,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Astrocyte,0.11495813727378845,8.675667911519678,3481,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Endothelial,0.24434804916381836,13.942491038059647,26222,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Ependymal_CP,0.12814420461654663,10.56338028169014,4402,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Microglia,0.5537699460983276,34.92887785053059,13287,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Myeloid,0.23478159308433533,17.838427947598255,4580,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Oligodendrocyte,0.06192708760499954,5.8668424522083065,1517,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,Pericyte,0.11647039651870728,8.173562058526741,991,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,VLMC_Fibroblast,0.23216727375984192,17.635658914728683,516,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Icam1,VSMC,0.05559302121400833,4.395218002812939,2844,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,Astrocyte,0.0794254019856453,6.225296442687747,3036,acute endothelial activation,surface candidate,KEEP,30.180943176121275,1.2871925375402757,0.35468179540158035,0.00028435877861072913,0.004667164421820473,up,pseudobulk 3+3
+Icam1,Endothelial,0.24431146681308746,13.954194994112957,26329,acute endothelial activation,surface candidate,KEEP,1069.4245126862058,1.0345345074576124,0.0911708668414056,7.657145596253952e-30,2.9706456619613276e-28,up,pseudobulk 3+3
+Icam1,Ependymal_CP,0.12716540694236755,10.488081725312146,4405,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,Microglia,0.5464343428611755,34.48402228085605,13644,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,Myeloid,0.2360057681798935,17.92802617230098,4585,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,Oligodendrocyte,0.06229667738080025,5.901856763925729,1508,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,Pericyte,0.12700074911117554,9.60591133004926,1218,acute endothelial activation,surface candidate,KEEP,19.249692438412414,0.8028241837676284,0.39803383145506843,0.04369814942827854,0.2415545357566069,up,pseudobulk 3+3
+Icam1,VLMC_Fibroblast,0.27825820446014404,21.012658227848103,395,acute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Icam1,VSMC,0.05959970876574516,4.632352941176471,2720,acute endothelial activation,surface candidate,KEEP,22.475808111462907,1.5902615648093945,0.4101023070809149,0.00010544034073405513,0.001637598756008487,up,pseudobulk 3+3
 Vcam1,Ambiguous,0.5485818386077881,28.767123287671232,73,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Astrocyte,0.6080063581466675,39.58632576845734,3481,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Endothelial,0.2744019627571106,13.381893066890397,26222,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Ependymal_CP,0.5602033138275146,39.8682417083144,4402,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Microglia,0.10178802162408829,7.082110333408595,13287,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Myeloid,0.5103136301040649,25.895196506550217,4580,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Oligodendrocyte,0.09050748497247696,7.976268951878708,1517,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,Pericyte,0.09875082969665527,5.852674066599395,991,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,VLMC_Fibroblast,0.6619547605514526,35.27131782945737,516,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
-Vcam1,VSMC,0.06712069362401962,4.852320675105485,2844,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,Astrocyte,0.6371614933013916,41.3372859025033,3036,subacute endothelial activation,surface candidate,KEEP,297.50916199480224,0.15686892325206075,0.12310609772979002,0.2025720151018845,0.5234995217192514,up,pseudobulk 3+3
+Vcam1,Endothelial,0.27440303564071655,13.392077177257017,26329,subacute endothelial activation,surface candidate,KEEP,1932.990101431821,0.28325695242681137,0.07383027484462583,0.00012475133821900888,0.0006155334543764591,up,pseudobulk 3+3
+Vcam1,Ependymal_CP,0.5603513121604919,39.86379114642452,4405,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,Microglia,0.1104116290807724,7.688361184403401,13644,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,Myeloid,0.5091466307640076,25.866957470010902,4585,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,Oligodendrocyte,0.08824912458658218,7.758620689655173,1508,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,Pericyte,0.13293199241161346,8.374384236453201,1218,subacute endothelial activation,surface candidate,KEEP,33.43876737681224,-0.19066780559838076,0.30060356102211133,0.5258959815440856,0.8384579838027403,down,pseudobulk 3+3
+Vcam1,VLMC_Fibroblast,0.8423150777816772,44.303797468354425,395,subacute endothelial activation,surface candidate,KEEP,,,,,,untested,not available
+Vcam1,VSMC,0.051118750125169754,3.75,2720,subacute endothelial activation,surface candidate,KEEP,21.0033467408298,0.4109534394782958,0.36956852658558303,0.26614601749905753,0.6149529388759717,up,pseudobulk 3+3
 Ackr1,Ambiguous,0.1188981831073761,6.8493150684931505,73,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Astrocyte,0.057771485298871994,4.222924446997989,3481,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Endothelial,0.14852739870548248,6.078865075127755,26222,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Ependymal_CP,0.04942554980516434,4.248069059518401,4402,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Microglia,0.045570988208055496,3.401821329118687,13287,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Myeloid,0.0558926947414875,4.323144104803493,4580,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Oligodendrocyte,0.05580182373523712,4.812129202373105,1517,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,Pericyte,0.05746610835194588,3.632694248234107,991,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,VLMC_Fibroblast,0.04579468071460724,3.2945736434108532,516,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
-Ackr1,VSMC,0.03963766247034073,2.7777777777777777,2844,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,Astrocyte,0.05377388373017311,3.985507246376811,3036,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,22.162185449650384,2.769002187318482,0.5012340785811563,3.3067116475682875e-08,1.6614666259385564e-06,up,pseudobulk 3+3
+Ackr1,Endothelial,0.1482880562543869,6.076949371415549,26329,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,2701.0300382993305,3.1626723894208526,0.2582937613753587,1.7982941869708282e-34,8.261116797546494e-33,up,pseudobulk 3+3
+Ackr1,Ependymal_CP,0.04911160469055176,4.222474460839955,4405,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,Microglia,0.046443548053503036,3.4520668425681618,13644,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,Myeloid,0.05610102787613869,4.340239912758997,4585,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,Oligodendrocyte,0.05613485723733902,4.840848806366048,1508,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,Pericyte,0.06507675349712372,4.1871921182266005,1218,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,15.087731780994922,1.8332194254386447,0.530565961494319,0.0005498543313994627,0.009313461861049307,up,pseudobulk 3+3
+Ackr1,VLMC_Fibroblast,0.039345722645521164,2.7848101265822782,395,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,,,,,,untested,not available
+Ackr1,VSMC,0.03624391555786133,2.610294117647059,2720,inflammatory venular state,surface but erythrocyte-confounded,TEAMRED,11.655555828207396,3.5977170543414703,0.7635235080291444,2.453063930107762e-06,5.82909316391857e-05,up,pseudobulk 3+3
 Pvr,Ambiguous,0.023159127682447433,1.36986301369863,73,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Astrocyte,0.035880982875823975,2.9014650962367137,3481,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Endothelial,0.10898473858833313,7.0170086187171075,26222,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Ependymal_CP,0.05006327107548714,4.429804634257155,4402,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Microglia,0.06787902116775513,5.36614736208324,13287,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Myeloid,0.0753522738814354,6.593886462882097,4580,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Oligodendrocyte,0.05481169372797012,4.878048780487805,1517,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,Pericyte,0.06406380981206894,4.843592330978809,991,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,VLMC_Fibroblast,0.03826111555099487,3.2945736434108532,516,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
-Pvr,VSMC,0.05036420747637749,4.043600562587905,2844,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,Astrocyte,0.030809318646788597,2.4703557312252964,3036,activated endothelium/immune interface,surface candidate,KEEP,10.437579425881028,2.3177712359769673,0.6617339669235861,0.00046078825573038365,0.00683368846800062,up,pseudobulk 3+3
+Pvr,Endothelial,0.10879526287317276,7.01128033727069,26329,activated endothelium/immune interface,surface candidate,KEEP,335.57907924967043,1.1029743163689358,0.10867710182517501,3.344476988369377e-24,9.738780246453162e-23,up,pseudobulk 3+3
+Pvr,Ependymal_CP,0.04969791695475578,4.404086265607265,4405,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,Microglia,0.06794345378875732,5.379654060392847,13644,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,Myeloid,0.0753428041934967,6.586695747001091,4585,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,Oligodendrocyte,0.05455632135272026,4.840848806366048,1508,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,Pericyte,0.07802394777536392,6.321839080459771,1218,activated endothelium/immune interface,surface candidate,KEEP,11.118153516625698,0.8286169122472178,0.5399998848134792,0.12491257085365182,0.4519942658925072,up,pseudobulk 3+3
+Pvr,VLMC_Fibroblast,0.03908618167042732,3.2911392405063293,395,activated endothelium/immune interface,surface candidate,KEEP,,,,,,untested,not available
+Pvr,VSMC,0.04322713240981102,3.3455882352941178,2720,activated endothelium/immune interface,surface candidate,KEEP,14.364977658097722,1.5406768858162183,0.4813890988182961,0.0013719819572299119,0.014585759178671288,up,pseudobulk 3+3
 Tnfrsf10b,Ambiguous,0.0,0.0,73,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Astrocyte,0.008234833367168903,0.7469118069520253,3481,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Endothelial,0.02315029315650463,1.5521317977270992,26222,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Ependymal_CP,0.007758681662380695,0.7723761926397091,4402,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Microglia,0.00392569974064827,0.30857228870324377,13287,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Myeloid,0.002596052596345544,0.26200873362445415,4580,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Oligodendrocyte,0.0021762121468782425,0.26367831245880025,1517,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,Pericyte,0.005631299689412117,0.5045408678102926,991,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,VLMC_Fibroblast,0.015977753326296806,1.550387596899225,516,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
-Tnfrsf10b,VSMC,0.00399597967043519,0.35161744022503516,2844,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Astrocyte,0.006804252043366432,0.6258234519104084,3036,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Endothelial,0.023099016398191452,1.549622089710965,26329,injury-associated receptor,surface candidate,KEEP,68.28352380606931,1.0416682084568134,0.2388409099816785,1.292638700374468e-05,7.75156807835302e-05,up,pseudobulk 3+3
+Tnfrsf10b,Ependymal_CP,0.008034829050302505,0.7945516458569807,4405,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Microglia,0.004155208356678486,0.32981530343007914,13644,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Myeloid,0.0025932216085493565,0.2617230098146129,4585,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Oligodendrocyte,0.0021892001386731863,0.2652519893899204,1508,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,Pericyte,0.008681906387209892,0.8210180623973727,1218,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,VLMC_Fibroblast,0.0208722073584795,2.0253164556962027,395,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
+Tnfrsf10b,VSMC,0.0027495562098920345,0.22058823529411764,2720,injury-associated receptor,surface candidate,KEEP,,,,,,untested,not available
 Itgav,Ambiguous,0.14626890420913696,8.21917808219178,73,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Astrocyte,0.3259968161582947,23.326630278655557,3481,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Endothelial,0.05320022627711296,3.386469376859126,26222,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Ependymal_CP,0.09968607872724533,9.086778736937756,4402,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Microglia,0.16891202330589294,11.816060811319334,13287,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Myeloid,0.12017851322889328,9.65065502183406,4580,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Oligodendrocyte,0.1543431431055069,14.172709294660516,1517,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,Pericyte,0.16667760908603668,10.696266397578205,991,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,VLMC_Fibroblast,0.19934765994548798,15.503875968992247,516,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgav,VSMC,0.18803948163986206,13.60759493670886,2844,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Ambiguous,0.02707812935113907,1.36986301369863,73,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Astrocyte,0.010621017776429653,0.8043665613329504,3481,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Endothelial,0.005873577203601599,0.39279993898253374,26222,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Ependymal_CP,0.010502194985747337,0.8632439800090868,4402,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Microglia,0.03023042343556881,2.1223752540076766,13287,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Myeloid,0.006713612470775843,0.5676855895196506,4580,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Oligodendrocyte,0.005314392037689686,0.5273566249176005,1517,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,Pericyte,0.01663222722709179,1.109989909182644,991,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,VLMC_Fibroblast,0.007446535862982273,0.5813953488372093,516,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
-Itgb3,VSMC,0.028748715296387672,2.1448663853727146,2844,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,Astrocyte,0.32869380712509155,23.55072463768116,3036,angiogenesis,established RGD comparator,COMPARATOR,132.46274547907652,0.06517205682717811,0.16956231660137694,0.7007156429744512,0.8964716585351734,up,pseudobulk 3+3
+Itgav,Endothelial,0.053651321679353714,3.4182840214212464,26329,angiogenesis,established RGD comparator,COMPARATOR,151.73894993540725,0.61073214636481,0.15829279444061986,0.00011420483488443408,0.0005679001656523734,up,pseudobulk 3+3
+Itgav,Ependymal_CP,0.10003852099180222,9.103291713961408,4405,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,Microglia,0.17112548649311066,11.968630900029318,13644,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,Myeloid,0.12152159214019775,9.74918211559433,4585,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,Oligodendrocyte,0.15288469195365906,13.992042440318302,1508,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,Pericyte,0.16962918639183044,11.658456486042693,1218,angiogenesis,established RGD comparator,COMPARATOR,22.169853774817184,0.10624309003646817,0.3577799840166319,0.7665039914465318,0.936950948437362,up,pseudobulk 3+3
+Itgav,VLMC_Fibroblast,0.25124701857566833,19.49367088607595,395,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgav,VSMC,0.19145628809928894,13.750000000000002,2720,angiogenesis,established RGD comparator,COMPARATOR,67.77855712944339,-0.1688842302867399,0.21855494363479966,0.43968146048374235,0.7599876853787908,down,pseudobulk 3+3
+Itgb3,Ambiguous,0.02707812748849392,1.36986301369863,73,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Astrocyte,0.006676351185888052,0.5270092226613966,3036,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Endothelial,0.00592498853802681,0.39500170914201066,26329,angiogenesis,established RGD comparator,COMPARATOR,18.216068486547506,1.432651161531435,0.44712497723102246,0.0013546644236523298,0.005239041191935171,up,pseudobulk 3+3
+Itgb3,Ependymal_CP,0.01049504242837429,0.8626560726447219,4405,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Microglia,0.030250567942857742,2.118147170917619,13644,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Myeloid,0.006706290878355503,0.5670665212649946,4585,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Oligodendrocyte,0.0053461091592907906,0.5305039787798408,1508,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,Pericyte,0.017165182158350945,1.2315270935960592,1218,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,VLMC_Fibroblast,0.009727626107633114,0.7594936708860759,395,angiogenesis,established RGD comparator,COMPARATOR,,,,,,untested,not available
+Itgb3,VSMC,0.029775680974125862,2.2426470588235294,2720,angiogenesis,established RGD comparator,COMPARATOR,10.450008909092793,-0.4855173596002383,0.5380610168182204,0.3668729456095082,0.7083713299248185,down,pseudobulk 3+3
 Kdr,Ambiguous,0.31133073568344116,16.43835616438356,73,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Astrocyte,0.10478774458169937,7.727664464234415,3481,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Endothelial,0.7004250288009644,38.524902753413166,26222,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Ependymal_CP,0.07515265047550201,6.746933212176283,4402,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Microglia,0.10432994365692139,7.496048769473922,13287,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Myeloid,0.09129603952169418,7.03056768558952,4580,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Oligodendrocyte,0.08910486102104187,8.174027686222809,1517,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,Pericyte,0.171462744474411,11.70534813319879,991,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,VLMC_Fibroblast,0.09919705986976624,7.945736434108527,516,angiogenesis,context,CONTEXT,,,,,,untested,not available
-Kdr,VSMC,0.08039901405572891,6.118143459915612,2844,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,Astrocyte,0.09314332902431488,6.982872200263504,3036,angiogenesis,context,CONTEXT,43.81027090091411,-0.6420749033341353,0.2734288555631098,0.01886267276323765,0.12272176288806398,down,pseudobulk 3+3
+Kdr,Endothelial,0.6999169588088989,38.52026282806031,26329,angiogenesis,context,CONTEXT,2476.7847716215515,-0.6458559163641698,0.05445449950382968,1.8990783392687565e-32,8.055257289064974e-31,down,pseudobulk 3+3
+Kdr,Ependymal_CP,0.07544542104005814,6.765039727582294,4405,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,Microglia,0.10328690707683563,7.4391673995895635,13644,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,Myeloid,0.09086603671312332,7.001090512540895,4585,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,Oligodendrocyte,0.0890541598200798,8.156498673740053,1508,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,Pericyte,0.22536198794841766,16.338259441707716,1218,angiogenesis,context,CONTEXT,48.28617812353398,-0.9902320701766697,0.2553951543193666,0.0001056417371122225,0.002371827388067963,down,pseudobulk 3+3
+Kdr,VLMC_Fibroblast,0.09585652500391006,7.59493670886076,395,angiogenesis,context,CONTEXT,,,,,,untested,not available
+Kdr,VSMC,0.04988391697406769,3.713235294117647,2720,angiogenesis,context,CONTEXT,18.111263989623342,-0.29739082390935806,0.39740643274235715,0.45426163708988476,0.7685330148233318,down,pseudobulk 3+3
 Flt1,Ambiguous,1.9585634469985962,83.56164383561644,73,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Astrocyte,0.5874344706535339,33.12266590060327,3481,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Endothelial,2.8183586597442627,96.86522767142094,26222,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Ependymal_CP,0.4594840407371521,32.82598818718764,4402,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Microglia,0.5003271102905273,29.25415819974411,13287,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Myeloid,0.5037246346473694,31.615720524017465,4580,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Oligodendrocyte,0.4323679804801941,33.22346736980884,1517,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,Pericyte,0.8992776870727539,42.078708375378405,991,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,VLMC_Fibroblast,0.4720545709133148,30.426356589147286,516,vascular state,context,CONTEXT,,,,,,untested,not available
-Flt1,VSMC,0.4934826195240021,29.711673699015474,2844,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,Astrocyte,0.5015789270401001,29.71014492753623,3036,vascular state,context,CONTEXT,332.63526051370724,-0.06705945601076369,0.13532296469144195,0.6202110981216851,0.8623713833209177,down,pseudobulk 3+3
+Flt1,Endothelial,2.8168742656707764,96.85517870029246,26329,vascular state,context,CONTEXT,21585.726761493082,-0.29657919053324194,0.04997032349258707,2.9365486191872853e-09,2.9079829711407165e-08,down,pseudobulk 3+3
+Flt1,Ependymal_CP,0.4581449329853058,32.735527809307605,4405,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,Microglia,0.5072779655456543,29.62474347698622,13644,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,Myeloid,0.5040878653526306,31.668484187568158,4585,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,Oligodendrocyte,0.4320858418941498,33.15649867374005,1508,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,Pericyte,1.1307061910629272,51.970443349753694,1218,vascular state,context,CONTEXT,409.625351683592,-0.6033671551714999,0.12243713202773045,8.308614281992225e-07,3.383550582070876e-05,down,pseudobulk 3+3
+Flt1,VLMC_Fibroblast,0.4594067633152008,29.873417721518987,395,vascular state,context,CONTEXT,,,,,,untested,not available
+Flt1,VSMC,0.35674339532852173,24.485294117647058,2720,vascular state,context,CONTEXT,134.7444312682775,-0.09000581378236715,0.1602494093658138,0.5743471372919895,0.8372959417117116,down,pseudobulk 3+3
 Angpt2,Ambiguous,0.07590911537408829,4.10958904109589,73,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Astrocyte,0.053956303745508194,3.9069232979029014,3481,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Endothelial,0.14400942623615265,7.611928914651819,26222,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Ependymal_CP,0.05058380216360092,4.543389368468878,4402,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Microglia,0.030938509851694107,2.4008429291788964,13287,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Myeloid,0.03582553192973137,2.925764192139738,4580,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Oligodendrocyte,0.03278641030192375,3.1641397495056034,1517,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,Pericyte,0.2818065881729126,15.842583249243189,991,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,VLMC_Fibroblast,0.17383305728435516,12.015503875968992,516,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Angpt2,VSMC,0.5160814523696899,31.856540084388186,2844,vascular remodeling,context,CONTEXT,,,,,,untested,not available
-Esm1,Ambiguous,0.02300717681646347,1.36986301369863,73,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Astrocyte,0.00627024145796895,0.4021832806664752,3481,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Endothelial,0.018237942829728127,0.7932270612462818,26222,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Ependymal_CP,0.006729254964739084,0.47705588368923213,4402,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Microglia,0.00325480243191123,0.2483630616391962,13287,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Myeloid,0.0028423722833395004,0.19650655021834063,4580,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Oligodendrocyte,0.0024474409874528646,0.26367831245880025,1517,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,Pericyte,0.01422790251672268,1.0090817356205852,991,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,VLMC_Fibroblast,0.013369154185056686,0.7751937984496124,516,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Esm1,VSMC,0.002155679976567626,0.10548523206751054,2844,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Angpt2,Astrocyte,0.04415317624807358,3.3267457180500655,3036,vascular remodeling,context,CONTEXT,18.562461824272983,1.8332605882565451,0.484176308650129,0.00015287678831621396,0.0027186035878869973,up,pseudobulk 3+3
+Angpt2,Endothelial,0.14461563527584076,7.645561927912188,26329,vascular remodeling,context,CONTEXT,687.8215505748013,2.5852515222800165,0.09575954029539963,1.5886968841762523e-160,7.775449173516464e-158,up,pseudobulk 3+3
+Angpt2,Ependymal_CP,0.05054934695363045,4.540295119182747,4405,vascular remodeling,context,CONTEXT,,,,,,untested,not available
+Angpt2,Microglia,0.028869248926639557,2.2354148343594256,13644,vascular remodeling,context,CONTEXT,,,,,,untested,not available
+Angpt2,Myeloid,0.0357864648103714,2.9225736095965105,4585,vascular remodeling,context,CONTEXT,,,,,,untested,not available
+Angpt2,Oligodendrocyte,0.03298208490014076,3.183023872679045,1508,vascular remodeling,context,CONTEXT,,,,,,untested,not available
+Angpt2,Pericyte,0.3128074109554291,19.21182266009852,1218,vascular remodeling,context,CONTEXT,58.30701440846392,0.8405325514817636,0.24805273717869294,0.0007026998410811833,0.011184760880078045,up,pseudobulk 3+3
+Angpt2,VLMC_Fibroblast,0.20685888826847076,14.430379746835442,395,vascular remodeling,context,CONTEXT,,,,,,untested,not available
+Angpt2,VSMC,0.5197004675865173,31.838235294117645,2720,vascular remodeling,context,CONTEXT,240.77590885908793,1.2556635008200903,0.13264374306646434,2.895548271385774e-21,5.004033876276687e-19,up,pseudobulk 3+3
+Esm1,Ambiguous,0.02300717495381832,1.36986301369863,73,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Astrocyte,0.005958699621260166,0.36231884057971014,3036,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Endothelial,0.018215421587228775,0.7938015116411561,26329,activated/angiogenic endothelium,candidate,KEEP,110.77136414208347,-0.35661742473961877,0.36294167851292314,0.32581664685505607,0.47550875648182644,down,pseudobulk 3+3
+Esm1,Ependymal_CP,0.006724672392010689,0.4767309875141884,4405,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Microglia,0.003427924821153283,0.2638522427440633,13644,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Myeloid,0.00283927284181118,0.19629225736095968,4585,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Oligodendrocyte,0.002462047850713134,0.2652519893899204,1508,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,Pericyte,0.013590803369879723,0.9031198686371099,1218,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,VLMC_Fibroblast,0.014562237076461315,0.7594936708860759,395,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Esm1,VSMC,0.0013518412597477436,0.07352941176470588,2720,activated/angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
 Egfl7,Ambiguous,2.379999876022339,93.15068493150685,73,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Astrocyte,0.5339567065238953,32.519390979603564,3481,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Endothelial,2.423208475112915,93.06307680573565,26222,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Ependymal_CP,0.41392552852630615,31.122217174011812,4402,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Microglia,0.4734511971473694,29.4949951080003,13287,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Myeloid,0.5204214453697205,33.97379912663755,4580,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Oligodendrocyte,0.395666241645813,31.509558338826633,1517,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,Pericyte,0.6857422590255737,35.11604439959637,991,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,VLMC_Fibroblast,0.4190804362297058,28.488372093023255,516,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
-Egfl7,VSMC,0.4296739399433136,27.637130801687764,2844,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,Astrocyte,0.4609561562538147,29.281949934123848,3036,angiogenic endothelium,candidate,KEEP,246.70454242793798,0.0748684664307839,0.15830427274320816,0.6362557893729403,0.8702177401564478,up,pseudobulk 3+3
+Egfl7,Endothelial,2.421985387802124,93.0532872498006,26329,angiogenic endothelium,candidate,KEEP,15283.144873577607,0.039615553381059807,0.0448650800943857,0.377240032971379,0.526935172289879,up,pseudobulk 3+3
+Egfl7,Ependymal_CP,0.414600670337677,31.146424517593648,4405,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,Microglia,0.4785934388637543,29.80064497214893,13644,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,Myeloid,0.5189253687858582,33.89312977099237,4585,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,Oligodendrocyte,0.39600253105163574,31.49867374005305,1508,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,Pericyte,0.8745442628860474,45.073891625615765,1218,angiogenic endothelium,candidate,KEEP,252.14225438530397,-0.43145408159356907,0.12653518702091937,0.0006502108238890215,0.0105915192929667,down,pseudobulk 3+3
+Egfl7,VLMC_Fibroblast,0.42668062448501587,28.860759493670884,395,angiogenic endothelium,candidate,KEEP,,,,,,untested,not available
+Egfl7,VSMC,0.32358306646347046,22.794117647058822,2720,angiogenic endothelium,candidate,KEEP,114.46001356613414,-0.0631821360332716,0.17275660463975753,0.7145671496945573,0.9095730119289444,down,pseudobulk 3+3

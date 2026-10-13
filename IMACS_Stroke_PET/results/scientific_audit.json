@@ -11,8 +11,8 @@
   },
   {
     "name": "mouse_acute_DESeq2",
-    "status": "NOT_COMPLETE",
-    "detail": "4 unresolved DESeq2 errors; use exact-label direction analysis only"
+    "status": "PASS",
+    "detail": "0 unresolved DESeq2 errors; use exact-label direction analysis only"
   },
   {
     "name": "mouse_temporal",

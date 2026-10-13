@@ -1,7 +1,7 @@
 ,n_cells,library_size,condition,celltype
-MCAO1,271,762087,MCAO,Pericyte
-MCAO2,271,703900,MCAO,Pericyte
-MCAO3,205,669138,MCAO,Pericyte
-sham1,70,181008,Sham,Pericyte
-sham2,75,180747,Sham,Pericyte
-sham3,99,278570,Sham,Pericyte
+MCAO1,326,1028529,MCAO,Pericyte
+MCAO2,312,923798,MCAO,Pericyte
+MCAO3,240,864060,MCAO,Pericyte
+sham1,99,338982,Sham,Pericyte
+sham2,105,322493,Sham,Pericyte
+sham3,136,490508,Sham,Pericyte

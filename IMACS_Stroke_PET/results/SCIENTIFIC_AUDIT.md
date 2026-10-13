@@ -6,7 +6,7 @@ Generated from committed processed results. Execution success is not scientific 
 |---|---|---|
 | mouse_acute_samples | PASS | 6 sample rows |
 | mouse_acute_animal_level_permutations | PASS | 116 candidate x compartment rows; minimum exact p=0.100; cannot claim p<0.05 |
-| mouse_acute_DESeq2 | NOT_COMPLETE | 4 unresolved DESeq2 errors; use exact-label direction analysis only |
+| mouse_acute_DESeq2 | PASS | 0 unresolved DESeq2 errors; use exact-label direction analysis only |
 | mouse_temporal | PASS | 4 deposited conditions; ONE SAMPLE per condition, descriptive only |
 | mouse_temporal_pseudoreplication | PASS | No spurious cell-level inferential p-values |
 | rat_48h | PASS | 6 condition/hemisphere matrices; individual rat identities NOT recoverable |
