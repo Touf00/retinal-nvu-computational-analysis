@@ -1,0 +1,35 @@
+name: IMACS GSE225948 source normalization audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_GSE225948_normalization_qc.yml"
+      - "IMACS_Stroke_PET/scripts/audit_GSE225948_library_sizes.py"
+      - "IMACS_Stroke_PET/results/independent_day2/11_inputs_checksums.csv"
+      - "IMACS_Stroke_PET/results/independent_late/12_inputs_checksums.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  normalization:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install minimal audit dependencies
+        run: python -m pip install "numpy>=1.26,<3" "pandas>=2.0,<3" "requests>=2.31,<3"
+      - name: Audit all twelve preparations against nCount_RNA
+        run: python IMACS_Stroke_PET/scripts/audit_GSE225948_library_sizes.py
+      - name: Preserve compact audit and numerical results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-GSE225948-full-matrix-normalization-audit
+          path: IMACS_Stroke_PET/results/source_normalization_qc/
+          if-no-files-found: warn
+          retention-days: 30
