@@ -1,0 +1,1 @@
+donor_id,block_id,slide_id,vessel_id,target,assay,stain_batch,clinical_group,poststroke_hours,region,segment,endothelial_mask_pixels,target_mean_intensity,local_background_intensity,mask_qc_pass,pathology_region_verified,acquisition_blinded
