@@ -1,0 +1,8 @@
+{
+  "dataset": "GSE225948",
+  "cells": "original author EC parent label",
+  "contrast": "young-male brain day2 stroke vs day2 sham",
+  "independent_units": "n=4 pooled preparations/group, 4\u20135 animal hemispheres per preparation",
+  "statistics": "exact label permutation on preparation-level mean log1p expression; BH 29-gene panel",
+  "source_matrix_unit": "fractional-valued deposited counts.csv, not integer UMI"
+}
