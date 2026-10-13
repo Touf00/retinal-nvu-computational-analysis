@@ -1,0 +1,7 @@
+published_original_marker,published_expected_class,feature_present,expected_class_samples,top_three_inhouse_broad_classes,expected_in_top_three,quantitative_source,not_original_author_cell_id_reproduction
+Itm2a,Endothelial,True,6,Endothelial;VLMC_Fibroblast;Pericyte,True,"mean of sample-wise normalized expression, descriptive",True
+Hexb,Microglia,True,6,Microglia;Myeloid;VLMC_Fibroblast,True,"mean of sample-wise normalized expression, descriptive",True
+Aldoc,Astrocyte,True,6,Astrocyte;Ependymal_CP;Oligodendrocyte,True,"mean of sample-wise normalized expression, descriptive",True
+Plp1,Oligodendrocyte,True,6,Oligodendrocyte;Astrocyte;Microglia,True,"mean of sample-wise normalized expression, descriptive",True
+Ttr,Ependymal_CP,True,6,Ependymal_CP;Microglia;Endothelial,True,"mean of sample-wise normalized expression, descriptive",True
+Acta2,VSMC,True,6,VSMC;Pericyte;VLMC_Fibroblast,True,"mean of sample-wise normalized expression, descriptive",True

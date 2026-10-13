@@ -1,0 +1,40 @@
+{
+  "dataset": "GSE174574",
+  "original_study_doi": "10.1177/0271678X211026770",
+  "original_geo_samples": [
+    "GSM5319987",
+    "GSM5319988",
+    "GSM5319989",
+    "GSM5319990",
+    "GSM5319991",
+    "GSM5319992"
+  ],
+  "biological_design": "three deposited sham and three MCAO mouse sample labels",
+  "caveat": "GEO rep identifiers do not expose a direct mapping from each cell to original raw animal beyond the six libraries",
+  "original_paper_annotations": "17 original detailed types including capillary, arterial, and venous EC; no per-cell author label file was supplied in our source inputs",
+  "current_annotations": "our 11 broad marker-score classes; not one-to-one comparable with published authors",
+  "independent_check_limit": "Itm2a independent of original classifier marker list; other published markers overlap existing classifier panels",
+  "original_paper_marker_presence": {
+    "Itm2a": true,
+    "Hexb": true,
+    "Aldoc": true,
+    "Plp1": true,
+    "Ttr": true,
+    "Acta2": true
+  },
+  "expected_class_in_top_three": {
+    "Itm2a": true,
+    "Hexb": true,
+    "Aldoc": true,
+    "Plp1": true,
+    "Ttr": true,
+    "Acta2": true
+  },
+  "source_SHA256_matches_archived_six_samples": true,
+  "archived_compartment_counts_equal": false,
+  "n_sample_by_celltype_count_slots_changed": 47,
+  "maximal_absolute_change_in_class_counts": 52,
+  "marker_concordance": "Descriptive only; no published original per-cell cluster transfer",
+  "inferential_outcome": "UNCHANGED: no additional animal-level differential expression conducted",
+  "protein_PET": "No transcript marker check proves protein targetability"
+}
