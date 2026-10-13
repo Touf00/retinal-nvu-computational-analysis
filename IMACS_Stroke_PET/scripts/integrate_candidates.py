@@ -28,9 +28,14 @@ independent_ec_file=base/"independent/08_independent_FACS_EC_exact_permutation_4
 independent_astro_file=base/"independent/08_independent_astro_endfoot_paired_3animals.csv"
 ind_ec=pd.read_csv(independent_ec_file).set_index("gene") if independent_ec_file.exists() else None
 ind_ast=pd.read_csv(independent_astro_file).set_index("gene") if independent_astro_file.exists() else None
+# Verified separately executed marker/reclustering sensitivity, six independent
+# mouse samples. Does NOT reassign original author's per-cell categories.
+mouse_sensitivity_file=base/"mouse_author_marker_validation/16_Zheng_pseudobulk_candidate_annotation_sensitivity.csv"
+mouse_sensitivity=(pd.read_csv(mouse_sensitivity_file).set_index(["gene","celltype"])
+                   if mouse_sensitivity_file.exists() else None)
 
 genes=sorted(set(p.index.get_level_values("gene")))
-cts=["Endothelial","Astrocyte","Pericyte"]
+cts=["Endothelial","Astrocyte","Pericyte","VSMC"]
 rows=[]
 def fetch(df,idx,col):
     try:
@@ -56,6 +61,26 @@ for gene in genes:
             temporal_independent_animals=0,
             rat_animal_inference="NOT POSSIBLE from deposited pooled group matrices",
             spatial_celltype_inference="NOT POSSIBLE mixed Visium spots")
+
+        if mouse_sensitivity is None:
+            d["primary_mouse_reannotation_direction_stable"]=np.nan
+            d["primary_mouse_reannotation_abs_effect_change_log2CPM"]=np.nan
+            d["primary_mouse_reannotation_status"]="NOT_RUN_DO_NOT_INFER_ANNOTATION_STABILITY"
+        else:
+            item_key=(gene,ct)
+            if item_key not in mouse_sensitivity.index:
+                raise AssertionError(f"Missing original mouse cell-label sensitivity {item_key}")
+            stable=mouse_sensitivity.loc[item_key,"sign_concordant"]
+            if not isinstance(stable,(bool,np.bool_)):
+                raise AssertionError(f"Unexpected sensitivity flag {item_key}")
+            d["primary_mouse_reannotation_direction_stable"]=bool(stable)
+            d["primary_mouse_reannotation_abs_effect_change_log2CPM"]=abs(
+                float(mouse_sensitivity.loc[item_key,"change_in_effect_log2CPM"]))
+            d["primary_mouse_reannotation_status"]=(
+                "DIRECTION_STABLE_ONE_INHOUSE_RECLUSTERING" if stable else
+                "DIRECTION_REVERSED_UNDER_INHOUSE_RECLUSTERING"
+            )
+        d["primary_mouse_original_author_cell_labels_available"]=False
 
         sham=fetch(t,(gene,ct,"Sham"),"mean_log1p")
         d["temporal_sham_mean_log1p"]=sham
@@ -117,7 +142,10 @@ assert not (matrix["rat_48h_qualified_for_descriptive_interpretation"] &
 matrix.to_csv(out/"candidate_by_celltype_cross_dataset_evidence.csv",index=False)
 summary=matrix[matrix.celltype=="Endothelial"][["gene","primary_mouse_log2CPM_difference_24h",
   "temporal_MCAO_day1_minus_sham_mean_log1p","mouse_24h_vs_day1_reproducibility",
-  "rat_48h_qualified_for_descriptive_interpretation","priority_PET_status"]]
+  "rat_48h_qualified_for_descriptive_interpretation",
+  "primary_mouse_reannotation_direction_stable",
+  "primary_mouse_reannotation_abs_effect_change_log2CPM",
+  "primary_mouse_reannotation_status","priority_PET_status"]]
 summary.to_csv(out/"endothelial_compact_audit.csv",index=False)
 (out/"README.md").write_text("""# Frozen cross-dataset candidate synthesis
 
@@ -137,5 +165,9 @@ not a matched sham-controlled repetition. Endfoot n=3 data are paired ipsilatera
 versus contralateral and reflect early ribosome-bound RNA, not global astrocytes.
 Time-series data have no within-condition animal replication and marker-based
 cell annotations require independent curation before biological validation.
+GSE174574 re-clustering sensitivity is now included as a separate column:
+29/29 endothelial directions were stable in this one in-house rerun,
+but 11/29 pericyte directions reversed. This is NOT an original author
+cell-ID comparison, independent animal replication, or PET target validation.
 """)
 print("Saved",len(matrix),"gene × compartment rows; no statistical meta-analysis")
