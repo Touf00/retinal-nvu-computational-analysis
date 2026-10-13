@@ -17,6 +17,10 @@
 | FACS endothelial and paired astrocyte **source format audit** | `notebooks/07_independent_endothelial_astro_source_audit.ipynb` | `imacs_independent_sources.yml` |
 | Independent sorted CD31+ EC n4+4 and astrocytic endfoot RiboTag n3 pairs | `notebooks/08_independent_FACS_astro_paired_analysis.ipynb` | `imacs_independent_validation.yml` |
 
+| Independent tMCAO day-3 2026 spatial transcriptomic matrix GSE337578 | `notebooks/09_spatial_GSE337578_day3_screen.ipynb` | `imacs_spatial_day3_2026.yml` |
+| Human n6 paired autopsy infarct core vs contralateral array GSE162955 | `notebooks/10_human_paired_GSE162955_screen.ipynb` | `imacs_human_paired.yml` |
+| Original Zucha lesion region label API access audit | `scripts/probe_spatial_region_source.py` | `imacs_spatial_source_probe.yml` |
+
 Each notebook is Colab-compatible via:
 `https://colab.research.google.com/github/Touf00/retinal-nvu-computational-analysis/blob/imacs-stroke-pet-screen/IMACS_Stroke_PET/notebooks/<filename>.ipynb`.
 
@@ -34,7 +38,7 @@ Every successfully archived dataset directory includes `source_run_id.txt`: the 
 
 ## /TEAMRED completion and scientific limitations
 
-**GSE174574 — computed; candidate direction screen only.** Three MCAO and three sham animals. Exact balanced permutation p has a theoretical minimum of 0.100. PyDESeq2 failed in four broad cell types; no DESeq2 p-values are reported. The provisional marker-based cell type labels need independent validation. RNA fold changes do not establish PET suitability.
+**GSE174574 — computed; candidate direction screen only.** Three MCAO and three sham animals. Exact balanced permutation p has a theoretical minimum of 0.100. After upgrading PyDESeq2 to 0.5.4, all four broad-compartment Wald-model DE tables ran successfully (GitHub Actions 38325572095); model p-values can be extremely small with n=3/group and must not be treated as independent strong proof relative to exact permutations. The provisional marker-based cell type labels need independent validation. RNA fold changes do not establish PET suitability.
 
 **GSE227651 — computed; descriptive only.** One GEO matrix per condition, no animal-level estimates of variance. Limited late-timepoint astrocyte capture.
 
@@ -54,7 +58,7 @@ Every successfully archived dataset directory includes `source_run_id.txt`: the 
 2. Recover rat cell-type metadata or use a curated reference before declaring cross-species vascular validation; do not use the poorly captured EC group to support a PET claim.
 3. Obtain the original spatial region annotation for proper core/periphery contrasts (author Seurat object / supplementary tables).
 4. Investigate SCT portal large H5AD access via authorized download or validated alternative public deposit.
-5. Perform a biological **targetability** audit for candidates: protein localization, luminal accessibility, target-to-background, binder/radiotracer availability, BBB/flow confound, human relevance.
+5. Include independent one-library **GSE337578 day3 tMCAO spatial data** (run 38325519991, archived under `results/spatial_day3/`). Coordinate mapping and gene detection are validated. The sample has no controls, so no inferential or core/peri-infarct claims.\n6. For human translation test **GSE162955** (six paired autopsy core/contralateral microarrays) with an auditable GPL17586 probe-to-gene mapping; use only whole-tissue injury evidence, not cell specificity.\n7. Perform a biological **targetability** audit for candidates: protein localization, luminal accessibility, target-to-background, binder/radiotracer availability, BBB/flow confound, human relevance.
 6. Study the BBB cargo-delivery question in a separate pharmacokinetics and assay framework; no RNA-expression atlas proves productive transcytosis.
 
 The science can reject APJ, AMOT, MAO-B or any existing tracer if independent evidence supports doing so. These are **not** automatic leading candidates.
