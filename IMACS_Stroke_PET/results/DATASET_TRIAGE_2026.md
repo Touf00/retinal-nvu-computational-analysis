@@ -18,12 +18,27 @@
 - The paper's open interactive Nygen ScarfWeb may also display region annotations. It is a visual aid, not a proven machine-readable export.
 - When an authorized user download of the processed object or an author-exported **barcode + sample ID + DetailedRegionAnnoShort CSV** becomes available, join on both specimen and barcode; do not use barcode alone across sections. Hold out day-7 section replication explicitly.
 
-## Human tissue translation — GSE162955 — INITIATED
+## Human tissue translation — GSE162955 — EXECUTED AND SOURCE-VERIFIED
 
 - Six human postmortem ischemic-stroke donors, **paired infarct core and contralateral tissue**: 12 GPL17586 microarrays.
 - Separate notebook `10_human_paired_GSE162955_screen.ipynb` uses original GEO series matrix, authoritative platform annotation and exact **n=6 sign-flip** paired analysis.
 - Human **bulk brain tissue** does not supply brain endothelial specificity, BBB accessibility, pericyte specificity, tracer binding or survival-zone signal. Ischemic core cell loss and terminal illness are critical confounders.
+- Original downloaded GEO source checksum verified, all six donor/condition labels verified, all probe intensities and 64-permutation paired statistics and BH values independently reproduced. **27/29 panel genes mappable; none reaches frozen-panel human BH q<0.05. Six-donor leave-one-out sign changes in 16/27 genes.** Execution: https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38440475042; results: `human_replication_qc/`.
 - Any source-file/platform-map failure must be recorded, not hidden by unverified symbol mapping.
+
+## Adult surgical-control human brain FACS endothelium — GSE256490 — EXECUTED
+
+- **Six original TL_patient1–6_EC GEO samples**, GSM8101534–1539; separately downloaded and source-SHA256 fingerprinted. This is an adult temporal lobe control/surgery reference, **not a human AIS case-control study**. Two original source filenames explicitly mention epilepsy.
+- After basic per-library QC, **50,251 captured endothelial-enriched cells** from six named patient preparations. All 29 target gene features present; only eight genes detected in >=10% of cells in all six preparations. Cells do not inflate biological sample size.
+- Median fraction of cells with detectable RNA across six independent preparations: APLNR **0.12%**, AMOT **4.72%**, MCAM **9.65%**, ICAM1 **16.01%**, PVR **6.12%**, SLC3A2/CD98hc **90.39%**, TFRC **66.88%**, CLDN5 **99.42%**. Low detection does not demonstrate protein absence; high detection does not prove luminal accessibility or BBB transcytosis.
+- Executed and archived at https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38441222229; results: `human_vascular_reference/`. Original paper: Wälchli et al. Nature 2024, DOI 10.1038/s41586-024-07493-y.
+- Joined as distinct human normal-baseline evidence with acute mouse EC cohorts and six paired human bulk postmortem donors (29-gene translation **hypothesis** gates, not meta-analysis), execution https://github.com/Touf00/retinal-nvu-computational-analysis/actions/runs/38441801735; results: `target_validation_gate/`.
+
+## Other human candidates ruled out as direct AIS cerebral vascular replication
+
+- GSE248760: four sickle-cell patients with versus four without prior ischemic stroke, **peripheral blood-derived endothelial colony-forming cells**. Genuine donor contrast, but not an ischemic human brain microvascular study. Context only.
+- GSE331114: poststroke brain immune **CD45-enriched** cells, not unbiased vascular endothelial cells.
+- GSE308369: HUVECs stimulated with human stroke plasma, an *in vitro peripheral endothelial model* rather than stroke-patient brain endothelium.
 
 ## Exclusions and limits
 
