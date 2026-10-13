@@ -76,7 +76,20 @@ jobs:
             echo "No new results to archive"
           else
             git commit -m "Archive IMACS processed tables and run provenance [skip ci]"
-            git push origin HEAD:imacs-stroke-pet-screen
+            # Concurrent notebook/documentation commits may advance the isolated branch.
+            # Rebase on latest remote and retry; never force-push or touch main.
+            for attempt in 1 2 3; do
+              if git push origin HEAD:imacs-stroke-pet-screen; then
+                echo "Archived results pushed successfully"
+                break
+              fi
+              if [[ "$attempt" -eq 3 ]]; then
+                echo "Could not push archived results after three non-destructive retries" >&2
+                exit 1
+              fi
+              git fetch origin imacs-stroke-pet-screen
+              git rebase origin/imacs-stroke-pet-screen
+            done
           fi
 
 # Rebuild latest integrated matrix after /TEAMRED removal of nonreplicated sign concordance.
