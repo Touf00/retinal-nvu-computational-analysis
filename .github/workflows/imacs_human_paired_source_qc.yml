@@ -1,0 +1,45 @@
+name: IMACS human six-donor paired GEO replication audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_human_paired_source_qc.yml"
+      - "IMACS_Stroke_PET/scripts/audit_GSE162955_human_paired_source.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  paired_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify GEO-published 6 human pairs, original probes and leave-one-out
+        run: python IMACS_Stroke_PET/scripts/audit_GSE162955_human_paired_source.py
+      - name: Archive source-verified human replication sensitivity results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/human_replication_qc/
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive human paired source verification and leave-one-patient audit [skip ci]"
+            git fetch origin imacs-stroke-pet-screen
+            git rebase origin/imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve outputs even on branch-write failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-human-source-verified-six-paired-audit
+          path: IMACS_Stroke_PET/results/human_replication_qc/
+          if-no-files-found: warn
+          retention-days: 30
