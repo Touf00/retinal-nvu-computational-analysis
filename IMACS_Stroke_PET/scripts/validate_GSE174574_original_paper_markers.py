@@ -279,3 +279,83 @@ report=dict(
 (RESULTS/"16_Zheng_original_marker_validation_manifest.json").write_text(json.dumps(
     report,indent=2)+"\n",encoding="utf-8")
 print("MOUSE_MARKER_AUDIT PASS",json.dumps(report),flush=True)
+
+
+# Compare primary candidate directions after reconstituting sample-level pseudobulk
+# with the currently rerun marker classifications. This does not convert
+# provisional classes into validated original author labels.
+import itertools
+panel=pd.read_csv("IMACS_Stroke_PET/results/primary/00_frozen_candidate_catalog.csv")
+old_effects=pd.read_csv(
+    "IMACS_Stroke_PET/results/primary/06_primary_candidate_exact_permutation_screen.csv"
+)
+old_key={(r.celltype,r.gene):r for r in old_effects.itertuples(index=False)}
+samples=list(SAMPLES.prefix)
+groups=SAMPLES.set_index("prefix")["condition"]
+comparison_records=[]
+for lineage in ["Endothelial","Astrocyte","Pericyte","VSMC"]:
+    sub=adata[adata.obs["broad_celltype"]==lineage]
+    libcounts=[]; names=[]
+    for sample in samples:
+        idx=np.flatnonzero(sub.obs["sample_id"].astype(str).to_numpy()==sample)
+        assert len(idx)>=20, (lineage,sample,"inadequate repeat annotation")
+        vals=np.asarray(sub.layers["counts"][idx].sum(axis=0)).ravel()
+        libcounts.append(vals); names.append(sample)
+    allcounts=pd.DataFrame(libcounts,index=names,columns=sub.var_names).round().astype(int)
+    library=allcounts.sum(axis=1)
+    assert (library>=10000).all(),(lineage,"sample library too small")
+    filtered=[x for x in panel["gene"] if x in allcounts]
+    normalized=np.log2(allcounts[filtered].div(library,axis=0)*1e6+0.1)
+    is_case=groups.loc[names].eq("MCAO").to_numpy()
+    assert sum(is_case)==3 and len(is_case)==6
+    for gene in filtered:
+        old=old_key.get((lineage,gene))
+        if old is None: continue
+        y=normalized[gene].to_numpy(dtype=float)
+        delta=float(y[is_case].mean()-y[~is_case].mean())
+        null=[]
+        for chosen in itertools.combinations(range(6),3):
+            k=np.zeros(6,dtype=bool)
+            k[list(chosen)]=True
+            null.append(float(y[k].mean()-y[~k].mean()))
+        p=float(np.mean(np.abs(null)>=abs(delta)-1e-12))
+        olddelta=float(old.log2CPM_mean_difference)
+        comparison_records.append(dict(
+            celltype=lineage,gene=gene,
+            original_broad_annotation_effect_log2CPM=olddelta,
+            rerun_broad_annotation_effect_log2CPM=delta,
+            change_in_effect_log2CPM=delta-olddelta,
+            sign_concordant=bool(
+                np.sign(delta)==np.sign(olddelta) or
+                (abs(delta)<1e-10 and abs(olddelta)<1e-10)),
+            original_exact_p=float(old.exact_label_permutation_two_sided_p),
+            rerun_exact_p_conditional_on_sample_exchangeability=p,
+            n_deposited_samples_per_group=3,
+            inferential_limit="Annotation sensitivity only; exact p floor 0.10; no BH or original per-cell author labels"
+        ))
+sens=pd.DataFrame(comparison_records)
+assert len(sens)>=100 and set(sens.celltype)=={
+    "Endothelial","Astrocyte","Pericyte","VSMC"}
+sens.to_csv(RESULTS/"16_Zheng_pseudobulk_candidate_annotation_sensitivity.csv",index=False)
+directions={}
+for lin,g in sens.groupby("celltype"):
+    diverg=g.loc[~g.sign_concordant]
+    directions[lin]={
+        "genes":len(g),
+        "sign_changes":int(len(diverg)),
+        "sign_changed_gene_symbols":sorted(diverg.gene.tolist()),
+        "max_absolute_effect_change_log2CPM":float(np.max(np.abs(g.change_in_effect_log2CPM))),
+        "median_absolute_effect_change_log2CPM":float(np.median(np.abs(g.change_in_effect_log2CPM)))
+    }
+sensitivity_report=dict(
+    source="GSE174574 original six GEO samples, SHA256 checked",
+    original_marker_classifier="rerun in original computation order; broad classes not original author labels",
+    baseline="results/primary/06_primary_candidate_exact_permutation_screen.csv",
+    celltype_differences=directions,
+    animal_replicates_per_group=3,
+    warning="Effect sign stability under imperfect broad reannotation is sensitivity evidence only, not independent replication or causal discovery"
+)
+(RESULTS/"16_Zheng_pseudobulk_annotation_sensitivity_report.json").write_text(
+    json.dumps(sensitivity_report,indent=2)+"\n",encoding="utf-8")
+print("MOUSE_ANNOTATION_PSEUDOBULK_SENSITIVITY PASS",
+      json.dumps(directions),flush=True)
