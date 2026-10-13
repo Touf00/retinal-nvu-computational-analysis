@@ -177,7 +177,7 @@ GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Aplnr,1226,0.0,0.0
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Apln,1226,,
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Apela,1226,0.0,0.0
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Amot,1226,,
-GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Mcam,1226,0.21293696761131287,0.08482871125611746
+GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Mcam,1226,0.21293699741363525,0.08482871125611746
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Maob,1226,0.008385928347706795,0.0032626427406199023
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Mfsd2a,1226,0.05563360080122948,0.02202283849918434
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Slc22a8,1226,0.0,0.0
@@ -185,7 +185,7 @@ GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Cldn5,1226,,
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Cav1,1226,0.0102373156696558,0.004078303425774877
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Plvap,1226,0.0,0.0
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Tfrc,1226,0.0850372463464737,0.03588907014681892
-GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Lrp1,1226,0.11814428865909576,0.04812398042414356
+GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Lrp1,1226,0.11814429610967636,0.04812398042414356
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Slc3a2,1226,0.04198060184717178,0.017128874388254486
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Igf1r,1226,0.2983825206756592,0.11500815660685156
 GSM7976206,Sham_L,Sham,contralateral_or_left,Oligodendrocyte,Pdgfrb,1226,0.008133960887789726,0.0032626427406199023
@@ -305,7 +305,7 @@ GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Lrp1,186,0.296037942171096
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Slc3a2,186,0.01534289587289095,0.005376344086021506
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Igf1r,186,0.5672944784164429,0.20967741935483872
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Pdgfrb,186,0.08731425553560257,0.03225806451612903
-GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Rgs5,186,0.14425991475582123,0.043010752688172046
+GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Rgs5,186,0.14425992965698242,0.043010752688172046
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Icam1,186,0.015681857243180275,0.005376344086021506
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Vcam1,186,0.02930016629397869,0.010752688172043012
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Ambiguous,Ackr1,186,0.0,0.0
@@ -526,13 +526,13 @@ GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Apln,20,,
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Apela,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Amot,20,,
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Mcam,20,0.21753259003162384,0.1
-GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Maob,20,0.3194430470466614,0.15
+GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Maob,20,0.31944307684898376,0.15
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Mfsd2a,20,0.1372906118631363,0.05
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Slc22a8,20,0.4816233217716217,0.2
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Cldn5,20,,
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Cav1,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Plvap,20,0.0,0.0
-GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Tfrc,20,0.3620257079601288,0.15
+GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Tfrc,20,0.36202573776245117,0.15
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Lrp1,20,0.4250248372554779,0.15
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Slc3a2,20,0.5235721468925476,0.2
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Igf1r,20,1.130468726158142,0.4
@@ -543,7 +543,7 @@ GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Vcam1,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Ackr1,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Pvr,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Tnfrsf10b,20,0.0,0.0
-GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Itgav,20,0.3180667757987976,0.15
+GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Itgav,20,0.31806680560112,0.15
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Itgb3,20,0.0,0.0
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Kdr,20,0.05106550455093384,0.05
 GSM7976207,Sham_R,Sham,ipsilateral_or_right,Pericyte,Flt1,20,,
@@ -657,7 +657,7 @@ GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Rgs5,250,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Icam1,250,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Vcam1,250,0.14047056436538696,0.056
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Ackr1,250,0.0,0.0
-GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Pvr,250,0.03024604357779026,0.012
+GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Pvr,250,0.03024604730308056,0.012
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Tnfrsf10b,250,0.011261296458542347,0.004
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Itgav,250,0.4488217234611511,0.184
 GSM7976208,mMCAO_contra,moderate,contralateral,Astrocyte,Itgb3,250,0.0,0.0
@@ -692,7 +692,7 @@ GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Itgav,34,0.1774773597
 GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Itgb3,34,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Kdr,34,1.372051477432251,0.5882352941176471
 GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Flt1,34,,
-GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Angpt2,34,0.02864421345293522,0.029411764705882353
+GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Angpt2,34,0.02864421159029007,0.029411764705882353
 GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Esm1,34,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Endothelial,Egfl7,34,1.226918339729309,0.4411764705882353
 GSM7976208,mMCAO_contra,moderate,contralateral,Microglia,Aplnr,39,0.0,0.0
@@ -746,7 +746,7 @@ GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Vcam1,33,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Ackr1,33,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Pvr,33,0.05504070594906807,0.030303030303030304
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Tnfrsf10b,33,0.0,0.0
-GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Itgav,33,0.2296299934387207,0.09090909090909091
+GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Itgav,33,0.2296300083398819,0.09090909090909091
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Itgb3,33,0.0835391953587532,0.030303030303030304
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Kdr,33,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,Myeloid,Flt1,33,,
@@ -795,7 +795,7 @@ GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Cav1,68,0.09210290759801865,0
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Plvap,68,0.0,0.0
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Tfrc,68,0.23554642498493195,0.10294117647058823
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Lrp1,68,0.6850000619888306,0.27941176470588236
-GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Slc3a2,68,0.03421339392662048,0.014705882352941176
+GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Slc3a2,68,0.03421339765191078,0.014705882352941176
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Igf1r,68,0.4520469605922699,0.19117647058823528
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Pdgfrb,68,0.08410555869340897,0.029411764705882353
 GSM7976208,mMCAO_contra,moderate,contralateral,OPC,Rgs5,68,0.03708973899483681,0.014705882352941176
@@ -832,7 +832,7 @@ GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Icam1,2004,0.0004
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Vcam1,2004,0.0026013441383838654,0.0014970059880239522
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Ackr1,2004,0.001332990825176239,0.000499001996007984
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Pvr,2004,0.007633064407855272,0.003493013972055888
-GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Tnfrsf10b,2004,0.003972455393522978,0.0014970059880239522
+GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Tnfrsf10b,2004,0.003972455859184265,0.0014970059880239522
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Itgav,2004,0.5472146272659302,0.21157684630738524
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Itgb3,2004,0.0034194402396678925,0.0014970059880239522
 GSM7976208,mMCAO_contra,moderate,contralateral,Oligodendrocyte,Kdr,2004,0.010846951976418495,0.004491017964071856
@@ -985,7 +985,7 @@ GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Astrocyte,Flt1,367,,
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Astrocyte,Angpt2,367,0.028618765994906425,0.010899182561307902
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Astrocyte,Esm1,367,0.0,0.0
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Astrocyte,Egfl7,367,0.0278460793197155,0.010899182561307902
-GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Aplnr,42,0.05427413806319237,0.023809523809523808
+GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Aplnr,42,0.054274145513772964,0.023809523809523808
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Apln,42,,
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Apela,42,0.0,0.0
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Amot,42,,
@@ -1006,10 +1006,10 @@ GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Icam1,42,0.0,0.0
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Vcam1,42,0.06147867813706398,0.023809523809523808
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Ackr1,42,0.03836572915315628,0.023809523809523808
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Pvr,42,0.380981981754303,0.16666666666666666
-GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Tnfrsf10b,42,0.11575280874967575,0.047619047619047616
+GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Tnfrsf10b,42,0.11575282365083694,0.047619047619047616
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Itgav,42,0.17031614482402802,0.07142857142857142
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Itgb3,42,0.04719237610697746,0.023809523809523808
-GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Kdr,42,0.9374018907546997,0.40476190476190477
+GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Kdr,42,0.9374020099639893,0.40476190476190477
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Flt1,42,,
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Angpt2,42,0.16029496490955353,0.07142857142857142
 GSM7976209,mMCAO_ipsi,moderate,ipsilateral,Endothelial,Esm1,42,0.0,0.0
@@ -1284,7 +1284,7 @@ GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Maob,161,0.36996161937713
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Mfsd2a,161,0.08004967868328094,0.031055900621118012
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Slc22a8,161,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Cldn5,161,,
-GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Cav1,161,0.010431825183331966,0.006211180124223602
+GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Cav1,161,0.010431826114654541,0.006211180124223602
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Plvap,161,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Tfrc,161,0.01361214742064476,0.006211180124223602
 GSM7976210,sMCAO_contra,severe,contralateral,Astrocyte,Lrp1,161,0.650950014591217,0.2422360248447205
@@ -1344,7 +1344,7 @@ GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Slc22a8,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Cldn5,22,,
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Cav1,22,0.22896216809749603,0.09090909090909091
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Plvap,22,0.0,0.0
-GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Tfrc,22,0.10773546248674393,0.045454545454545456
+GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Tfrc,22,0.10773546993732452,0.045454545454545456
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Lrp1,22,0.46432191133499146,0.18181818181818182
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Slc3a2,22,0.22844089567661285,0.09090909090909091
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Igf1r,22,0.20922955870628357,0.09090909090909091
@@ -1355,7 +1355,7 @@ GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Vcam1,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Ackr1,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Pvr,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Tnfrsf10b,22,0.0,0.0
-GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Itgav,22,0.546613335609436,0.22727272727272727
+GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Itgav,22,0.5466134548187256,0.22727272727272727
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Itgb3,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Kdr,22,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Microglia,Flt1,22,,
@@ -1395,7 +1395,7 @@ GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Aplnr,8811,0.000444583361968
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Apln,8811,,
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Apela,8811,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Amot,8811,,
-GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Mcam,8811,0.007080349139869213,0.004993757802746567
+GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Mcam,8811,0.0070803496055305,0.004993757802746567
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Maob,8811,0.016592329367995262,0.011122460560662809
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Mfsd2a,8811,0.008759253658354282,0.006128702757916241
 GSM7976210,sMCAO_contra,severe,contralateral,Neuron,Slc22a8,8811,0.002511705504730344,0.001815911928271479
@@ -1491,7 +1491,7 @@ GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Cav1,18,0.2741945385932922
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Plvap,18,0.0,0.0
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Tfrc,18,0.3462705612182617,0.16666666666666666
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Lrp1,18,0.49154791235923767,0.2222222222222222
-GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Slc3a2,18,0.6001958847045898,0.2222222222222222
+GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Slc3a2,18,0.6001959443092346,0.2222222222222222
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Igf1r,18,1.604159951210022,0.6111111111111112
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Pdgfrb,18,1.2532973289489746,0.5
 GSM7976210,sMCAO_contra,severe,contralateral,Pericyte,Rgs5,18,2.1925387382507324,0.6666666666666666
@@ -1617,7 +1617,7 @@ GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Ackr1,611,0.00518141128122806
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Pvr,611,0.10109781473875046,0.06382978723404255
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Tnfrsf10b,611,0.007508206646889448,0.004909983633387889
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Itgav,611,0.8049406409263611,0.41734860883797054
-GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Itgb3,611,0.023340899497270584,0.01309328968903437
+GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Itgb3,611,0.023340901359915733,0.01309328968903437
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Kdr,611,0.015582195483148098,0.008183306055646482
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Flt1,611,,
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Astrocyte,Angpt2,611,0.025994325056672096,0.014729950900163666
@@ -1774,7 +1774,7 @@ GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Apela,1713,0.0,0.0
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Amot,1713,,
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Mcam,1713,0.3958943784236908,0.1739638061879743
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Maob,1713,0.017513152211904526,0.009340338587273789
-GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Mfsd2a,1713,0.12322056293487549,0.05487448920023351
+GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Mfsd2a,1713,0.12322057038545609,0.05487448920023351
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Slc22a8,1713,0.002445250516757369,0.0011675423234092236
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Cldn5,1713,,
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,Oligodendrocyte,Cav1,1713,0.013944126665592194,0.0070052539404553416
@@ -1844,7 +1844,7 @@ GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Igf1r,99,1.647397637367
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Pdgfrb,99,0.6567968726158142,0.3333333333333333
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Rgs5,99,0.058947689831256866,0.020202020202020204
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Icam1,99,0.11350691318511963,0.06060606060606061
-GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Vcam1,99,0.0432443730533123,0.010101010101010102
+GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Vcam1,99,0.0432443767786026,0.010101010101010102
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Ackr1,99,0.0,0.0
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Pvr,99,0.38530609011650085,0.2222222222222222
 GSM7976211,sMCAO_ipsi,severe,ipsilateral,VLMC_Fibroblast,Tnfrsf10b,99,0.060819294303655624,0.04040404040404041
