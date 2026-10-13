@@ -32,8 +32,8 @@
   },
   "source_SHA256_matches_archived_six_samples": true,
   "archived_compartment_counts_equal": false,
-  "n_sample_by_celltype_count_slots_changed": 43,
-  "maximal_absolute_change_in_class_counts": 207,
+  "n_sample_by_celltype_count_slots_changed": 40,
+  "maximal_absolute_change_in_class_counts": 300,
   "marker_concordance": "Descriptive only; no published original per-cell cluster transfer",
   "inferential_outcome": "UNCHANGED: no additional animal-level differential expression conducted",
   "protein_PET": "No transcript marker check proves protein targetability"

@@ -1,0 +1,54 @@
+{
+  "source": "GSE174574 original six GEO samples, SHA256 checked",
+  "original_marker_classifier": "rerun in original computation order; broad classes not original author labels",
+  "baseline": "results/primary/06_primary_candidate_exact_permutation_screen.csv",
+  "celltype_differences": {
+    "Astrocyte": {
+      "genes": 29,
+      "sign_changes": 1,
+      "sign_changed_gene_symbols": [
+        "Egfl7"
+      ],
+      "max_absolute_effect_change_log2CPM": 0.7137490362850096,
+      "median_absolute_effect_change_log2CPM": 0.024448372679025
+    },
+    "Endothelial": {
+      "genes": 29,
+      "sign_changes": 0,
+      "sign_changed_gene_symbols": [],
+      "max_absolute_effect_change_log2CPM": 0.010730479607056975,
+      "median_absolute_effect_change_log2CPM": 0.0010985805879379917
+    },
+    "Pericyte": {
+      "genes": 29,
+      "sign_changes": 11,
+      "sign_changed_gene_symbols": [
+        "Amot",
+        "Aplnr",
+        "Itgav",
+        "Itgb3",
+        "Maob",
+        "Pdgfrb",
+        "Plvap",
+        "Rgs5",
+        "Slc3a2",
+        "Tnfrsf10b",
+        "Vcam1"
+      ],
+      "max_absolute_effect_change_log2CPM": 4.050451653047378,
+      "median_absolute_effect_change_log2CPM": 0.23650811539691216
+    },
+    "VSMC": {
+      "genes": 29,
+      "sign_changes": 2,
+      "sign_changed_gene_symbols": [
+        "Egfl7",
+        "Rgs5"
+      ],
+      "max_absolute_effect_change_log2CPM": 2.3323716804747825,
+      "median_absolute_effect_change_log2CPM": 0.08325060171430915
+    }
+  },
+  "animal_replicates_per_group": 3,
+  "warning": "Effect sign stability under imperfect broad reannotation is sensitivity evidence only, not independent replication or causal discovery"
+}
