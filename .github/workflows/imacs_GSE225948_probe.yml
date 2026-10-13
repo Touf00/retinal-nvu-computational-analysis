@@ -1,0 +1,27 @@
+name: IMACS independent day-2 mouse stroke source probe
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/scripts/probe_GSE225948_source.py"
+      - ".github/workflows/imacs_GSE225948_probe.yml"
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests beautifulsoup4 pandas
+      - run: python IMACS_Stroke_PET/scripts/probe_GSE225948_source.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: imacs-GSE225948-source-probe
+          path: IMACS_Stroke_PET/results/source_probes/
+          if-no-files-found: warn
