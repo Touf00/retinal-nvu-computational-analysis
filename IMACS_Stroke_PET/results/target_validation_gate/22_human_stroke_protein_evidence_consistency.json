@@ -1,0 +1,35 @@
+{
+  "n_candidates": 9,
+  "genes": [
+    "AMOT",
+    "APLNR",
+    "ICAM1",
+    "MAOB",
+    "MCAM",
+    "PVR",
+    "SLC3A2",
+    "TFRC",
+    "VCAM1"
+  ],
+  "direct_human_ischemic_vascular_IHC": [
+    "ICAM1",
+    "VCAM1"
+  ],
+  "direct_human_ischemic_vascular_PET_verified": [],
+  "human_brain_BBB_protein_nonstroke": [
+    "SLC3A2",
+    "TFRC"
+  ],
+  "preclinical_ischemic_cerebral_binding_or_protein": [
+    "ICAM1",
+    "VCAM1",
+    "MCAM",
+    "PVR"
+  ],
+  "protein_surface_access_human_ischemia": "NOT_PROVEN_FOR_ANY_TARGET",
+  "documented_stroke_parenchymal_PET": [
+    "MAOB-context THK5351 (crossbinding; not specific vascular MAOB)"
+  ],
+  "literature_review_is_not_original_protein_experiment": true,
+  "purpose": "Evidence gate/citation consistency only, not PET clearance or full systematic literature review"
+}
