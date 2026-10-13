@@ -109,6 +109,11 @@ for gene in genes:
         d["priority_PET_status"]="NOT RANKED: requires cell-specific protein, accessible epitope, binder and PK"
         rows.append(d)
 matrix=pd.DataFrame(rows)
+# Fail closed if any missing-feature rat comparison is incorrectly marked eligible.
+assert not (matrix["rat_48h_qualified_for_descriptive_interpretation"] &
+            ~matrix["rat_48h_feature_present_both_pooled_groups"]).any(), "Rat missing-feature QC regression"
+assert not (matrix["rat_48h_qualified_for_descriptive_interpretation"] &
+            matrix["rat_48h_comparison_gate"].ne("DESCRIPTIVE_ONLY_NO_ANIMAL_REPLICATION")).any()
 matrix.to_csv(out/"candidate_by_celltype_cross_dataset_evidence.csv",index=False)
 summary=matrix[matrix.celltype=="Endothelial"][["gene","primary_mouse_log2CPM_difference_24h",
   "temporal_MCAO_day1_minus_sham_mean_log1p","mouse_24h_vs_day1_reproducibility",
@@ -121,7 +126,7 @@ numerically across independent scRNA, snRNA and Visium experiments.
 
 **Primary (3+3):** exact label-permutation p has theoretical floor 0.1.
 **Temporal:** only one deposited sample/condition, descriptive trends only.
-**Rat:** six group/hemisphere matrices without recoverable individual rat labels.
+**Rat:** six group/hemisphere matrices without recoverable individual rat labels. A candidate needs BOTH a present deposited feature and >=50 cells in each contrasted compartment even for descriptive inclusion; no animal-level differential expression can be inferred.
 **Spatial:** mixed spots, no author region annotations transferred.
 **PET feasibility:** not inferred from RNA.
 
