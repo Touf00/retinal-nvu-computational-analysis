@@ -133,17 +133,17 @@ MARKERS={
 
 sc.pp.normalize_total(adata,target_sum=1e4)
 sc.pp.log1p(adata)
-# Avoid an unneeded second AnnData copy; use full normalized adata.X
+adata.raw=adata.copy()  # Restore original pipeline object state before clustering
 
 sc.pp.highly_variable_genes(adata,n_top_genes=2500,flavor="seurat",batch_key="sample_id")
 sc.tl.pca(adata,n_comps=40,use_highly_variable=True)
 sc.pp.neighbors(adata,n_neighbors=15,n_pcs=30)
-# UMAP is irrelevant to original-marker concordance
+sc.tl.umap(adata)  # Preserve original pipeline's computation order before Leiden
 sc.tl.leiden(adata,resolution=.6,key_added="leiden")
 
 for lineage,genes in MARKERS.items():
     genes=[g for g in genes if g in adata.var_names]
-    sc.tl.score_genes(adata,genes,score_name=f"score_{lineage}",use_raw=False)
+    sc.tl.score_genes(adata,genes,score_name=f"score_{lineage}",use_raw=True)
 
 score_cols=[f"score_{x}" for x in MARKERS]
 cs=adata.obs.groupby("leiden")[score_cols].mean()
@@ -158,7 +158,7 @@ cs.to_csv(RESULTS/"03_cluster_annotation_scores.csv")
 
 
 
-# Source-independent marker cross-check from Zheng et al., JCBFM 2022
+# Original pipeline's source QC, UMAP, Leiden, score_genes and broad calls are reproduced in the same order.\n# Source-independent marker cross-check from Zheng et al., JCBFM 2022
 # DOI 10.1177/0271678X211026770: Itm2a/EC, Hexb/MG, Aldoc/astrocyte,
 # Plp1/oligodendrocyte, Ttr/ependymal, Acta2/VSMC.
 # This is NOT recovery of original per-cell authors' annotations.
