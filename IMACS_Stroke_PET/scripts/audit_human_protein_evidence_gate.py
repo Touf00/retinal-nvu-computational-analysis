@@ -31,7 +31,7 @@ for row in rows:
     assert "GO" not in row["decision"] or "NOT_STROKE_PET_GO" in row["decision"], (
         "No human ischemic brain-vessel target has achieved a full PET gate"
     )
-    assert "PET" in row["in_vivo_PET_validation"] or gene in {"ICAM1","VCAM1","MCAM","PVR"}
+    assert any(token in row["in_vivo_PET_validation"] for token in ("PET","18F","89Zr","68Ga")) or gene in {"ICAM1","VCAM1","MCAM","PVR"}
     for field in ("primary_url","secondary_url"):
         u=urlsplit(row[field])
         assert u.scheme=="https" and bool(u.netloc), f"Missing source {gene}: {field}"
