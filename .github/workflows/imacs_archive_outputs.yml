@@ -55,6 +55,7 @@ jobs:
           IMACS independent vascular astro target validation|imacs-independent-biological-validation|imacs_stroke_pet_independent/results|independent
           IMACS independent day3 tMCAO spatial check|imacs-spatial-day3-2026-results|imacs_day3_2026/results|spatial_day3
           IMACS processed spatial region source probe|imacs-spatial-source-probe|.|source_probes
+          IMACS human paired brain stroke screen|imacs-human-paired-ischemia-screen|imacs_human_paired/results|human
           EOF
 
       - name: Run scientific audit after collecting data
