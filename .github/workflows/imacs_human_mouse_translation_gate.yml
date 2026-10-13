@@ -1,0 +1,45 @@
+name: IMACS source-aware human mouse PET translation gates
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_human_mouse_translation_gate.yml"
+      - "IMACS_Stroke_PET/scripts/build_human_mouse_target_validation_gates.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  cross_species_qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit all frozen target evidence without mixing study units
+        run: python IMACS_Stroke_PET/scripts/build_human_mouse_target_validation_gates.py
+      - name: Archive translational QC and experimental shortlist on isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/target_validation_gate/
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive 29-gene human mouse source-aware experimental validation gates [skip ci]"
+            git fetch origin imacs-stroke-pet-screen
+            git rebase origin/imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve output on failed archival commit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-29-gene-human-mouse-validation-gates
+          path: IMACS_Stroke_PET/results/target_validation_gate/
+          if-no-files-found: warn
+          retention-days: 30
