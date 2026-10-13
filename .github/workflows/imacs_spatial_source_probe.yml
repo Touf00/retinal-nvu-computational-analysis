@@ -1,0 +1,27 @@
+name: IMACS processed spatial region source probe
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - "IMACS_Stroke_PET/scripts/probe_spatial_region_source.py"
+      - ".github/workflows/imacs_spatial_source_probe.yml"
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests
+      - run: python IMACS_Stroke_PET/scripts/probe_spatial_region_source.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: imacs-spatial-source-probe
+          path: IMACS_Stroke_PET/results/source_probes/*.json
+          if-no-files-found: warn
