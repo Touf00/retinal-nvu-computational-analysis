@@ -22,7 +22,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "results"
 OUT = RES / "preparation_design_qc"
-CANDIDATE = "source panel"
 
 GROUPS = {
     "Sham": [f"GSM70608{i:02d}" for i in range(15, 19)],
@@ -64,7 +63,7 @@ def group_of(gsm):
 def keyed(data, keys):
     result = {}
     for row in data:
-        key = tuple(row[k] for k in keys)
+        key = row[keys[0]] if len(keys) == 1 else tuple(row[k] for k in keys)
         fail(key not in result, f"Duplicate row for {key}")
         result[key] = row
     return result
@@ -266,12 +265,6 @@ def main(qc_dir):
             })
         by_subtype[prefix] = subtype_counts
         # Sample-specific capture is NOT tissue abundance.
-        for gsm in ids:
-            if gsm in whole and gsm not in GROUPS["Day2"]:
-                pass
-            n = subtype_counts[gsm]
-            n_ec = comp[gsm]["EC"]
-            group_rows.append if False else None  # no-op to keep fields uniform
         by_subtype[prefix + "_results"] = group_rows
 
     output = []
