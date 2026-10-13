@@ -95,3 +95,6 @@ jobs:
 
 # Rebuild latest integrated matrix after /TEAMRED removal of nonreplicated sign concordance.
 # Archive human dataset after run 38326150950 and repaired DESeq2 run 38325572095.
+
+# 2026-10-13: refresh rat artifact after source-feature gating repair, successful run 38431919460.
+# The rat comparator remains descriptive and cannot support individual-rat statistics.
