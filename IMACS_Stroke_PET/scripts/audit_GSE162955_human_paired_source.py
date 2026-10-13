@@ -101,7 +101,7 @@ def source_probe_extract(path,wanted):
             key=values[0]
             if key not in wanted:continue
             must(key not in hits,"Duplicate candidate probe in source matrix "+key)
-            hits[key]={gsm:float(value) for gsm,value in zip(header[1:],values)}
+            hits[key]={gsm:float(value) for gsm,value in zip(header[1:],values[1:])}
     must(set(hits)==set(wanted),f"Missing {len(set(wanted)-set(hits))} target probes in GEO matrix")
     must(all(all(math.isfinite(v) for v in sample.values()) for sample in hits.values()),
          "Nonfinite GEO human candidate probe intensity")
