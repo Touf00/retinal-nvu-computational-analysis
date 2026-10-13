@@ -5,6 +5,7 @@ on:
     paths:
       - ".github/workflows/imacs_archive_outputs.yml"
       - "IMACS_Stroke_PET/scripts/audit_all_results.py"
+      - "IMACS_Stroke_PET/scripts/integrate_candidates.py"
   workflow_dispatch:
 
 jobs:
