@@ -101,6 +101,42 @@ try:
 except (FileNotFoundError,KeyError,ValueError) as e:
     add("human_six_paired_brain_infarct","NOT_COMPLETE",str(e))
 
+try:
+    day2=csv("independent_day2/11_GSE225948_day2_EC_exact_permutation.csv")
+    subtype=csv("independent_day2/11_within_author_EC_subtype_sensitivity.csv")
+    ec1=subtype.loc[subtype.author_subtype.eq("EC1") & subtype.status.eq("TESTABLE_4v4_pooled_preps")]
+    ec2=subtype.loc[subtype.author_subtype.eq("EC2")]
+    safe=(not day2.empty and day2.n_sham_preparations.eq(4).all()
+          and day2.n_stroke_preparations.eq(4).all()
+          and day2.exact_two_sided_p.min()>=2/70-1e-12
+          and len(ec1)==len(day2) and len(ec2)==len(day2)
+          and ec2.status.eq("NO_INFERENCE_low_or_missing_group_sample").all())
+    qsig=int((day2.BH_q_across_frozen_panel<.05).sum())
+    subq=int((ec1.BH_q_within_subtype_frozen_panel<.05).sum())
+    add("GSE225948_day2_sham_vs_stroke_pooled_FACS_EC",
+        "PASS" if safe else "FAIL",
+        f"{len(day2)} testable frozen genes; {qsig} whole-EC and {subq} within-EC1 genes at BH q<.05; "
+        "n4+4 independent pooled preparations, NOT individual animals; "
+        "non-paired processing dates/batches, author EC-subtype composition shift; source counts fractional")
+except (FileNotFoundError,KeyError,ValueError) as e:
+    add("GSE225948_day2_FACS_EC","NOT_COMPLETE",str(e))
+
+try:
+    late=csv("independent_late/12_GSE225948_day2_EC_exact_permutation.csv")
+    sublate=csv("independent_late/12_within_author_EC_subtype_sensitivity.csv")
+    late1=sublate.loc[sublate.author_subtype.eq("EC1") & sublate.status.eq("TESTABLE_4v4_pooled_preps")]
+    safe=(not late.empty and late.n_day2_stroke_preparations.eq(4).all()
+        and late.n_day14_stroke_preparations.eq(4).all()
+        and late.exact_two_sided_p.min()>=2/70-1e-12 and len(late1)==len(late))
+    add("GSE225948_stroke_day14_vs_day2_pooled_FACS_EC",
+        "PASS" if safe else "FAIL",
+        f"{len(late)} genes, {(late.BH_q_across_frozen_panel<.05).sum()} whole-EC and "
+        f"{(late1.BH_q_within_subtype_frozen_panel<.05).sum()} within-EC1 BH discoveries; "
+        "4 pooled stroke preparations/timepoint, UNPAIRED, no sham day14 control; "
+        "age/sex matched by source labels, processing batch and subtype composition unresolved")
+except (FileNotFoundError,KeyError,ValueError) as e:
+    add("GSE225948_stroke_day14_vs_day2","NOT_COMPLETE",str(e))
+
 BASE.mkdir(exist_ok=True,parents=True)
 (BASE/"scientific_audit.json").write_text(json.dumps(checks,indent=2))
 lines=["# Automated /TEAMRED analysis audit","",
@@ -115,6 +151,9 @@ lines += ["", "## Mandatory interpretation constraints",
     "- Rat GSE250245: six group/hemisphere matrices, not independent individual-animal transcriptomes.",
     "- Spatial GSE233814: mixed capture spots and unavailable lesion-region labels in raw count matrices.",
     "- Rat annotation and missing feature symbols require additional review before vascular validation.",
+    "- GSE225948: source matrices are fractional; n4+4 biological pooled preparations, not individual mice.",
+    "- Sham and stroke day2 samples are unpaired batches; EC subtype composition differs sharply.",
+    "- Day14 versus day2 compares different stroke-only preparations; no sham at day14.",
     "- RNA expression cannot establish protein, PET binding, BBB transfer, or human translation.",
     "", "## Recovery", "",
     "All outputs are inside `IMACS_Stroke_PET/results/<dataset>/` on the isolated branch.",
