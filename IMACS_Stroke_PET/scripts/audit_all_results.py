@@ -24,8 +24,12 @@ try:
         "PASS" if x.n_animals_per_group.eq(3).all() and x.exact_label_permutation_two_sided_p.min()>=.099999 else "FAIL",
         f"{len(x)} candidate x compartment rows; minimum exact p={x.exact_label_permutation_two_sided_p.min():.3f}; cannot claim p<0.05")
     failures=csv("primary/06_DESeq2_failure_audit.csv")
-    add("mouse_acute_DESeq2","NOT_COMPLETE" if len(failures)>0 else "PASS",
-        f"{len(failures)} unresolved DESeq2 errors; use exact-label direction analysis only")
+    full_de_available = all((BASE/f"primary/06_DESeq2_{ct}.csv").exists()
+                            for ct in ["Endothelial","Astrocyte","Pericyte","VSMC"])
+    de_state = ("PASS" if len(failures)==0 and full_de_available else "NOT_COMPLETE")
+    add("mouse_acute_DESeq2",de_state,
+        f"{len(failures)} unresolved errors; complete four-compartment analysis: {full_de_available}; "
+        "n=3/group parametric Wald p-values require careful scrutiny, exact permutation floor 0.10")
 except (FileNotFoundError, KeyError) as e:
     add("mouse_acute","NOT_COMPLETE",str(e))
 
@@ -75,6 +79,27 @@ try:
         f"{len(val)} genes with 3 contralateral/ipsilateral pairs; no population-level significance")
 except (FileNotFoundError,KeyError) as e:
     add("independent_vascular_astro","NOT_COMPLETE",str(e))
+
+try:
+    additional=csv("spatial_day3/09_day3_spatial_frozen_panel_descriptive.csv")
+    m=(BASE/"spatial_day3/09_spatial_run_manifest.json")
+    meta=json.loads(m.read_text())
+    add("new_2026_independent_spatial_day3",
+        "PASS" if meta.get("n_barcodes",0)>1000 and not meta.get("target_protein_or_PET_validation",False) else "CHECK",
+        f"GSE337578 one library; {meta.get('n_barcodes')} spatial units; no sham control or validated region masks; descriptive only")
+except (FileNotFoundError,KeyError,ValueError) as e:
+    add("new_2026_independent_spatial_day3","NOT_COMPLETE",str(e))
+
+try:
+    human=csv("human/10_human_paired_core_vs_contralateral_candidate_screen.csv")
+    tested=human.loc[human.status.eq("TESTABLE")]
+    valid=not tested.empty and tested.n_pairs.eq(6).all() and tested.paired_exact_signflip_p_two_sided.min()>=2/64-1e-12
+    add("human_six_paired_brain_infarct",
+        "PASS" if valid else "CHECK",
+        f"6 matched postmortem brain tissue donors, {len(tested)} mapped candidate genes. "
+        "Microarray core-vs-contralateral; not vessel-specific and not PET proof.")
+except (FileNotFoundError,KeyError,ValueError) as e:
+    add("human_six_paired_brain_infarct","NOT_COMPLETE",str(e))
 
 BASE.mkdir(exist_ok=True,parents=True)
 (BASE/"scientific_audit.json").write_text(json.dumps(checks,indent=2))
