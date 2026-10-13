@@ -1,0 +1,70 @@
+name: IMACS GSE225948 preparation design and stability audit
+on:
+  push:
+    branches: [imacs-stroke-pet-screen]
+    paths:
+      - ".github/workflows/imacs_GSE225948_design_audit.yml"
+      - "IMACS_Stroke_PET/scripts/audit_GSE225948_preparation_design.py"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  design:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: imacs-stroke-pet-screen
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Retrieve completed source-matrix normalization QC
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p tmp/source_normalization_qc
+          gh run download 38427680867 \
+            --repo "$GITHUB_REPOSITORY" \
+            -n imacs-GSE225948-full-matrix-normalization-audit \
+            -D tmp/source_normalization_qc
+          test -s tmp/source_normalization_qc/13_GSE225948_full_matrix_normalization_audit.csv
+          test -s tmp/source_normalization_qc/13_GSE225948_full_matrix_normalization_audit.json
+      - name: Validate source manifests, batch design, composition and archived statistics
+        run: |
+          python IMACS_Stroke_PET/scripts/audit_GSE225948_preparation_design.py \
+            --qc-dir tmp/source_normalization_qc
+      - name: Archive compact scientific audit on isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p IMACS_Stroke_PET/results/source_normalization_qc
+          cp tmp/source_normalization_qc/13_GSE225948_full_matrix_normalization_audit.csv \
+             IMACS_Stroke_PET/results/source_normalization_qc/
+          cp tmp/source_normalization_qc/13_GSE225948_full_matrix_normalization_audit.json \
+             IMACS_Stroke_PET/results/source_normalization_qc/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add IMACS_Stroke_PET/results/preparation_design_qc/ \
+                  IMACS_Stroke_PET/results/source_normalization_qc/
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive verified GSE225948 normalization and design audit [skip ci]"
+            git pull --rebase origin imacs-stroke-pet-screen
+            git push origin HEAD:imacs-stroke-pet-screen
+          fi
+      - name: Preserve auditable outputs even if branch push fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imacs-GSE225948-preparation-design-audit
+          path: |
+            tmp/source_normalization_qc/
+            IMACS_Stroke_PET/results/preparation_design_qc/
+          if-no-files-found: warn
+          retention-days: 30
