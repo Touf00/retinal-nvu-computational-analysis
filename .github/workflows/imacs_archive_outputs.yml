@@ -57,6 +57,7 @@ jobs:
           IMACS processed spatial region source probe|imacs-spatial-source-probe|.|source_probes
           IMACS human paired brain stroke screen|imacs-human-paired-ischemia-screen|imacs_human_paired/results|human
           IMACS independent day-2 brain EC validation|imacs-GSE225948-day2-EC-4v4|imacs_stroke_GSE225948/results|independent_day2
+          IMACS replicated day2 versus day14 stroke EC comparison|imacs-GSE225948-day14-vs-day2-EC|imacs_stroke_GSE225948_late/results|independent_late
           IMACS independent day-2 mouse stroke source probe|imacs-GSE225948-source-probe|.|independent_day2_source
           EOF
 
