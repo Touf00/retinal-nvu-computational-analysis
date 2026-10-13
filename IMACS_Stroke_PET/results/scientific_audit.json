@@ -68,5 +68,15 @@
     "name": "human_six_paired_brain_infarct",
     "status": "PASS",
     "detail": "6 matched postmortem brain tissue donors, 27 mapped candidate genes. Microarray core-vs-contralateral; not vessel-specific and not PET proof."
+  },
+  {
+    "name": "GSE225948_day2_sham_vs_stroke_pooled_FACS_EC",
+    "status": "PASS",
+    "detail": "28 testable frozen genes; 0 whole-EC and 0 within-EC1 genes at BH q<.05; n4+4 independent pooled preparations, NOT individual animals; non-paired processing dates/batches, author EC-subtype composition shift; source counts fractional"
+  },
+  {
+    "name": "GSE225948_stroke_day14_vs_day2_pooled_FACS_EC",
+    "status": "PASS",
+    "detail": "28 genes, 0 whole-EC and 0 within-EC1 BH discoveries; 4 pooled stroke preparations/timepoint, UNPAIRED, no sham day14 control; age/sex matched by source labels, processing batch and subtype composition unresolved"
   }
 ]

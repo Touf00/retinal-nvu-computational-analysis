@@ -18,6 +18,8 @@ Generated from committed processed results. Execution success is not scientific 
 | independent_astro_endfeet_3paired | PASS | 29 genes with 3 contralateral/ipsilateral pairs; no population-level significance |
 | new_2026_independent_spatial_day3 | PASS | GSE337578 one library; 30560 spatial units; no sham control or validated region masks; descriptive only |
 | human_six_paired_brain_infarct | PASS | 6 matched postmortem brain tissue donors, 27 mapped candidate genes. Microarray core-vs-contralateral; not vessel-specific and not PET proof. |
+| GSE225948_day2_sham_vs_stroke_pooled_FACS_EC | PASS | 28 testable frozen genes; 0 whole-EC and 0 within-EC1 genes at BH q<.05; n4+4 independent pooled preparations, NOT individual animals; non-paired processing dates/batches, author EC-subtype composition shift; source counts fractional |
+| GSE225948_stroke_day14_vs_day2_pooled_FACS_EC | PASS | 28 genes, 0 whole-EC and 0 within-EC1 BH discoveries; 4 pooled stroke preparations/timepoint, UNPAIRED, no sham day14 control; age/sex matched by source labels, processing batch and subtype composition unresolved |
 
 ## Mandatory interpretation constraints
 - Do not pool cells/spots as biological replicates.
@@ -26,6 +28,9 @@ Generated from committed processed results. Execution success is not scientific 
 - Rat GSE250245: six group/hemisphere matrices, not independent individual-animal transcriptomes.
 - Spatial GSE233814: mixed capture spots and unavailable lesion-region labels in raw count matrices.
 - Rat annotation and missing feature symbols require additional review before vascular validation.
+- GSE225948: source matrices are fractional; n4+4 biological pooled preparations, not individual mice.
+- Sham and stroke day2 samples are unpaired batches; EC subtype composition differs sharply.
+- Day14 versus day2 compares different stroke-only preparations; no sham at day14.
 - RNA expression cannot establish protein, PET binding, BBB transfer, or human translation.
 
 ## Recovery
