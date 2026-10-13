@@ -1,0 +1,321 @@
+{
+  "dataset": "GSE225948",
+  "preparations": 12,
+  "overall": "PASS",
+  "threshold": "At least 95% of annotated EC cells must have full-matrix sum within 5% of nCount_RNA.",
+  "interpretation_limit": "No RNA-to-protein, PET, causal, or individual-animal inference.",
+  "samples": [
+    {
+      "gsm": "GSM7060815",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 546,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999979,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3465,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999979,
+        "p95_sum_over_nCount": 1.0000000000000022,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 11.1
+    },
+    {
+      "gsm": "GSM7060816",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 617,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.0000000000000018,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 4714,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.0000000000000018,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 14.5
+    },
+    {
+      "gsm": "GSM7060817",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 321,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.0000000000000018,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3048,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999982,
+        "p95_sum_over_nCount": 1.0000000000000018,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 9.8
+    },
+    {
+      "gsm": "GSM7060818",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 295,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3802,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.999999999999998,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 11.9
+    },
+    {
+      "gsm": "GSM7060819",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 360,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999977,
+        "p95_sum_over_nCount": 1.0000000000000024,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3540,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999973,
+        "p95_sum_over_nCount": 1.0000000000000027,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 11.7
+    },
+    {
+      "gsm": "GSM7060820",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 458,
+        "median_sum_over_nCount": 1.0000000000000002,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.0000000000000022,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3335,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999977,
+        "p95_sum_over_nCount": 1.0000000000000022,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 10.5
+    },
+    {
+      "gsm": "GSM7060821",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 502,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.999999999999998,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 3457,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999971,
+        "p95_sum_over_nCount": 1.0000000000000027,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 11.2
+    },
+    {
+      "gsm": "GSM7060822",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 1171,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.999999999999998,
+        "p95_sum_over_nCount": 1.0000000000000018,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 4491,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999973,
+        "p95_sum_over_nCount": 1.0000000000000027,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 14.0
+    },
+    {
+      "gsm": "GSM7060823",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 674,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999974,
+        "p95_sum_over_nCount": 1.0000000000000024,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 2983,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999971,
+        "p95_sum_over_nCount": 1.0000000000000027,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 9.9
+    },
+    {
+      "gsm": "GSM7060824",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 319,
+        "median_sum_over_nCount": 1.0000000000000002,
+        "p05_sum_over_nCount": 0.9999999999999977,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 2648,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999976,
+        "p95_sum_over_nCount": 1.0000000000000024,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 9.2
+    },
+    {
+      "gsm": "GSM7060825",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 300,
+        "median_sum_over_nCount": 1.0000000000000002,
+        "p05_sum_over_nCount": 0.999999999999998,
+        "p95_sum_over_nCount": 1.0000000000000024,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 2665,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999973,
+        "p95_sum_over_nCount": 1.0000000000000027,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 9.2
+    },
+    {
+      "gsm": "GSM7060826",
+      "status": "PASS",
+      "genes": 19704,
+      "fractional_values_present": true,
+      "ec": {
+        "n_cells": 317,
+        "median_sum_over_nCount": 1.0000000000000002,
+        "p05_sum_over_nCount": 0.9999999999999981,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "all_cells": {
+        "n_cells": 5121,
+        "median_sum_over_nCount": 1.0,
+        "p05_sum_over_nCount": 0.9999999999999979,
+        "p95_sum_over_nCount": 1.000000000000002,
+        "fraction_within_1pct": 1.0,
+        "fraction_within_5pct": 1.0
+      },
+      "ec_nFeature_exact_fraction": 1.0,
+      "ec_nFeature_median_difference": 0.0,
+      "interpretation": "PASS means numerical library denominator agreement only, not biological validation.",
+      "elapsed_seconds": 15.6
+    }
+  ]
+}

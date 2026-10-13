@@ -1,0 +1,120 @@
+{
+  "dataset": "GSE225948",
+  "qc_source": "executed GitHub Actions run 38427680867",
+  "source_files_sha256_compatible": true,
+  "barcode_and_annotation_totals_match": true,
+  "full_matrix_nCount_and_nFeature_agreement": "PASS (12/12 preparations)",
+  "source_accessions": [
+    "GSM7060815",
+    "GSM7060816",
+    "GSM7060817",
+    "GSM7060818",
+    "GSM7060819",
+    "GSM7060820",
+    "GSM7060821",
+    "GSM7060822",
+    "GSM7060823",
+    "GSM7060824",
+    "GSM7060825",
+    "GSM7060826"
+  ],
+  "design": {
+    "unit": "pooled sorted preparation, 4-5 hemispheres per deposited experiment (GEO)",
+    "single_animal_to_cell_mapping": "NOT AVAILABLE IN INPUT MANIFEST; individual-animal DE impossible",
+    "sham_day14": "ABSENT; day14 vs day2 is stroke-only comparison",
+    "batch_blocking": "No pair of groups shares an identical preparation ID; processing batch overlap is not established",
+    "date_like_identifiers": "Filename GRYYMMDD-like strings; temporal interpretation NOT independently verified",
+    "group_exchangeability": "UNVERIFIED; archival exact permutation p and BH are conditional arithmetic only",
+    "annotation": "Author-provided parent==EC, EC1 and EC2. Independent lineage validation NOT performed",
+    "capture": "FACS-enriched cell samples, cell fractions are NOT tissue cell abundance",
+    "normalization": "Fractional non-integer released counts. No DESeq2 on these counts",
+    "pet": "RNA results do not establish protein abundance, vascular luminal access, binding, or PET feasibility"
+  },
+  "preparation_group_summary": {
+    "Sham": {
+      "preparations": 4,
+      "captured_ec_cells_total_not_biological_n": 1779,
+      "captured_ec_fraction_median": [
+        0.10531496062992125,
+        0.1308867204072974
+      ],
+      "ec2_fraction_range": [
+        0.003389830508474576,
+        0.054945054945054944
+      ],
+      "ec2_fraction_mean_descriptive": 0.02577115730354102,
+      "date_like_preparation_labels": [
+        "GR180716",
+        "GR181128",
+        "GR181212",
+        "GR190110"
+      ]
+    },
+    "Day2": {
+      "preparations": 4,
+      "captured_ec_cells_total_not_biological_n": 2491,
+      "captured_ec_fraction_median": [
+        0.1373313343328336,
+        0.14521261209140873
+      ],
+      "ec2_fraction_range": [
+        0.32707087959009395,
+        0.5917030567685589
+      ],
+      "ec2_fraction_mean_descriptive": 0.44386457749382435,
+      "date_like_preparation_labels": [
+        "GR180426",
+        "GR180614",
+        "GR180919",
+        "GR181024"
+      ]
+    },
+    "Day14": {
+      "preparations": 4,
+      "captured_ec_cells_total_not_biological_n": 1610,
+      "captured_ec_fraction_median": [
+        0.1125703564727955,
+        0.12046827794561933
+      ],
+      "ec2_fraction_range": [
+        0.0031545741324921135,
+        0.04747774480712166
+      ],
+      "ec2_fraction_mean_descriptive": 0.024076575032709085,
+      "date_like_preparation_labels": [
+        "GR180125",
+        "GR180613",
+        "GR180905",
+        "GR181114"
+      ]
+    }
+  },
+  "effect_summary": {
+    "StrokeDay2_vs_ShamDay2": {
+      "testable_frozen_genes": 28,
+      "BH_q_below_0_05": 0,
+      "ec1_BH_q_below_0_05": 0,
+      "contrasts_with_leave_one_per_arm_direction_reversal": 8,
+      "sign_disagreements_EC1_vs_whole": [
+        "Itgav",
+        "Mfsd2a",
+        "Slc22a8",
+        "Tnfrsf10b",
+        "Vcam1"
+      ]
+    },
+    "StrokeDay14_vs_StrokeDay2": {
+      "testable_frozen_genes": 28,
+      "BH_q_below_0_05": 0,
+      "ec1_BH_q_below_0_05": 0,
+      "contrasts_with_leave_one_per_arm_direction_reversal": 10,
+      "sign_disagreements_EC1_vs_whole": [
+        "Apln",
+        "Egfl7",
+        "Itgav",
+        "Itgb3"
+      ]
+    }
+  },
+  "method": "Strict provenance and reference p/BH recomputation; 16 deterministic leave-one-preparation-per-arm descriptive contrasts for each gene"
+}
