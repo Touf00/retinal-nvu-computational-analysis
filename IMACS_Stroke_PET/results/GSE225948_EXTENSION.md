@@ -44,7 +44,17 @@ Notebook: `notebooks/11_GSE225948_FACS_EC_4v4_day2.ipynb`.
 
 Workflow: `.github/workflows/imacs_GSE225948_day2.yml`.
 
-Status at writing: workflow launched; results not yet scientifically audited.
+**Day-2 sham-versus-stroke workflow succeeded (runs 38328545411 initial and 38328795699 subtype sensitivity).**
+
+- Across **28 testable frozen genes**, the whole-author-EC pooled-preparation exact permutation had **no BH q < .05**.
+- Whole EC `Ackr1`, `Mcam`, `Icam1`, `Tfrc`, `Igf1r`, and `Flt1` reached the exact p floor .02857, but all had **q=.1333** after frozen-panel adjustment.
+- `Aplnr` had no consistent whole-EC direction (p=1.0). `Amot` was modestly lower (p=.0571; q=.178).
+- Within **author EC1 only**, all four preparations per group have >=70 cells; **none** of the 28 genes achieved unadjusted p<.05 (minimum p=.0857 for `Igf1r`, minimum q=.8). This strongly weakens an interpretation that whole-EC candidate contrasts reflect within-EC1 regulation.
+- Author EC2 has 1 and 5 cells in two Sham preparations, so subtype-level hypothesis testing was deliberately **not** attempted.
+- This pattern can arise from EC subtype shifts, sorting/dissociation, or within-other-state change. It **does not prove** the whole-EC signal is entirely compositional, because EC1 is not the only state and clusters are post-hoc.
+- Gene-level expression was derived from **fractional-valued source matrices**, and effects are in mean per-cell log1p(normalized expression) units, NOT log2 fold changes or protein abundance.
+
+**Second extension launched:** `notebooks/12_GSE225948_FACS_EC_day2_vs_day14.ipynb`, a distinct n4 day2 vs n4 day14 comparison *within operated-stroke preparations*. It is explicitly **not a day14 stroke-versus-sham comparison**, because the data do not include such controls.
 
 ## Required /TEAMRED checks after execution
 
